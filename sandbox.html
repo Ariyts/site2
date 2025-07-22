@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Варианты хедера с логотипом Росатома</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'rosatom-blue': '#003d82',
+            'rosatom-light': '#4a90e2',
+            'rosatom-dark': '#002855'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+
+    .gradient-rosatom {
+      background: linear-gradient(135deg, #003d82 0%, #4a90e2 100%);
+    }
+
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .logo-container {
+      background: white;
+      border-radius: 8px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-white-bg {
+      background: white;
+      border-radius: 6px;
+      padding: 6px 12px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+<!-- Вариант 1: Белый хедер с синими акцентами -->
+<div class="mb-8">
+  <h2 class="text-2xl font-bold mb-4 px-6 pt-6">Вариант 1: Белый хедер</h2>
+  <header class="bg-white shadow-lg">
+    <nav class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <!-- Логотип - замените src на путь к вашему файлу -->
+          <img src="/path/to/rosatom-logo.png" alt="Росатом" class="h-12 w-auto">
+          <div class="border-l-2 border-gray-300 pl-4">
+            <span class="text-xl font-bold text-rosatom-blue">CyberGuard</span>
+            <div class="text-sm text-gray-600">Информационная безопасность</div>
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="text-rosatom-blue hover:text-rosatom-light transition-colors font-medium">Главная</a>
+          <a href="#" class="text-gray-700 hover:text-rosatom-blue transition-colors">Услуги</a>
+          <a href="#" class="text-gray-700 hover:text-rosatom-blue transition-colors">Решения</a>
+          <a href="#" class="text-gray-700 hover:text-rosatom-blue transition-colors">О нас</a>
+          <a href="#" class="text-gray-700 hover:text-rosatom-blue transition-colors">Контакты</a>
+        </div>
+        <button class="bg-rosatom-blue text-white px-6 py-2 rounded-lg hover:bg-rosatom-dark transition-colors">
+          Консультация
+        </button>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<!-- Вариант 2: Синий хедер с белым контейнером для лого -->
+<div class="mb-8">
+  <h2 class="text-2xl font-bold mb-4 px-6">Вариант 2: Синий хедер с белым контейнером</h2>
+  <header class="gradient-rosatom text-white relative">
+    <div class="grid-pattern absolute inset-0 opacity-20"></div>
+    <nav class="container mx-auto px-6 py-4 relative z-10">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <!-- Белый контейнер для логотипа -->
+          <div class="logo-container">
+            <img src="/path/to/rosatom-logo.png" alt="Росатом" class="h-8 w-auto">
+          </div>
+          <div class="border-l-2 border-white border-opacity-30 pl-4">
+            <span class="text-xl font-bold">CyberGuard</span>
+            <div class="text-sm text-blue-100">Информационная безопасность</div>
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="text-white hover:text-blue-200 transition-colors font-medium">Главная</a>
+          <a href="#" class="text-blue-200 hover:text-white transition-colors">Услуги</a>
+          <a href="#" class="text-blue-200 hover:text-white transition-colors">Решения</a>
+          <a href="#" class="text-blue-200 hover:text-white transition-colors">О нас</a>
+          <a href="#" class="text-blue-200 hover:text-white transition-colors">Контакты</a>
+        </div>
+        <button class="bg-white text-rosatom-blue px-6 py-2 rounded-lg hover:bg-blue-50 transition-colors font-medium">
+          Консультация
+        </button>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<!-- Вариант 3: Темно-синий хедер с увеличенным лого -->
+<div class="mb-8">
+  <h2 class="text-2xl font-bold mb-4 px-6">Вариант 3: Темно-синий с крупным лого</h2>
+  <header class="bg-rosatom-dark text-white">
+    <nav class="container mx-auto px-6 py-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-6">
+          <!-- Увеличенный логотип в белом контейнере -->
+          <div class="logo-white-bg">
+            <img src="/path/to/rosatom-logo.png" alt="Росатом" class="h-10 w-auto">
+          </div>
+          <div>
+            <span class="text-2xl font-bold">CyberGuard</span>
+            <div class="text-sm text-blue-200">Дочерняя компания Росатома</div>
+            <div class="text-xs text-blue-300">Информационная безопасность</div>
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="text-white hover:text-blue-200 transition-colors">Главная</a>
+          <a href="#" class="text-blue-200 hover:text-white transition-colors">Услуги</a>
+          <a href="#" class="text-blue-200 hover:text-white transition-colors">Решения</a>
+          <a href="#" class="text-blue-200 hover:text-white transition-colors">О нас</a>
+          <a href="#" class="text-blue-200 hover:text-white transition-colors">Контакты</a>
+        </div>
+        <button class="bg-rosatom-light text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+          Консультация
+        </button>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<!-- Вариант 4: Минималистичный белый с тонкой синей полосой -->
+<div class="mb-8">
+  <h2 class="text-2xl font-bold mb-4 px-6">Вариант 4: Минималистичный с акцентом</h2>
+  <header class="bg-white border-b-4 border-rosatom-blue">
+    <nav class="container mx-auto px-6 py-5">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <img src="/path/to/rosatom-logo.png" alt="Росатом" class="h-12 w-auto">
+          <div class="ml-4">
+            <span class="text-2xl font-bold text-rosatom-blue">CyberGuard</span>
+            <div class="text-sm text-gray-600">Информационная безопасность</div>
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="text-rosatom-blue hover:text-rosatom-light transition-colors font-medium border-b-2 border-rosatom-blue pb-1">Главная</a>
+          <a href="#" class="text-gray-700 hover:text-rosatom-blue transition-colors pb-1">Услуги</a>
+          <a href="#" class="text-gray-700 hover:text-rosatom-blue transition-colors pb-1">Решения</a>
+          <a href="#" class="text-gray-700 hover:text-rosatom-blue transition-colors pb-1">О нас</a>
+          <a href="#" class="text-gray-700 hover:text-rosatom-blue transition-colors pb-1">Контакты</a>
+        </div>
+        <button class="bg-rosatom-blue text-white px-6 py-2 rounded-lg hover:bg-rosatom-dark transition-colors">
+          Консультация
+        </button>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<!-- Код для вставки логотипа -->
+<div class="bg-white p-8 rounded-lg shadow-lg mx-6">
+  <h2 class="text-2xl font-bold mb-6 text-rosatom-blue">Как вставить логотип:</h2>
+
+  <div class="space-y-6">
+    <div>
+      <h3 class="text-lg font-semibold mb-3">1. Подготовка файла:</h3>
+      <div class="bg-gray-100 p-4 rounded-lg">
+        <p class="text-sm text-gray-700 mb-2">• Сохраните логотип в формате PNG (с прозрачностью) или SVG</p>
+        <p class="text-sm text-gray-700 mb-2">• Оптимальный размер: 200-300px по ширине</p>
+        <p class="text-sm text-gray-700">• Поместите файл в папку: <code class="bg-white px-2 py-1 rounded">images/rosatom-logo.png</code></p>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-3">2. HTML код:</h3>
+      <div class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+                    <pre><code>&lt;img src="images/rosatom-logo.png"
+     alt="Росатом"
+     class="h-12 w-auto"&gt;</code></pre>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-3">3. Адаптивные размеры:</h3>
+      <div class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+                    <pre><code>&lt;img src="images/rosatom-logo.png"
+     alt="Росатом"
+     class="h-8 md:h-12 w-auto"&gt;</code></pre>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-lg font-semibold mb-3">4. С белым фоном для темных хедеров:</h3>
+      <div class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+                    <pre><code>&lt;div class="bg-white rounded-lg p-2"&gt;
+    &lt;img src="images/rosatom-logo.png"
+         alt="Росатом"
+         class="h-8 w-auto"&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+    <h4 class="font-semibold text-rosatom-blue mb-2">💡 Рекомендации:</h4>
+    <ul class="text-sm text-gray-700 space-y-1">
+      <li>• Используйте <strong>Вариант 1</strong> для корпоративного стиля</li>
+      <li>• <strong>Вариант 2</strong> подойдет для технологичного образа</li>
+      <li>• <strong>Вариант 4</strong> для минималистичного дизайна</li>
+      <li>• Всегда указывайте alt-текст для доступности</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

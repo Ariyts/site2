@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цази</title>
+  <meta name="description" content="Профессиональные услуги информационной безопасности для защиты вашего бизнеса от современных киберугроз. Аудит, пентест, мониторинг угроз.">
+  <meta name="keywords" content="информационная безопасность, кибербезопасность, аудит безопасности, пентест, мониторинг угроз">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'rosatom-blue': '#003d82',
+            'rosatom-light': '#4a90e2',
+            'rosatom-dark': '#002855',
+            'cyber-cyan': '#06b6d4',
+            'cyber-green': '#10b981'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+
+    .gradient-rosatom {
+      background: linear-gradient(135deg, #003d82 0%, #4a90e2 100%);
+    }
+
+    .cyber-glow {
+      box-shadow: 0 0 20px rgba(0, 61, 130, 0.3);
+    }
+
+    .floating-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+<!-- Header -->
+
+<div id="header-placeholder"></div>
+
+<!-- Hero Section -->
+<section class="hero-bg relative overflow-hidden">
+  <div class="container mx-auto px-6 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight text-rosatom-dark">
+          Защита вашего
+          <span class="text-rosatom-blue">цифрового</span>
+          будущего
+        </h1>
+        <p class="text-xl mb-8 text-gray-600">
+          Профессиональные услуги информационной безопасности для защиты вашего бизнеса от современных киберугроз
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 cyber-glow">
+            Получить консультацию
+          </button>
+          <button class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all" onclick="CyberGuard.scrollTo('#services')">
+            Наши услуги
+          </button>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="floating-animation">
+          <svg class="w-full h-96" viewBox="0 0 400 300" fill="none">
+            <!-- Shield -->
+            <path d="M200 50 L160 70 L160 150 Q160 180 200 200 Q240 180 240 150 L240 70 Z"
+                  fill="rgba(0, 61, 130, 0.1)" stroke="#003d82" stroke-width="2"/>
+            <!-- Lock -->
+            <rect x="185" y="120" width="30" height="40" rx="5"
+                  fill="rgba(74, 144, 226, 0.2)" stroke="#4a90e2" stroke-width="2"/>
+            <path d="M190 120 Q190 110 200 110 Q210 110 210 120"
+                  stroke="#4a90e2" stroke-width="3" fill="none"/>
+            <!-- Network nodes -->
+            <circle cx="120" cy="100" r="8" fill="#003d82" opacity="0.6"/>
+            <circle cx="280" cy="120" r="8" fill="#003d82" opacity="0.6"/>
+            <circle cx="140" cy="200" r="8" fill="#4a90e2" opacity="0.6"/>
+            <circle cx="260" cy="180" r="8" fill="#4a90e2" opacity="0.6"/>
+            <!-- Connecting lines -->
+            <line x1="120" y1="100" x2="170" y2="120" stroke="#003d82" stroke-width="2" opacity="0.4"/>
+            <line x1="280" y1="120" x2="230" y2="120" stroke="#003d82" stroke-width="2" opacity="0.4"/>
+            <line x1="140" y1="200" x2="180" y2="170" stroke="#4a90e2" stroke-width="2" opacity="0.4"/>
+            <line x1="260" y1="180" x2="220" y2="160" stroke="#4a90e2" stroke-width="2" opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="text-4xl font-bold text-rosatom-blue mb-2">500+</div>
+        <div class="text-gray-600">Защищенных компаний</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold text-rosatom-blue mb-2">99.9%</div>
+        <div class="text-gray-600">Время работы систем</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold text-rosatom-blue mb-2">24/7</div>
+        <div class="text-gray-600">Мониторинг угроз</div>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold text-rosatom-blue mb-2">15+</div>
+        <div class="text-gray-600">Лет опыта</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Наши услуги</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Комплексные решения для защиты вашего бизнеса от киберугроз
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Service 1 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+        <div class="w-16 h-16 bg-rosatom-blue bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Аудит безопасности и пентест</h3>
+        <p class="text-gray-600 mb-4">
+          Комплексная проверка защищенности вашей IT-инфраструктуры с выдачей детального отчета
+        </p>
+        <a href="services/pentest.html" class="text-rosatom-blue font-semibold hover:text-rosatom-light transition-colors">
+          Подробнее →
+        </a>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+        <div class="w-16 h-16 bg-orange-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            <rect x="9" y="8" width="6" height="6" rx="1" stroke-width="1.5"/>
+            <line x1="8" y1="10" x2="9" y2="10" stroke-width="1"/>
+            <line x1="8" y1="12" x2="9" y2="12" stroke-width="1"/>
+            <line x1="15" y1="10" x2="16" y2="10" stroke-width="1"/>
+            <line x1="15" y1="12" x2="16" y2="12" stroke-width="1"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Техническая защита информации</h3>
+        <p class="text-gray-600 mb-4">
+          Аттестационные испытания объектов информатизации в полном соответствии с требованиями регуляторов и руководящих документов
+        </p>
+        <a href="#" class="text-rosatom-blue font-semibold hover:text-rosatom-light transition-colors">
+          Подробнее →
+        </a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+        <div class="w-16 h-16 bg-red-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.232 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Реагирование на инциденты</h3>
+        <p class="text-gray-600 mb-4">
+          Быстрое реагирование и устранение последствий кибератак и инцидентов ИБ
+        </p>
+        <a href="#" class="text-rosatom-blue font-semibold hover:text-rosatom-light transition-colors">
+          Подробнее →
+        </a>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+        <div class="w-16 h-16 bg-purple-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Соответствие стандартам</h3>
+        <p class="text-gray-600 mb-4">
+          Помощь в соответствии требованиям ISO 27001, GDPR, 152-ФЗ и других стандартов
+        </p>
+        <a href="#" class="text-rosatom-blue font-semibold hover:text-rosatom-light transition-colors">
+          Подробнее →
+        </a>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+        <div class="w-16 h-16 bg-yellow-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Мониторинг угроз</h3>
+        <p class="text-gray-600 mb-4">
+          Круглосуточный мониторинг и анализ угроз информационной безопасности
+        </p>
+        <a href="#" class="text-rosatom-blue font-semibold hover:text-rosatom-light transition-colors">
+          Подробнее →
+        </a>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100">
+        <div class="w-16 h-16 bg-indigo-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Обучение персонала</h3>
+        <p class="text-gray-600 mb-4">
+          Повышение осведомленности сотрудников о киберугрозах и методах защиты
+        </p>
+        <a href="#" class="text-rosatom-blue font-semibold hover:text-rosatom-light transition-colors">
+          Подробнее →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="about" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Почему выбирают нас</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Надежность и экспертиза, подтвержденная годами работы
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-20 h-20 bg-rosatom-blue bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Быстрое реагирование</h3>
+        <p class="text-gray-600">
+          Время отклика на критические инциденты - менее 1 часа
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 bg-rosatom-light bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-rosatom-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Сертифицированные эксперты</h3>
+        <p class="text-gray-600">
+          Команда специалистов с международными сертификатами
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 bg-cyber-green bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-cyber-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Проверенная репутация</h3>
+        <p class="text-gray-600">
+          Более 500 успешных проектов за 15 лет работы
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Наши сертификаты</h2>
+      <p class="text-xl text-gray-600">Подтвержденная экспертиза и соответствие стандартам</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-2xl transition-all transform hover:-translate-y-1">
+        <div class="text-2xl font-bold text-rosatom-blue mb-2">ISO 27001</div>
+        <div class="text-gray-600 text-sm">Система менеджмента ИБ</div>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-2xl transition-all transform hover:-translate-y-1">
+        <div class="text-2xl font-bold text-rosatom-blue mb-2">CISSP</div>
+        <div class="text-gray-600 text-sm">Certified Information Systems Security Professional</div>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-2xl transition-all transform hover:-translate-y-1">
+        <div class="text-2xl font-bold text-rosatom-blue mb-2">CEH</div>
+        <div class="text-gray-600 text-sm">Certified Ethical Hacker</div>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-2xl transition-all transform hover:-translate-y-1">
+        <div class="text-2xl font-bold text-rosatom-blue mb-2">OSCP</div>
+        <div class="text-gray-600 text-sm">Offensive Security Certified Professional</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Industries Section -->
+<section id="industries" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Отрасли</h2>
+      <p class="text-xl text-gray-600">Специализированные решения для различных сфер деятельности</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-gradient-to-br from-rosatom-blue to-rosatom-light text-white p-6 rounded-xl hover:shadow-lg transition-all transform hover:scale-105">
+        <h3 class="text-lg font-semibold mb-2">Энергетика</h3>
+        <p class="text-sm opacity-90">Критическая инфраструктура</p>
+      </div>
+      <div class="bg-gradient-to-br from-rosatom-light to-cyber-cyan text-white p-6 rounded-xl hover:shadow-lg transition-all transform hover:scale-105">
+        <h3 class="text-lg font-semibold mb-2">Финансы</h3>
+        <p class="text-sm opacity-90">Банки и финансовые институты</p>
+      </div>
+      <div class="bg-gradient-to-br from-cyber-cyan to-cyber-green text-white p-6 rounded-xl hover:shadow-lg transition-all transform hover:scale-105">
+        <h3 class="text-lg font-semibold mb-2">Промышленность</h3>
+        <p class="text-sm opacity-90">Производственные предприятия</p>
+      </div>
+      <div class="bg-gradient-to-br from-cyber-green to-rosatom-blue text-white p-6 rounded-xl hover:shadow-lg transition-all transform hover:scale-105">
+        <h3 class="text-lg font-semibold mb-2">Государственный сектор</h3>
+        <p class="text-sm opacity-90">Органы власти и управления</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="gradient-rosatom text-white py-20 relative">
+  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <h2 class="text-4xl font-bold mb-4">Готовы защитить свой бизнес?</h2>
+    <p class="text-xl mb-8 max-w-2xl mx-auto">
+      Получите бесплатную консультацию по информационной безопасности от наших экспертов
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg">
+        Бесплатная консультация
+      </button>
+      <button class="border border-white text-white hover:bg-white hover:text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all">
+        +7 (495) 123-45-67
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<!-- Подключение скриптов -->
+<script src="js/app.js"></script>
+<script src="js/components.js"></script>
+</body>
+</html>
