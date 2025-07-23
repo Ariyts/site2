@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<!-- header.html -->
+<header class="bg-white shadow-lg sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="../img/logo_cazi.png" alt="Росатом" class="h-12 w-auto">
+                <div class="border-l-2 border-gray-300 pl-4">
+                    <span class="text-xl font-bold text-rosatom-blue">CyberGuard</span>
+                    <div class="text-sm text-gray-600">Информационная безопасность</div>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html" class="nav-link text-gray-700 hover:text-rosatom-blue transition-colors">Главная</a>
+                <a href="../pentest-service.html" class="nav-link text-gray-700 hover:text-rosatom-blue transition-colors">Услуги</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-rosatom-blue transition-colors">Решения</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-rosatom-blue transition-colors">О нас</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-rosatom-blue transition-colors">Контакты</a>
+            </div>
+            <button class="bg-rosatom-blue text-white px-6 py-2 rounded-lg hover:bg-rosatom-dark transition-colors consultation-btn">
+                Консультация
+            </button>
+            <button class="md:hidden mobile-menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
