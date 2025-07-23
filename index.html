@@ -6,8 +6,15 @@
   <title>Цази</title>
   <meta name="description" content="Профессиональные услуги информационной безопасности для защиты вашего бизнеса от современных киберугроз. Аудит, пентест, мониторинг угроз.">
   <meta name="keywords" content="информационная безопасность, кибербезопасность, аудит безопасности, пентест, мониторинг угроз">
-  <link rel="stylesheet" href="../css/style.css" />6
-  
+  <!-- Подключаем Tailwind CSS первым -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Подключаем конфигурацию Tailwind после -->
+  <script src="js/tailwind-config.js"></script>
+  <!-- Подключаем Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Подключаем пользовательские стили последними -->
+
+  <link href="css/custom.css" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-900 overflow-x-hidden">
 <!-- Header -->
@@ -140,7 +147,7 @@
       </a>
 
       <!-- Услуга 4 -->
-      <a href="services/pentest.html" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100 block">
+      <a href="services/p.html" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-100 block">
         <div class="w-16 h-16 bg-orange-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
           <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h3.586a1 1 0 01.707.293l1.414 1.414A1 1 0 0010.414 5H20a1 1 0 011 1v13a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
@@ -302,7 +309,5 @@
 <!-- Подключение скриптов -->
 <script src="js/app.js"></script>
 <script src="js/components.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="js/tailwind-config.js"></script>
 </body>
 </html>
