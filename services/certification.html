@@ -1,10 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сертификация СЗИ - Цази</title>
+  <meta name="description" content="Полный цикл сертификации средств защиты информации (СЗИ) и лабораторных испытаний на соответствие требованиям безопасности информации.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="../css/custom.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-white text-gray-900">
+<div id="header-placeholder"></div>
 
+<section class="bg-gray-50 py-4">
+  <div class="container mx-auto px-6">
+    <nav class="text-sm">
+      <ol class="flex items-center space-x-2">
+        <li><a href="../index.html" class="text-rosatom-blue hover:text-rosatom-light">Главная</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="../index.html#services" class="text-rosatom-blue hover:text-rosatom-light">Услуги</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-600">Сертификация СЗИ</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="hero-bg py-20">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue bg-opacity-10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+          Гарантия соответствия
+        </div>
+        <h1 class="text-5xl font-bold mb-6 leading-tight text-rosatom-dark">
+          Сертификация <span class="text-rosatom-blue">средств защиты</span> информации
+        </h1>
+        <p class="text-xl mb-8 text-gray-600">
+          Мы поможем подготовить Ваши средства защиты информации к сертификации, а также проведем полный цикл испытаний и проверок.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 cyber-glow">
+            Получить консультацию
+          </button>
+          <button class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
+            Узнать подробнее
+          </button>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="floating-animation">
+          <svg class="w-full h-96" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M150 70 C150 50 170 50 170 50 H230 C230 50 250 50 250 70 V230 C250 250 230 250 230 250 H170 C170 250 150 250 150 230 Z"
+                  fill="rgba(0, 61, 130, 0.1)" stroke="#003d82" stroke-width="3"/>
+            <path d="M220 70 L250 50 L250 90 L220 70 Z" fill="#4a90e2"/>
+            <path d="M220 70 C225 75 225 85 220 90 L180 90 L180 70 L220 70 Z" fill="#10b981"/>
+            <circle cx="200" cy="170" r="30" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="2"/>
+            <path d="M190 170 L200 180 L210 160" stroke="#10b981" stroke-width="3" fill="none"/>
+            <rect x="175" y="110" width="50" height="6" rx="1" fill="#4a90e2"/>
+            <rect x="175" y="125" width="30" height="6" rx="1" fill="#4a90e2"/>
+            <rect x="175" y="140" width="40" height="6" rx="1" fill="#4a90e2"/>
+
+            <path d="M80 150 C80 130 100 130 100 130 V110 C100 100 90 100 90 100 C80 100 80 110 80 110 V150 Z"
+                  fill="rgba(74, 144, 226, 0.1)" stroke="#4a90e2" stroke-width="2"/>
+            <rect x="75" y="150" width="30" height="20" rx="3" fill="rgba(0, 61, 130, 0.05)" stroke="#003d82" stroke-width="1.5"/>
+
+            <circle cx="300" cy="150" r="25" fill="rgba(74, 144, 226, 0.1)" stroke="#4a90e2" stroke-width="2"/>
+            <line x1="315" y1="165" x2="330" y2="180" stroke="#4a90e2" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Наши услуги по сертификации СЗИ</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Мы проводим полный цикл испытаний и проверок на соответствие средств защиты информации требованиям безопасности.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+        <div class="w-16 h-16 bg-rosatom-blue bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.11C6.23 15.414 9.11 13 12 13c4.97 0 9-3.582 9-8s-4.03-8-9-8-9 3.582-9 8c0 1.02.193 2.008.544 2.946L3 12.5M21 12a9 9 0 00-9-9"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Консультация и поддержка</h3>
+        <p class="text-gray-600 mb-4">
+          Предоставляем оперативную помощь и консультации на всех этапах сертификации.
+        </p>
+        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
+          <li>Помощь в решении любых вопросов</li>
+          <li>Разъяснение требований</li>
+        </ul>
+      </div>
+
+      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+        <div class="w-16 h-16 bg-rosatom-light bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-rosatom-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Подготовка документации</h3>
+        <p class="text-gray-600 mb-4">
+          Анализ и подготовка технической документации для прохождения сертификации.
+        </p>
+        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
+          <li>Анализ технической документации СЗИ</li>
+          <li>Актуализация сведений</li>
+        </ul>
+      </div>
+
+      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+        <div class="w-16 h-16 bg-green-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Подача Заявки на сертификацию</h3>
+        <p class="text-gray-600 mb-4">
+          Обеспечиваем помощь и сопровождение при подаче официальной Заявки на сертификацию СЗИ.
+        </p>
+        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
+          <li>Подготовка пакета документов</li>
+          <li>Взаимодействие с органами сертификации</li>
+        </ul>
+      </div>
+
+      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+        <div class="w-16 h-16 bg-orange-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Формирование перечня компонентов (SBOM)</h3>
+        <p class="text-gray-600 mb-4">
+          Методическая и консультационная помощь при формировании SBOM-файлов.
+        </p>
+        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
+          <li>Идентификация заимствованных компонентов</li>
+          <li>Структурирование данных</li>
+        </ul>
+      </div>
+
+      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+        <div class="w-16 h-16 bg-purple-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9a2 2 0 00-2-2h-7a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v-6a2 2 0 012-2h2"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Проведение сертификационных испытаний</h3>
+        <p class="text-gray-600 mb-4">
+          Лабораторные испытания по выявлению уязвимостей и недекларированных возможностей.
+        </p>
+        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
+          <li>Тестирование на проникновение (пентест)</li>
+          <li>Анализ безопасности кода</li>
+        </ul>
+      </div>
+
+      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+        <div class="w-16 h-16 bg-cyan-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Оценка соответствия и заключение</h3>
+        <p class="text-gray-600 mb-4">
+          Оценка соответствия требованиям безопасности и выдача технического заключения.
+        </p>
+        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
+          <li>Комплексная оценка</li>
+          <li>Выдача технического заключения</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Сопровождение сертификационных материалов</h2>
+      <p class="text-xl text-gray-600">Мы обеспечиваем полное сопровождение на всех этапах взаимодействия с регулирующими органами.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="text-center">
+        <div class="w-20 h-20 bg-rosatom-blue rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2m-2 4h2m-2 4h2m10-10l2 2m0 0l-2 2m2-2H9"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-rosatom-dark">Взаимодействие с Органами</h3>
+        <p class="text-gray-600 text-lg">
+          Сопровождаем материалы сертификационных испытаний в Органе по сертификации.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 bg-rosatom-light rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-rosatom-dark">Сопровождение в ФОС</h3>
+        <p class="text-gray-600 text-lg">
+          Полное сопровождение в Федеральном органе по сертификации до получения конечного результата.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6 text-center">
+    <div class="bg-gradient-to-r from-rosatom-blue to-rosatom-light rounded-2xl p-12 text-white">
+      <h2 class="text-3xl font-bold mb-4">Надежная сертификация для вашего СЗИ</h2>
+      <p class="text-xl mb-8 opacity-90">
+        Доверьте сертификацию профессионалам — мы обеспечим соответствие всем требованиям и стандартам.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="text-4xl font-bold mb-2">99%</div>
+          <div class="text-lg opacity-90">Успешных сертификаций</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">ФСТЭК</div>
+          <div class="text-lg opacity-90">Аккредитованные специалисты</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">15+</div>
+          <div class="text-lg opacity-90">Лет опыта в безопасности</div>
+        </div>
+      </div>
+      <button class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+        Получить консультацию
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="gradient-rosatom text-white py-20 relative">
+  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <h2 class="text-4xl font-bold mb-4">Готовы сертифицировать СЗИ?</h2>
+    <p class="text-xl mb-8 max-w-2xl mx-auto">
+      Свяжитесь с нами для детального обсуждения и запуска процесса сертификации ваших средств защиты.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg">
+        Оставить заявку
+      </button>
+      <button class="border border-white text-white hover:bg-white hover:text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all">
+        +7 (495) 123-45-67
+      </button>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="../components.js"></script>
+<script src="../script.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/components.js"></script>
 </body>
 </html>

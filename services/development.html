@@ -1,10 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Разработка программного обеспечения - Цази</title>
+  <meta name="description" content="Создание современных IT-решений для автоматизации бизнеса, разработка десктоп-приложений, миграция систем и разработка ПО для обработки закрытой информации.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="../css/custom.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-white text-gray-900">
+<div id="header-placeholder"></div>
 
+<section class="bg-gray-50 py-4">
+  <div class="container mx-auto px-6">
+    <nav class="text-sm">
+      <ol class="flex items-center space-x-2">
+        <li><a href="../index.html" class="text-rosatom-blue hover:text-rosatom-light">Главная</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="../index.html#services" class="text-rosatom-blue hover:text-rosatom-light">Услуги</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-600">Разработка ПО</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="hero-bg py-20">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue bg-opacity-10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+          Инновации и эффективность
+        </div>
+        <h1 class="text-5xl font-bold mb-6 leading-tight text-rosatom-dark">
+          Разработка <span class="text-rosatom-blue">программного обеспечения</span>
+        </h1>
+        <p class="text-xl mb-8 text-gray-600">
+          Мы создаём современные ИТ-решения, которые помогают бизнесу работать быстрее, безопаснее и эффективнее.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 cyber-glow">
+            Обсудить проект
+          </button>
+          <button class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
+            Узнать подробнее
+          </button>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="floating-animation">
+          <svg class="w-full h-96" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="100" y="70" width="200" height="150" rx="10" fill="rgba(0, 61, 130, 0.1)" stroke="#003d82" stroke-width="3"/>
+            <rect x="110" y="80" width="180" height="10" rx="2" fill="#4a90e2"/>
+            <rect x="110" y="100" width="50" height="8" rx="2" fill="#10b981"/>
+            <rect x="110" y="115" width="80" height="8" rx="2" fill="#ffc107"/>
+            <rect x="110" y="130" width="120" height="8" rx="2" fill="#4a90e2"/>
+            <rect x="110" y="145" width="70" height="8" rx="2" fill="#10b981"/>
+
+            <circle cx="280" cy="220" r="30" fill="rgba(74, 144, 226, 0.1)" stroke="#4a90e2" stroke-width="2"/>
+            <path d="M280 190 L285 200 L295 200 L290 210 L300 215 L290 220 L295 230 L285 230 L280 240 L275 230 L265 230 L270 220 L260 215 L270 210 L265 200 L275 200 Z"
+                  fill="#4a90e2"/>
+            <circle cx="280" cy="220" r="10" fill="white"/>
+
+            <path d="M70 180 C50 180 50 160 70 160 C70 140 90 140 90 160 C110 160 110 180 90 180 Z"
+                  fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="2"/>
+            <path d="M85 180 C65 180 65 160 85 160 C85 140 105 140 105 160 C125 160 125 180 105 180 Z"
+                  fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Наши компетенции в разработке ПО</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Мы предлагаем полный спектр услуг по разработке, миграции и обеспечению кибербезопасности программного обеспечения.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+        <div class="w-16 h-16 bg-rosatom-blue bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h4a2 2 0 002-2v-3.375M17.25 5L21 8.75m0 0L14.25 12H12l-2.75-2.75M21 8.75L14.25 12"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Автоматизация бизнес-процессов</h3>
+        <p class="text-gray-600 mb-4">
+          Создаем программные комплексы для эффективной автоматизации внутренних бизнес-процессов вашей компании.
+        </p>
+      </div>
+
+      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+        <div class="w-16 h-16 bg-rosatom-light bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-rosatom-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h4a2 2 0 002-2v-3.375M17.25 5L21 8.75m0 0L14.25 12H12l-2.75-2.75M21 8.75L14.25 12"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Десктоп-приложения</h3>
+        <p class="text-gray-600 mb-4">
+          Разрабатываем надежные десктоп-приложения для операционных систем Astra Linux и Windows.
+        </p>
+      </div>
+
+      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+        <div class="w-16 h-16 bg-green-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Миграция систем</h3>
+        <p class="text-gray-600 mb-4">
+          Осуществляем бесшовную миграцию программного обеспечения с Windows на Astra Linux с сохранением функциональности.
+        </p>
+      </div>
+
+      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+        <div class="w-16 h-16 bg-purple-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v3h8z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">ПО для закрытой информации</h3>
+        <p class="text-gray-600 mb-4">
+          Разрабатываем специализированное ПО для обработки закрытой информации с учетом самых строгих требований безопасности.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6 text-center">
+    <div class="bg-gradient-to-r from-rosatom-blue to-rosatom-light rounded-2xl p-12 text-white">
+      <h2 class="text-3xl font-bold mb-4">Ваш надежный партнер в разработке ПО</h2>
+      <p class="text-xl mb-8 opacity-90">
+        Создаем инновационные решения, которые гарантируют безопасность и эффективность вашего бизнеса.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="text-4xl font-bold mb-2">100%</div>
+          <div class="text-lg opacity-90">Сохранность данных</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">ОС</div>
+          <div class="text-lg opacity-90">Поддержка различных платформ</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">5+</div>
+          <div class="text-lg opacity-90">Лет в разработке</div>
+        </div>
+      </div>
+      <button class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+        Получить консультацию
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="gradient-rosatom text-white py-20 relative">
+  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <h2 class="text-4xl font-bold mb-4">Начните свой IT-проект сегодня!</h2>
+    <p class="text-xl mb-8 max-w-2xl mx-auto">
+      Свяжитесь с нами, чтобы обсудить ваши потребности и получить индивидуальное решение.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg">
+        Оставить заявку
+      </button>
+      <button class="border border-white text-white hover:bg-white hover:text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all">
+        +7 (495) 123-45-67
+      </button>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="../components.js"></script>
+<script src="../script.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/components.js"></script>
 </body>
 </html>
