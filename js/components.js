@@ -5,7 +5,7 @@ const HEADER_HTML = `
     <nav class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <img src="../images/rosatom-logo.png" alt="Росатом" class="h-12 w-auto">
+                <img src="../img/logo_cazi.png" alt="Росатом" class="h-12 w-auto">
                 <div class="border-l-2 border-gray-300 pl-4">
                     <span class="text-xl font-bold text-rosatom-blue">CyberGuard</span>
                     <div class="text-sm text-gray-600">Информационная безопасность</div>
@@ -38,7 +38,7 @@ const FOOTER_HTML = `
             <div>
                 <div class="flex items-center space-x-3 mb-4">
                     <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1">
-                        <img src="../images/rosatom-logo.png" alt="Росатом" class="h-6 w-auto">
+                        <img src="../img/fevicon.ico" alt="Росатом" class="h-6 w-auto">
                     </div>
                     <div>
                         <span class="text-xl font-bold">CyberGuard</span>
@@ -127,7 +127,7 @@ const FOOTER_HTML = `
         </div>
 
         <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm">&copy; 2024 CyberGuard. Все права защищены.</p>
+            <p class="text-gray-400 text-sm">&copy; 2025 АО Центр «Атомзащитаинформ». Все права защищены.</p>
             <div class="flex space-x-6 mt-4 md:mt-0">
                 <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Политика конфиденциальности</a>
                 <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Условия использования</a>
