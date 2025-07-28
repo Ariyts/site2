@@ -28,7 +28,13 @@
 </section>
 
 
-<section class="py-24 bg-gray-50">
+<!-- 
+  Финальный вариант: Секция контактов с фоном "Инженерный чертеж"
+-->
+<section class="relative bg-slate-50 py-24 z-0">
+  <!-- Фоновая сетка -->
+  <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
+  
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Свяжитесь с нами напрямую</h2>
@@ -38,29 +44,36 @@
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-      <!-- Колонка с детальной информацией (слева) -->
-      <div class="space-y-8">
+      <!-- 
+        Колонка с детальной информацией (слева)
+        ВАЖНО: Добавляем полупрозрачный фон и размытие, чтобы текст хорошо читался поверх сетки.
+      -->
+      <div class="space-y-6 rounded-2xl p-6 md:p-8 bg-white/70 backdrop-blur-md border border-gray-200/50 shadow-lg">
         <!-- Блок "Связь" -->
         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 bg-rosatom-blue/10 rounded-lg flex-shrink-0 flex items-center justify-center"><svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
+          <div class="w-12 h-12 bg-white rounded-lg flex-shrink-0 flex items-center justify-center border"><svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
           <div>
             <h3 class="text-xl font-bold text-rosatom-dark mb-2">Общие контакты</h3>
             <p class="text-gray-700"><strong>Телефон:</strong> <a href="tel:+74999494633" class="text-rosatom-blue hover:underline">8 (499) 949-46-33</a></p>
             <p class="text-gray-700"><strong>Email:</strong> <a href="mailto:cazi@rosatom.ru" class="text-rosatom-blue hover:underline">cazi@rosatom.ru</a></p>
           </div>
         </div>
+        <!-- Разделитель -->
+        <div class="border-b border-gray-200"></div>
         <!-- Блок "Адреса" -->
         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 bg-rosatom-blue/10 rounded-lg flex-shrink-0 flex items-center justify-center"><svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>
+          <div class="w-12 h-12 bg-white rounded-lg flex-shrink-0 flex items-center justify-center border"><svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>
           <div>
             <h3 class="text-xl font-bold text-rosatom-dark mb-2">Адреса</h3>
             <p class="text-gray-700"><strong>Юридический:</strong> 119017, г. Москва, ул. Большая Ордынка, дом 24</p>
             <p class="text-gray-700"><strong>Фактический:</strong> 119180, г. Москва, ул. Старомонетный переулок, дом 26</p>
           </div>
         </div>
+        <!-- Разделитель -->
+        <div class="border-b border-gray-200"></div>
         <!-- Блок "Реквизиты и часы" -->
         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 bg-rosatom-blue/10 rounded-lg flex-shrink-0 flex items-center justify-center"><svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+          <div class="w-12 h-12 bg-white rounded-lg flex-shrink-0 flex items-center justify-center border"><svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
           <div>
             <h3 class="text-xl font-bold text-rosatom-dark mb-2">Реквизиты и часы работы</h3>
             <p class="text-gray-700"><strong>ИНН:</strong> 7706469319</p>
@@ -70,7 +83,7 @@
       </div>
       
       <!-- Колонка с ИНТЕРАКТИВНОЙ КАРТОЙ (справа) -->
-      <div class="h-96 lg:h-full w-full rounded-2xl shadow-xl overflow-hidden">
+      <div class="h-96 lg:h-full w-full rounded-2xl shadow-xl overflow-hidden border-2 border-white">
         <div id="map" style="width: 100%; height: 100%;"></div>
       </div>
 
@@ -79,7 +92,13 @@
 </section>
 
 
-<section class="py-24 bg-gray-50" x-data="{ open: 1 }">
+<!-- 
+  Секция FAQ с фоном "Инженерный чертеж"
+-->
+<section class="relative bg-slate-50 py-24 z-0" x-data="{ open: 1 }">
+  <!-- Фоновая сетка -->
+  <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
+  
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Часто задаваемые вопросы</h2>
@@ -89,33 +108,36 @@
     </div>
 
     <div class="max-w-3xl mx-auto space-y-4">
+      <!-- 
+        Каждая карточка вопроса теперь имеет полупрозрачный фон и эффект размытия.
+      -->
       <!-- Вопрос 1 -->
-      <div class="bg-white rounded-lg shadow-md">
+      <div class="bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-gray-200/50">
         <button @click="open = (open === 1 ? 0 : 1)" class="w-full flex justify-between items-center text-left p-6">
           <span class="text-lg font-semibold text-rosatom-dark">Как быстро вы отвечаете на заявку?</span>
           <svg class="w-6 h-6 text-rosatom-blue transform transition-transform" :class="{'rotate-180': open === 1}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </button>
-        <div x-show="open === 1" x-collapse class="p-6 pt-0 text-gray-600">
+        <div x-show="open === 1" x-collapse class="px-6 pb-6 pt-0 text-gray-600">
           <p>Мы стараемся обрабатывать все входящие заявки в течение одного рабочего дня. Наш менеджер свяжется с вами для уточнения деталей в самое ближайшее время.</p>
         </div>
       </div>
       <!-- Вопрос 2 -->
-      <div class="bg-white rounded-lg shadow-md">
+      <div class="bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-gray-200/50">
         <button @click="open = (open === 2 ? 0 : 2)" class="w-full flex justify-between items-center text-left p-6">
           <span class="text-lg font-semibold text-rosatom-dark">Можно ли организовать встречу в вашем офисе?</span>
           <svg class="w-6 h-6 text-rosatom-blue transform transition-transform" :class="{'rotate-180': open === 2}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </button>
-        <div x-show="open === 2" x-collapse class="p-6 pt-0 text-gray-600">
+        <div x-show="open === 2" x-collapse class="px-6 pb-6 pt-0 text-gray-600">
           <p>Да, конечно. Мы всегда рады встретиться с нашими клиентами лично. Пожалуйста, согласуйте время вашего визита с менеджером по телефону или электронной почте.</p>
         </div>
       </div>
       <!-- Вопрос 3 -->
-      <div class="bg-white rounded-lg shadow-md">
+      <div class="bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-gray-200/50">
         <button @click="open = (open === 3 ? 0 : 3)" class="w-full flex justify-between items-center text-left p-6">
           <span class="text-lg font-semibold text-rosatom-dark">Работаете ли вы с государственными заказчиками?</span>
           <svg class="w-6 h-6 text-rosatom-blue transform transition-transform" :class="{'rotate-180': open === 3}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </button>
-        <div x-show="open === 3" x-collapse class="p-6 pt-0 text-gray-600">
+        <div x-show="open === 3" x-collapse class="px-6 pb-6 pt-0 text-gray-600">
           <p>Да, работа с государственными структурами и предприятиями ОПК является одним из наших ключевых направлений. Мы обладаем всеми необходимыми лицензиями и опытом для реализации проектов любого уровня сложности.</p>
         </div>
       </div>
