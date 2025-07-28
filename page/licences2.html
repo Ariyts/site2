@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лицензии и Аттестаты | Подтвержденные Полномочия ЦАЗИ</title>
+  <meta name="description" content="Полный перечень действующих лицензий и аттестатов ФСБ, ФСТЭК и Министерства обороны РФ. Доверие, подтвержденное государством.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="../css/custom.css" rel="stylesheet">
+  <style>
+    .license-card {
+      background-image: url('data:image/svg+xml;utf8,<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M 50 10 H 150 V 20 H 50 V 10 M 50 180 H 150 V 190 H 50 V 180 M 10 50 H 20 V 150 H 10 V 50 M 180 50 H 190 V 150 H 180 V 50" fill="%23003d82" opacity="0.05" /></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 90%;
+    }
+    .modal {
+      transition: opacity 0.25s ease;
+    }
+    body.modal-active {
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<div id="header-placeholder"></div>
+
+<section class="bg-gray-50 py-4">
+  <div class="container mx-auto px-6">
+    <nav class="text-sm">
+      <ol class="flex items-center space-x-2">
+        <li><a href="../index.html" class="text-rosatom-blue hover:text-rosatom-light">Главная</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-600">Наши лицензии</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="hero-bg py-20">
+  <div class="container mx-auto px-6 text-center">
+    <h1 class="text-5xl font-bold mb-6 leading-tight text-rosatom-dark">
+      Доверие, подтвержденное <span class="text-rosatom-blue">государством</span>
+    </h1>
+    <p class="text-xl max-w-3xl mx-auto text-gray-600">
+      Мы обладаем полным набором лицензий и аттестатов ФСБ, ФСТЭК и Министерства обороны для реализации проектов любого уровня сложности и секретности.
+    </p>
+  </div>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Наши полномочия по ведомствам</h2>
+      <p class="text-xl text-gray-600">Ключевые документы, которые дают нам право оказывать услуги.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="license-card bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col">
+        <div class="flex-grow">
+          <p class="font-bold text-rosatom-blue mb-2">ФСБ России</p>
+          <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Работа с государственной тайной</h3>
+          <p class="text-gray-600">Позволяет нам проводить работы, связанные с использованием сведений, составляющих государственную тайну.</p>
+        </div>
+        <button onclick="openModal('modal-fsb1')" class="mt-6 w-full bg-rosatom-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-rosatom-dark transition-colors">Подробнее</button>
+      </div>
+
+      <div class="license-card bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col">
+        <div class="flex-grow">
+          <p class="font-bold text-rosatom-blue mb-2">ФСБ России</p>
+          <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Работа с криптографическими средствами</h3>
+          <p class="text-gray-600">Дает право на разработку, производство, распространение и обслуживание шифровальных (криптографических) средств и систем (СКЗИ).</p>
+        </div>
+        <button onclick="openModal('modal-fsb2')" class="mt-6 w-full bg-rosatom-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-rosatom-dark transition-colors">Подробнее</button>
+      </div>
+      
+      <div class="license-card bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col">
+        <div class="flex-grow">
+          <p class="font-bold text-rosatom-light mb-2">ФСТЭК России</p>
+          <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Техническая защита информации (ТЗКИ)</h3>
+          <p class="text-gray-600">Основание для проведения аттестации объектов, контроля защищенности и оказания услуг по технической защите конфиденциальной информации.</p>
+        </div>
+        <button onclick="openModal('modal-fstek1')" class="mt-6 w-full bg-rosatom-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-rosatom-dark transition-colors">Подробнее</button>
+      </div>
+      
+      <div class="license-card bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col">
+        <div class="flex-grow">
+          <p class="font-bold text-rosatom-light mb-2">ФСТЭК России</p>
+          <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Разработка и производство СЗКИ</h3>
+          <p class="text-gray-600">Дает право на разработку и производство средств защиты конфиденциальной информации, что является ключевым для импортозамещения.</p>
+        </div>
+        <button onclick="openModal('modal-fstek2')" class="mt-6 w-full bg-rosatom-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-rosatom-dark transition-colors">Подробнее</button>
+      </div>
+      
+      <div class="license-card bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col">
+        <div class="flex-grow">
+          <p class="font-bold text-green-600 mb-2">Министерство обороны РФ</p>
+          <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Создание средств защиты информации</h3>
+          <p class="text-gray-600">Позволяет проводить работы по созданию средств защиты информации, включая сертификацию и специальные экспертизы для нужд МО РФ.</p>
+        </div>
+        <button onclick="openModal('modal-mo')" class="mt-6 w-full bg-rosatom-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-rosatom-dark transition-colors">Подробнее</button>
+      </div>
+      
+      <div class="license-card bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 flex flex-col">
+        <div class="flex-grow">
+          <p class="font-bold text-purple-600 mb-2">Аттестаты аккредитации</p>
+          <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Статус Органа по аттестации и ИЛ</h3>
+          <p class="text-gray-600">Подтверждают наш статус как официального органа по аттестации и испытательной лаборатории, уполномоченных выдавать аттестаты соответствия.</p>
+        </div>
+        <button onclick="openModal('modal-accreditation')" class="mt-6 w-full bg-rosatom-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-rosatom-dark transition-colors">Подробнее</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Что это дает вашему бизнесу?</h2>
+      <p class="text-xl text-gray-600">Наличие лицензий — это не формальность, а ваша прямая выгода.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <svg class="w-12 h-12 text-rosatom-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        <h3 class="text-2xl font-bold text-rosatom-dark mb-2">Гарантия легитимности</h3>
+        <p class="text-gray-600">Все наши работы по аттестации, аудиту и защите КИИ полностью легитимны и соответствуют законам РФ. Это исключает претензии со стороны регуляторов.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <svg class="w-12 h-12 text-rosatom-light mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v3h8z"></path></svg>
+        <h3 class="text-2xl font-bold text-rosatom-dark mb-2">Допуск к сложным проектам</h3>
+        <p class="text-gray-600">Мы можем быть вашим единым подрядчиком для всех задач, включая работу с гостайной, защиту КИИ и проекты для оборонной промышленности.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <svg class="w-12 h-12 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 4v16h16V4H4zm8 12a4 4 0 100-8 4 4 0 000 8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 class="text-2xl font-bold text-rosatom-dark mb-2">Снижение ваших рисков</h3>
+        <p class="text-gray-600">Сотрудничество с лицензированным подрядчиком с подтвержденной репутацией — это залог защиты ваших юридических и репутационных интересов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gradient-rosatom text-white py-20 relative">
+  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <h2 class="text-4xl font-bold mb-4">Начните проект с партнером, которому доверяют</h2>
+    <p class="text-xl mb-8 max-w-2xl mx-auto">
+      Наша компетенция подтверждена на высшем уровне. Свяжитесь с нами, чтобы обсудить ваши задачи и запросить копии документов.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg">
+        Получить консультацию
+      </button>
+      <a href="contact.html" class="border border-white text-white hover:bg-white hover:text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all">
+        Запросить документы
+      </a>
+    </div>
+  </div>
+</section>
+
+<div id="modal-fsb1" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+  <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" onclick="closeModal(this)"></div>
+  <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-xl shadow-lg z-50 overflow-y-auto">
+    <div class="modal-content py-4 text-left px-6">
+      <div class="flex justify-between items-center pb-3">
+        <p class="text-2xl font-bold text-rosatom-dark">Лицензия ФСБ России</p>
+        <div class="modal-close cursor-pointer z-50" onclick="closeModal(this)">
+          <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path></svg>
+        </div>
+      </div>
+      <div class="prose">
+          <h4 class="font-semibold">Проведение работ, связанных с использованием сведений, составляющих государственную тайну.</h4>
+          <p>Эта лицензия подтверждает наше право на осуществление деятельности, требующей доступа к секретной информации, и гарантирует соблюдение всех необходимых мер по ее защите.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-fsb2" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" onclick="closeModal(this)"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-xl shadow-lg z-50 overflow-y-auto">
+        <div class="modal-content py-4 text-left px-6">
+            <div class="flex justify-between items-center pb-3">
+                <p class="text-2xl font-bold text-rosatom-dark">Лицензия ФСБ России</p>
+                <div class="modal-close cursor-pointer z-50" onclick="closeModal(this)"><svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path></svg></div>
+            </div>
+            <div class="prose">
+                <h4 class="font-semibold">Деятельность по разработке, производству, распространению и техническому обслуживанию шифровальных (криптографических) средств и систем (СКЗИ).</h4>
+                <p>Позволяет нам не только поставлять и настраивать сертифицированные СКЗИ, но и разрабатывать собственные криптографические решения для защиты информации.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-fstek1" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" onclick="closeModal(this)"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-xl shadow-lg z-50 overflow-y-auto">
+        <div class="modal-content py-4 text-left px-6">
+            <div class="flex justify-between items-center pb-3">
+                <p class="text-2xl font-bold text-rosatom-dark">Лицензия ФСТЭК России</p>
+                <div class="modal-close cursor-pointer z-50" onclick="closeModal(this)"><svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path></svg></div>
+            </div>
+            <div class="prose">
+                <h4 class="font-semibold">Деятельность по технической защите конфиденциальной информации (ТЗКИ).</h4>
+                <p>Эта лицензия является основой для проведения аттестации объектов информатизации, инструментального контроля защищенности, проектирования и внедрения систем защиты информации.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-fstek2" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" onclick="closeModal(this)"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-xl shadow-lg z-50 overflow-y-auto">
+        <div class="modal-content py-4 text-left px-6">
+            <div class="flex justify-between items-center pb-3">
+                <p class="text-2xl font-bold text-rosatom-dark">Лицензия ФСТЭК России</p>
+                <div class="modal-close cursor-pointer z-50" onclick="closeModal(this)"><svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path></svg></div>
+            </div>
+            <div class="prose">
+                <h4 class="font-semibold">Деятельность по разработке и производству средств защиты конфиденциальной информации (СЗКИ).</h4>
+                <p>Ключевая лицензия для проектов по импортозамещению, позволяющая нам создавать отечественные программные и аппаратные средства защиты.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-mo" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" onclick="closeModal(this)"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-xl shadow-lg z-50 overflow-y-auto">
+        <div class="modal-content py-4 text-left px-6">
+            <div class="flex justify-between items-center pb-3">
+                <p class="text-2xl font-bold text-rosatom-dark">Лицензия Министерства обороны РФ</p>
+                <div class="modal-close cursor-pointer z-50" onclick="closeModal(this)"><svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path></svg></div>
+            </div>
+            <div class="prose">
+                <h4 class="font-semibold">Проведение работ, связанных с созданием средств защиты информации.</h4>
+                <p>Данная лицензия уполномочивает нас на проведение сертификации средств защиты и специальных экспертиз для нужд оборонного комплекса страны.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-accreditation" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" onclick="closeModal(this)"></div>
+    <div class="modal-container bg-white w-11/12 md:max-w-2xl mx-auto rounded-xl shadow-lg z-50 overflow-y-auto">
+        <div class="modal-content py-4 text-left px-6">
+            <div class="flex justify-between items-center pb-3">
+                <p class="text-2xl font-bold text-rosatom-dark">Аттестаты аккредитации</p>
+                <div class="modal-close cursor-pointer z-50" onclick="closeModal(this)"><svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path></svg></div>
+            </div>
+            <div class="prose">
+                <ul>
+                    <li>Аттестат аккредитации органа по аттестации ФСТЭК России.</li>
+                    <li>Аттестат аккредитации органа по сертификации ФСТЭК России.</li>
+                    <li>Аттестат аккредитации испытательной лаборатории ФСТЭК России.</li>
+                    <li>Аттестат аккредитации испытательной лаборатории Министерства обороны Российской Федерации.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  function openModal(modalID) {
+    document.getElementById(modalID).classList.remove('opacity-0', 'pointer-events-none');
+    document.body.classList.add('modal-active');
+  }
+
+  function closeModal(element) {
+    let modal = element.closest('.modal');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    document.body.classList.remove('modal-active');
+  }
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (!modal.classList.contains('opacity-0')) {
+          closeModal(modal);
+        }
+      });
+    }
+  });
+</script>
+
+<script src="../js/app.js"></script>
+<script src="../js/components.js"></script>
+</body>
+</html>

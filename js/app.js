@@ -446,3 +446,25 @@ CyberGuard.measurePerformance();
 
 // Track page view
 CyberGuard.trackEvent('Page', 'View', 'Homepage');
+
+
+/**
+ * Функция для динамического добавления favicon в <head> документа.
+ * Это гарантирует, что иконка будет на всех страницах,
+ * где подключен этот скрипт.
+ */
+function addFavicon() {
+  // Создаем новый элемент <link>
+  const faviconLink = document.createElement('link');
+
+  // Устанавливаем его атрибуты
+  faviconLink.rel = 'icon';
+  faviconLink.type = 'image/png'; // Укажите правильный тип вашего файла
+  faviconLink.href = '../img/fevicon.ico'; // Укажите путь к вашей иконке
+
+  // Добавляем созданный тег в <head> текущей страницы
+  document.head.appendChild(faviconLink);
+}
+
+// Вызываем функцию после загрузки основной структуры страницы
+document.addEventListener('DOMContentLoaded', addFavicon);
