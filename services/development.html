@@ -27,14 +27,15 @@
   </div>
 </section>
 
-<section class="hero-bg py-20">
+
+
+<section class="bg-slate-50 py-24">
   <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Текстовый блок (ОСТАЛСЯ БЕЗ ИЗМЕНЕНИЙ) -->
       <div>
-        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue bg-opacity-10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
-          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-          </svg>
+        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue/10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
           Инновации и эффективность
         </div>
         <h1 class="text-5xl font-bold mb-6 leading-tight text-rosatom-dark">
@@ -44,39 +45,112 @@
           Мы создаём современные ИТ-решения, которые помогают бизнесу работать быстрее, безопаснее и эффективнее.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <button class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 cyber-glow">
+          <a href="#form" class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
             Обсудить проект
-          </button>
-          <button class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
+          </a>
+          <a href="#details" class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
             Узнать подробнее
-          </button>
+          </a>
         </div>
       </div>
-      <div class="relative">
-        <div class="floating-animation">
-          <svg class="w-full h-96" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="100" y="70" width="200" height="150" rx="10" fill="rgba(0, 61, 130, 0.1)" stroke="#003d82" stroke-width="3"/>
-            <rect x="110" y="80" width="180" height="10" rx="2" fill="#4a90e2"/>
-            <rect x="110" y="100" width="50" height="8" rx="2" fill="#10b981"/>
-            <rect x="110" y="115" width="80" height="8" rx="2" fill="#ffc107"/>
-            <rect x="110" y="130" width="120" height="8" rx="2" fill="#4a90e2"/>
-            <rect x="110" y="145" width="70" height="8" rx="2" fill="#10b981"/>
+      
+      <!-- 
+        ИСПРАВЛЕННАЯ ВИЗУАЛИЗАЦИЯ (встроена в правую колонку)
+      -->
+      <div class="hidden lg:flex justify-center items-center h-96">
+        <div class="w-full max-w-lg h-full rounded-2xl bg-white shadow-2xl border font-mono text-sm overflow-hidden flex flex-col">
+          <!-- Заголовок окна IDE -->
+          <div class="flex-shrink-0 flex items-center gap-1.5 p-4 border-b z-10 bg-white relative">
+            <div class="w-3 h-3 rounded-full bg-gray-300"></div>
+            <div class="w-3 h-3 rounded-full bg-gray-300"></div>
+            <div class="w-3 h-3 rounded-full bg-gray-300"></div>
+            <!-- Внутренняя тень для эффекта глубины -->
+            <div class="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-gray-100 to-transparent -z-10"></div>
+          </div>
+          
+          <!-- Область для кода с маской -->
+          <div class="relative flex-grow overflow-hidden">
+            <!-- Анимированный контейнер -->
+            <div class="absolute inset-x-0 top-0 p-4 animate-waterfall">
+              <!-- Блок кода (дублируется для бесшовной анимации) -->
+              <pre class="code-block"><code class="language-csharp">
+<span class="text-gray-400">// --- Data Processing Module ---</span>
+<span class="text-blue-600">namespace</span> <span class="text-gray-800">SecureAnalytics</span>
+{
+    <span class="text-blue-600">public</span> <span class="text-blue-600">class</span> <span class="text-teal-600">DataProcessor</span>
+    {
+        <span class="text-blue-600">public</span> <span class="text-teal-600">List</span>&lt;<span class="text-blue-600">double</span>&gt; Data { <span class="text-blue-600">get</span>; <span class="text-blue-600">private</span> <span class="text-blue-600">set</span>; }
 
-            <circle cx="280" cy="220" r="30" fill="rgba(74, 144, 226, 0.1)" stroke="#4a90e2" stroke-width="2"/>
-            <path d="M280 190 L285 200 L295 200 L290 210 L300 215 L290 220 L295 230 L285 230 L280 240 L275 230 L265 230 L270 220 L260 215 L270 210 L265 200 L275 200 Z"
-                  fill="#4a90e2"/>
-            <circle cx="280" cy="220" r="10" fill="white"/>
+        <span class="text-blue-600">public</span> <span class="text-teal-600">DataProcessor</span>(<span class="text-teal-600">IEnumerable</span>&lt;<span class="text-blue-600">double</span>&gt; initialData)
+        {
+            Data = <span class="text-purple-600">new</span> <span class="text-teal-600">List</span>&lt;<span class="text-blue-600">double</span>&gt;(initialData);
+            <span class="text-gray-800">Console</span>.<span class="text-yellow-600">WriteLine</span>(<span class="text-green-600">"Processor Initialized."</span>);
+        }
 
-            <path d="M70 180 C50 180 50 160 70 160 C70 140 90 140 90 160 C110 160 110 180 90 180 Z"
-                  fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="2"/>
-            <path d="M85 180 C65 180 65 160 85 160 C85 140 105 140 105 160 C125 160 125 180 105 180 Z"
-                  fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="2"/>
-          </svg>
+        <span class="text-gray-400">/// &lt;summary&gt;</span>
+        <span class="text-gray-400">/// Calculates the average value of the dataset.</span>
+        <span class="text-gray-400">/// &lt;/summary&gt;</span>
+        <span class="text-blue-600">public</span> <span class="text-blue-600">double</span> <span class="text-yellow-600">CalculateAverage</span>()
+        {
+            <span class="text-blue-600">if</span> (Data.Count == <span class="text-orange-600">0</span>)
+                <span class="text-purple-600">return</span> <span class="text-orange-600">0</span>;
+
+            <span class="text-blue-600">double</span> sum = <span class="text-orange-600">0</span>;
+            <span class="text-blue-600">foreach</span> (<span class="text-blue-600">var</span> value <span class="text-blue-600">in</span> Data)
+            {
+                sum += value;
+            }
+            <span class="text-purple-600">return</span> sum / Data.Count;
+        }
+    }
+}
+              </code></pre>
+              <!-- Точная копия блока кода для бесшовности -->
+              <pre class="code-block"><code class="language-csharp">
+<span class="text-gray-400">// --- Data Processing Module ---</span>
+<span class="text-blue-600">namespace</span> <span class="text-gray-800">SecureAnalytics</span>
+{
+    <span class="text-blue-600">public</span> <span class="text-blue-600">class</span> <span class="text-teal-600">DataProcessor</span>
+    {
+        <span class="text-blue-600">public</span> <span class="text-teal-600">List</span>&lt;<span class="text-blue-600">double</span>&gt; Data { <span class="text-blue-600">get</span>; <span class="text-blue-600">private</span> <span class="text-blue-600">set</span>; }
+
+        <span class="text-blue-600">public</span> <span class="text-teal-600">DataProcessor</span>(<span class="text-teal-600">IEnumerable</span>&lt;<span class="text-blue-600">double</span>&gt; initialData)
+        {
+            Data = <span class="text-purple-600">new</span> <span class="text-teal-600">List</span>&lt;<span class="text-blue-600">double</span>&gt;(initialData);
+            <span class="text-gray-800">Console</span>.<span class="text-yellow-600">WriteLine</span>(<span class="text-green-600">"Processor Initialized."</span>);
+        }
+
+        <span class="text-gray-400">/// &lt;summary&gt;</span>
+        <span class="text-gray-400">/// Calculates the average value of the dataset.</span>
+        <span class="text-gray-400">/// &lt;/summary&gt;</span>
+        <span class="text-blue-600">public</span> <span class="text-blue-600">double</span> <span class="text-yellow-600">CalculateAverage</span>()
+        {
+            <span class="text-blue-600">if</span> (Data.Count == <span class="text-orange-600">0</span>)
+                <span class="text-purple-600">return</span> <span class="text-orange-600">0</span>;
+
+            <span class="text-blue-600">double</span> sum = <span class="text-orange-600">0</span>;
+            <span class="text-blue-600">foreach</span> (<span class="text-blue-600">var</span> value <span class="text-blue-600">in</span> Data)
+            {
+                sum += value;
+            }
+            <span class="text-purple-600">return</span> sum / Data.Count;
+        }
+    }
+}
+              </code></pre>
+            </div>
+            <!-- Градиентная маска для плавного исчезновения -->
+            <div class="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-white to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white to-transparent"></div>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
+
 
 <section class="py-20 bg-white">
   <div class="container mx-auto px-6">

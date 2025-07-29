@@ -27,54 +27,56 @@
   </div>
 </section>
 
-<section class="hero-bg py-20">
+<!-- 
+  Финальный вариант: «Активация Периметра»
+  Наглядно показывает, как щит выдвигается для защиты помещения.
+-->
+<section class="bg-slate-50 py-24 overflow-hidden">
   <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Текстовый блок -->
       <div>
-        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue bg-opacity-10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
-          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-          </svg>
-          Комплексная защита
+        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue/10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          Активная оборона
         </div>
         <h1 class="text-5xl font-bold mb-6 leading-tight text-rosatom-dark">
           Комплексная <span class="text-rosatom-blue">техническая защита</span> информации
         </h1>
         <p class="text-xl mb-8 text-gray-600">
-          Проводим аттестационные испытания объектов информатизации в полном соответствии с требованиями регуляторов и руководящих документов.
+          Выстраиваем надежный барьер для вашей IT-инфраструктуры, защищая от внешних угроз и обеспечивая соответствие требованиям регуляторов.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <button class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 cyber-glow">
+          <a href="#form" class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
             Получить консультацию
-          </button>
-          <button class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
+          </a>
+          <a href="#details" class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
             Узнать подробнее
-          </button>
+          </a>
         </div>
       </div>
-      <div class="relative">
-        <div class="floating-animation">
-          <svg class="w-full h-96" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M200 50 L100 100 L100 220 C100 230 110 240 120 240 H280 C290 240 300 230 300 220 L300 100 L200 50 Z"
-                  fill="rgba(0, 61, 130, 0.1)" stroke="#003d82" stroke-width="3"/>
+      
+      <!-- Визуализация "Щит защищает помещение" -->
+      <div class="hidden lg:flex justify-center items-center h-96">
+        <div class="group relative w-full max-w-md h-80">
+          
+          <!-- Угрозы (красные стрелки) -->
+          <svg class="absolute w-12 h-12 top-1/4 left-0 text-red-500 transition-all duration-500 ease-out group-hover:left-1/4 group-hover:opacity-0 group-hover:scale-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+          <svg class="absolute w-12 h-12 top-2/3 left-4 text-red-500 transition-all duration-500 ease-out [transition-delay:100ms] group-hover:left-1/4 group-hover:opacity-0 group-hover:scale-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+          
+          <!-- Помещение (цель) -->
+          <div class="absolute top-1/2 right-0 -translate-y-1/2 z-10">
+             <div class="w-48 h-48 rounded-2xl bg-slate-200 group-hover:bg-white border-2 border-transparent group-hover:border-rosatom-blue transition-all duration-500 p-4 flex flex-col justify-end">
+                <p class="font-bold text-gray-400 group-hover:text-rosatom-dark">Ваша инфраструктура</p>
+                <div class="w-full h-2 bg-gray-300 group-hover:bg-rosatom-blue/50 rounded-full mt-2"></div>
+             </div>
+          </div>
 
-            <rect x="180" y="140" width="40" height="30" rx="5" fill="rgba(74, 144, 226, 0.1)" stroke="#4a90e2" stroke-width="2"/>
-            <path d="M190 140 V120 C190 110 200 110 200 110 C210 110 210 120 210 120 V140"
-                  stroke="#4a90e2" stroke-width="2" fill="none"/>
-
-            <rect x="70" y="200" width="40" height="70" rx="5" fill="rgba(0, 61, 130, 0.05)" stroke="#003d82" stroke-width="1.5"/>
-            <rect x="75" y="205" width="30" height="5" rx="1" fill="#4a90e2"/>
-            <rect x="75" y="215" width="30" height="5" rx="1" fill="#4a90e2"/>
-            <rect x="75" y="225" width="30" height="5" rx="1" fill="#4a90e2"/>
-
-            <rect x="290" y="200" width="40" height="70" rx="5" fill="rgba(0, 61, 130, 0.05)" stroke="#003d82" stroke-width="1.5"/>
-            <rect x="295" y="205" width="30" height="5" rx="1" fill="#4a90e2"/>
-            <rect x="295" y="215" width="30" height="5" rx="1" fill="#4a90e2"/>
-            <rect x="295" y="225" width="30" height="5" rx="1" fill="#4a90e2"/>
-
-            <path d="M120 180 Q150 170 180 180 Q210 190 240 180" stroke="#10b981" stroke-width="2" opacity="0.7" fill="none"/>
-            <path d="M120 190 Q150 200 180 190 Q210 180 240 190" stroke="#10b981" stroke-width="2" opacity="0.7" fill="none"/>
-          </svg>
+          <!-- Щит (защитник) -->
+          <div class="absolute top-1/2 left-0 -translate-y-1/2 z-20 text-rosatom-blue opacity-50 scale-75 transition-all duration-500 ease-out group-hover:left-1/2 group-hover:-translate-x-1/2 group-hover:opacity-100 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(0,169,224,0.7)]">
+            <svg class="w-40 h-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          
         </div>
       </div>
     </div>

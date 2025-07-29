@@ -27,60 +27,111 @@
   </div>
 </section>
 
-<section class="hero-bg py-20">
+<!-- 
+  Вариант 1: «Официальный документ»
+  Выглядит солидно, надежно и вызывает доверие.
+-->
+<section class="bg-slate-50 py-24">
   <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Текстовый блок -->
       <div>
-        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue bg-opacity-10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
-          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-          </svg>
-          Соответствие требованиям
+        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue/10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          Соответствие требованиям регуляторов
         </div>
         <h1 class="text-5xl font-bold mb-6 leading-tight text-rosatom-dark">
           Аттестация объектов
           <span class="text-rosatom-blue">информатизации</span>
         </h1>
         <p class="text-xl mb-8 text-gray-600">
-          Ваш ключ к обеспечению безопасности данных и выполнению нормативных требований.
+          Официальное подтверждение соответствия вашей информационной системы требованиям безопасности данных и нормативным актам.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <button class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 cyber-glow">
+          <a href="#form" class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
             Получить консультацию
-          </button>
-          <button class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
+          </a>
+          <a href="#details" class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
             Узнать подробнее
-          </button>
+          </a>
         </div>
       </div>
-      <div class="relative">
-        <div class="floating-animation">
-          <svg class="w-full h-96" viewBox="0 0 400 300" fill="none">
-            <path d="M150 50 H250 V150 H150 Z" fill="rgba(0, 61, 130, 0.1)" stroke="#003d82" stroke-width="3"/>
-            <rect x="165" y="65" width="70" height="8" rx="2" fill="#4a90e2"/>
-            <rect x="165" y="80" width="40" height="8" rx="2" fill="#4a90e2"/>
-            <rect x="165" y="95" width="55" height="8" rx="2" fill="#4a90e2"/>
+      
+      <!-- Визуализация аттестата -->
+      <div class="hidden lg:flex justify-center">
+        <div class="group relative w-80 h-[22rem] bg-white rounded-lg shadow-xl border p-6 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-center text-rosatom-dark text-lg uppercase tracking-widest">Аттестат</h3>
+            <p class="text-center text-sm text-gray-400">соответствия требованиям безопасности</p>
+            <div class="mt-8 space-y-3">
+              <div class="w-full h-2 bg-gray-200 rounded-full"></div>
+              <div class="w-4/5 h-2 bg-gray-200 rounded-full"></div>
+              <div class="w-full h-2 bg-gray-200 rounded-full"></div>
+              <div class="w-1/2 h-2 bg-gray-200 rounded-full"></div>
+            </div>
+          </div>
+          <div class="flex justify-between items-end">
+            <div class="text-xs text-gray-400">
+              <p>№ 12345-67890</p>
+              <p>Дата выдачи: 20.05.2024</p>
+            </div>
+            <!-- Интерактивная печать -->
+            <div class="relative w-24 h-24">
+              <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-rosatom-blue/10 rounded-full transition-transform duration-500 group-hover:scale-110"></div>
+              <div class="absolute -bottom-4 -right-4 w-24 h-24 flex items-center justify-center">
+                <svg class="w-16 h-16 text-rosatom-blue transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <path d="M220 110 L200 130 L180 110" stroke="#10b981" stroke-width="4" fill="none"/>
-            <circle cx="200" cy="120" r="20" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="2"/>
-
-            <path d="M100 180 L80 190 L80 230 Q80 245 100 255 Q120 245 120 230 L120 190 Z"
-                  fill="rgba(0, 61, 130, 0.05)" stroke="#003d82" stroke-width="2"/>
-            <rect x="92" y="200" width="16" height="20" rx="3"
-                  fill="rgba(74, 144, 226, 0.1)" stroke="#4a90e2" stroke-width="1.5"/>
-            <path d="M94 200 Q94 195 100 195 Q106 195 106 200"
-                  stroke="#4a90e2" stroke-width="2" fill="none"/>
-
-            <path d="M300 180 L280 190 L280 230 Q280 245 300 255 Q320 245 320 230 L320 190 Z"
-                  fill="rgba(0, 61, 130, 0.05)" stroke="#003d82" stroke-width="2"/>
-            <rect x="292" y="200" width="16" height="20" rx="3"
-                  fill="rgba(74, 144, 226, 0.1)" stroke="#4a90e2" stroke-width="1.5"/>
-            <path d="M294 200 Q294 195 300 195 Q306 195 306 200"
-                  stroke="#4a90e2" stroke-width="2" fill="none"/>
-
-            <line x1="100" y1="170" x2="200" y2="150" stroke="#4a90e2" stroke-width="1" opacity="0.5"/>
-            <line x1="200" y1="150" x2="300" y2="170" stroke="#4a90e2" stroke-width="1" opacity="0.5"/>
-          </svg>
+<!-- 
+  Вариант 6: «Структурный подход»
+  Демонстрирует порядок, систему и инженерную точность.
+-->
+<section class="bg-slate-50 py-24">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Текстовый блок -->
+      <div>
+        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue/10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+          Системный подход
+        </div>
+        <h1 class="text-5xl font-bold mb-6 leading-tight text-rosatom-dark">
+          Аттестация объектов
+          <span class="text-rosatom-blue">информатизации</span>
+        </h1>
+        <p class="text-xl mb-8 text-gray-600">
+          Приводим структуру ваших информационных систем в полное соответствие с требованиями регуляторов и стандартами безопасности.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#form" class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
+            Получить консультацию
+          </a>
+          <a href="#details" class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
+            Узнать подробнее
+          </a>
+        </div>
+      </div>
+      
+      <!-- Изометрическая графика -->
+      <div class="hidden lg:flex justify-center items-center h-96 [perspective:1000px]">
+        <div class="relative w-80 h-80 transform [transform-style:preserve-3d] [transform:rotateX(60deg)_rotateZ(-45deg)]">
+          <!-- Сетка-основание -->
+          <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,51,160,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,51,160,0.2)_1px,transparent_1px)] bg-[size:2rem_2rem]"></div>
+          <!-- Блоки системы -->
+          <div class="absolute w-24 h-24 top-8 left-8 bg-white/80 backdrop-blur-sm rounded-lg shadow-xl border flex items-center justify-center p-2 text-center text-xs text-gray-500">Серверное оборудование</div>
+          <div class="absolute w-24 h-24 top-20 left-48 bg-white/80 backdrop-blur-sm rounded-lg shadow-xl border flex items-center justify-center p-2 text-center text-xs text-gray-500">Рабочие станции</div>
+          <!-- Аттестованный блок -->
+          <div class="absolute w-24 h-24 top-48 left-20 bg-rosatom-blue/80 backdrop-blur-sm rounded-lg shadow-2xl shadow-rosatom-blue/50 border-2 border-white flex flex-col items-center justify-center text-white">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <p class="text-xs mt-1 font-bold">Аттестовано</p>
+          </div>
         </div>
       </div>
     </div>

@@ -69,3 +69,78 @@ body {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   }
+
+  /* Для сертификации линия */
+  @keyframes scan {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(316px); } /* 320px (ширина) - 4px (ширина луча) */
+  100% { transform: translateX(0); }
+}
+.animate-scan {
+  animation: scan 4s infinite;
+}
+
+
+  /* Для пентеста вариант 1 - делает красную линию */
+@keyframes draw-path {
+  to { stroke-dashoffset: 0; }
+}
+.group:hover .path-animation {
+  animation: draw-path 1.5s ease-out forwards;
+}
+
+ /* Для пентеста вариант вариант с горизонтальной линией вниз */
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(320px); } /* 320px - высота блока */
+}
+.animate-scanline {
+  animation: scanline 3s linear infinite;
+}
+
+/* Для разработки - падающий текст */
+/* --- Стили для анимации водопада кода --- */
+
+/* 1. Определяем анимацию, которая сдвигает блок вверх на его собственную высоту */
+@keyframes waterfall {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%); /* Сдвигаем ровно на высоту одного блока кода */
+  }
+}
+
+/* 2. Применяем анимацию к контейнеру с двумя блоками кода */
+.animate-waterfall {
+  /* Длительность анимации (30 секунд) можно настроить под себя */
+  animation: waterfall 30s linear infinite;
+}
+
+/* 3. Гарантируем, что блоки кода не будут переноситься */
+.code-block {
+  white-space: pre;
+}
+
+/* --- Стили для ПЕНТЕСТА анимации сканирования и кода --- */
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(320px); } /* 320px - это высота блока h-80 */
+}
+.animate-scanline {
+  animation: scanline 4s linear infinite;
+}
+
+/* Стили для контейнера с кодом, чтобы он правильно переносился */
+#code-container {
+  word-break: break-all; /* Разрешаем перенос в любом месте */
+  line-height: 1.5; /* Устанавливаем высоту строки для расчетов */
+}
+
+/* Стили для найденной "ошибки" */
+.error-char {
+  color: #ef4444; /* Красный цвет */
+  animation: pulse 1.5s infinite; /* Анимация пульсации */
+  text-shadow: 0 0 8px #ef4444; /* Эффект свечения */
+}

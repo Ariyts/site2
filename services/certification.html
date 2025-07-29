@@ -27,56 +27,56 @@
   </div>
 </section>
 
-<section class="hero-bg py-20">
+<!-- 
+  Вариант 1: «Лабораторные испытания»
+  Демонстрирует научный и скрупулезный подход.
+-->
+<section class="bg-slate-50 py-24">
   <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Текстовый блок -->
       <div>
-        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue bg-opacity-10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
-          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-          </svg>
+        <div class="inline-flex items-center px-4 py-2 bg-rosatom-blue/10 rounded-full text-rosatom-blue text-sm font-medium mb-6">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
           Гарантия соответствия
         </div>
         <h1 class="text-5xl font-bold mb-6 leading-tight text-rosatom-dark">
-          Сертификация <span class="text-rosatom-blue">средств защиты</span> информации
+          Сертификационные испытания <span class="text-rosatom-blue">средств защиты</span>
         </h1>
         <p class="text-xl mb-8 text-gray-600">
-          Мы поможем подготовить Ваши средства защиты информации к сертификации, а также проведем полный цикл испытаний и проверок.
+          Проводим полный цикл лабораторных испытаний для подтверждения соответствия ваших средств защиты информации требованиям ФСТЭК и ФСБ России.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <button class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 cyber-glow">
+          <a href="#form" class="bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
             Получить консультацию
-          </button>
-          <button class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
+          </a>
+          <a href="#details" class="border border-rosatom-blue text-rosatom-blue hover:bg-rosatom-blue hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
             Узнать подробнее
-          </button>
+          </a>
         </div>
       </div>
-      <div class="relative">
-        <div class="floating-animation">
-          <svg class="w-full h-96" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M150 70 C150 50 170 50 170 50 H230 C230 50 250 50 250 70 V230 C250 250 230 250 230 250 H170 C170 250 150 250 150 230 Z"
-                  fill="rgba(0, 61, 130, 0.1)" stroke="#003d82" stroke-width="3"/>
-            <path d="M220 70 L250 50 L250 90 L220 70 Z" fill="#4a90e2"/>
-            <path d="M220 70 C225 75 225 85 220 90 L180 90 L180 70 L220 70 Z" fill="#10b981"/>
-            <circle cx="200" cy="170" r="30" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="2"/>
-            <path d="M190 170 L200 180 L210 160" stroke="#10b981" stroke-width="3" fill="none"/>
-            <rect x="175" y="110" width="50" height="6" rx="1" fill="#4a90e2"/>
-            <rect x="175" y="125" width="30" height="6" rx="1" fill="#4a90e2"/>
-            <rect x="175" y="140" width="40" height="6" rx="1" fill="#4a90e2"/>
-
-            <path d="M80 150 C80 130 100 130 100 130 V110 C100 100 90 100 90 100 C80 100 80 110 80 110 V150 Z"
-                  fill="rgba(74, 144, 226, 0.1)" stroke="#4a90e2" stroke-width="2"/>
-            <rect x="75" y="150" width="30" height="20" rx="3" fill="rgba(0, 61, 130, 0.05)" stroke="#003d82" stroke-width="1.5"/>
-
-            <circle cx="300" cy="150" r="25" fill="rgba(74, 144, 226, 0.1)" stroke="#4a90e2" stroke-width="2"/>
-            <line x1="315" y1="165" x2="330" y2="180" stroke="#4a90e2" stroke-width="2"/>
-          </svg>
+      
+      <!-- Визуализация тестового стенда -->
+      <div class="hidden lg:flex justify-center items-center h-96">
+        <div class="group relative w-80 h-80">
+          <!-- Сетка-фон -->
+          <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,51,160,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,51,160,0.1)_1px,transparent_1px)] bg-[size:2rem_2rem] rounded-2xl"></div>
+          <!-- Объект тестирования -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-rosatom-dark rounded-xl shadow-2xl flex items-center justify-center">
+            <svg class="w-16 h-16 text-rosatom-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3"></path></svg>
+          </div>
+          <!-- Сканирующий луч -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-rosatom-blue/50 rounded-full shadow-2xl shadow-rosatom-blue transition-all duration-3000 ease-linear animate-scan"></div>
+          <!-- Результат -->
+          <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <p class="font-bold text-green-600 flex items-center gap-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Соответствует</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <section class="py-20 bg-white">
   <div class="container mx-auto px-6">
