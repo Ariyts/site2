@@ -62,9 +62,11 @@
           <!-- Сетка-фон -->
           <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,51,160,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,51,160,0.1)_1px,transparent_1px)] bg-[size:2rem_2rem] rounded-2xl"></div>
           <!-- Объект тестирования -->
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-rosatom-dark rounded-xl shadow-2xl flex items-center justify-center">
-            <svg class="w-16 h-16 text-rosatom-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3"></path></svg>
-          </div>
+<!-- Объект тестирования -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 bg-gradient-to-br from-gray-800 to-rosatom-dark rounded-2xl shadow-2xl flex flex-col items-center justify-center p-4 border border-rosatom-light/20">
+  <svg class="w-16 h-16 text-rosatom-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v4a1 1 0 01-1 1H4m11-5v4a1 1 0 01-1 1H9M4 11h11a1 1 0 011 1v5a1 1 0 01-1 1H4a1 1 0 01-1-1v-5a1 1 0 011-1zM4 3h16v18H4V3z"></path></svg>
+  <p class="mt-2 font-mono text-white/50 text-sm">СЗИ-14.2</p>
+</div>
           <!-- Сканирующий луч -->
           <div class="absolute top-0 left-0 h-full w-1 bg-rosatom-blue/50 rounded-full shadow-2xl shadow-rosatom-blue transition-all duration-3000 ease-linear animate-scan"></div>
           <!-- Результат -->
@@ -76,6 +78,7 @@
     </div>
   </div>
 </section>
+
 
 
 <section class="py-20 bg-white">
