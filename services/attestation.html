@@ -75,13 +75,48 @@
               <p>№ 12345-67890</p>
               <p>Дата выдачи: 20.05.2024</p>
             </div>
-            <!-- Интерактивная печать -->
-            <div class="relative w-24 h-24">
-              <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-rosatom-blue/10 rounded-full transition-transform duration-500 group-hover:scale-110"></div>
-              <div class="absolute -bottom-4 -right-4 w-24 h-24 flex items-center justify-center">
-                <svg class="w-16 h-16 text-rosatom-blue transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-              </div>
-            </div>
+<!-- ФИНАЛЬНАЯ ВЕРСИЯ: Сургучная печать с ленточками-ляссе -->
+<div class="relative w-28 h-28">
+  <div class="absolute -bottom-2 -right-2 w-28 h-28">
+    
+<!-- 1. НОВАЯ, МАССИВНАЯ ЛЕНТА С ИДЕАЛЬНО РОВНЫМИ КОНЧИКАМИ -->
+<div class="absolute inset-0 flex items-center justify-center scale-90 opacity-0 transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100">
+  <svg class="w-full h-full text-rosatom-blue overflow-visible" viewBox="0 0 100 100">
+    <!-- Петличка сверху -->
+<path d="M45 50 C -20 -20, 20 50, 45 50 Z" fill="currentColor"/>
+    <path d="M55 50 C 120 -20, 80 50, 55 50 Z" fill="currentColor"/>
+    <!-- Левый широкий хвост с ровным вырезом -->
+    <path d="M15 55 L45 55 L30 140 L15 130 L0 140 Z" fill="currentColor"/>
+    <!-- Правый широкий хвост с ровным вырезом -->
+    <path d="M55 55 L85 55 L100 140 L85 130 L70 140 Z" fill="currentColor"/>
+  </svg>
+</div>
+
+    <!-- 2. Сургуч (поверх основания ленты) -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="w-full h-full bg-red-700 rounded-full shadow-lg scale-0 opacity-0 transition-all duration-300 ease-out delay-100 group-hover:scale-100 group-hover:opacity-100"></div>
+    </div>
+    
+    <!-- 3. Оттиск (последний) -->
+    <div class="absolute inset-0 flex items-center justify-center scale-0 opacity-0 transition-all duration-300 ease-out delay-200 group-hover:scale-100 group-hover:opacity-100">
+      <svg class="w-20 h-20 text-red-900/70" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="circlePath" d="M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
+        </defs>
+        <circle cx="50" cy="50" r="48" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+        <text font-size="8" font-family="monospace" letter-spacing="1" fill="currentColor">
+          <textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+            ★ АТТЕСТАТ СООТВЕТСТВИЯ ★
+          </textPath>
+        </text>
+        <g transform="translate(0, 5)">
+            <path d="M50 30 C 55 33, 70 40, 70 50 S 55 68, 50 68 S 45 68, 30 50 S 45 33, 50 30 Z" fill="currentColor" opacity="0.5"/>
+            <path d="M50 42 L53 49 L61 49 L55 54 L57 62 L50 57 L43 62 L45 54 L39 49 L47 49 Z" fill="rgba(0,0,0,0.2)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </div>
