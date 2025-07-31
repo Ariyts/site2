@@ -43,87 +43,59 @@
             <!-- Вариант 2: Атом Безопасности -->
 <!-- УЛУЧШЕННЫЙ БЛОК АНИМАЦИИ "АТОМ БЕЗОПАСНОСТИ" -->
 <!-- УЛУЧШЕННЫЙ БЛОК АНИМАЦИИ "АТОМ БЕЗОПАСНОСТИ" -->
-<div class="relative">
-  <div class="floating-animation h-96 lg:h-[520px] flex items-center justify-center">
-    <svg class="w-full h-full" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <!-- Определения path и clipPath остаются без изменений -->
-        <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse">
-          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(74, 144, 226, 0.1)" stroke-width="1"/>
-        </pattern>
-        <clipPath id="logoClip">
-          <circle cx="200" cy="200" r="60" />
-        </clipPath>
-        <path id="path1" d="M 60,200 a 140,80 0 1,0 280,0 a 140,80 0 1,0 -280,0 z" />
-        <path id="path2" d="M 130.00,78.76 a 140,80 60 1,0 140.00,242.48 a 140,80 60 1,0 -140.00,-242.48 z" />
-        <path id="path3" d="M 130.00,321.24 a 140,80 -60 1,0 140.00,-242.48 a 140,80 -60 1,0 -140.00,242.48 z" />
-      </defs>
+<!-- УЛУЧШЕННЫЙ БЛОК С ГЛИТЧ-ЭФФЕКТОМ -->
+<div class="relative group">
+  <!-- Контейнер для глитч-эффекта -->
+  <div class="glitch-container h-96 lg:h-[520px]">
+    
+    <!-- Слой 1: Оригинальная SVG анимация (базовый слой) -->
+    <div class="glitch-layer-base">
+      <svg class="w-full h-full" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(74, 144, 226, 0.1)" stroke-width="1"/></pattern>
+            <clipPath id="logoClip"><circle cx="200" cy="200" r="60" /></clipPath>
+            <path id="path1" d="M 60,200 a 140,80 0 1,0 280,0 a 140,80 0 1,0 -280,0 z" /><path id="path2" d="M 130.00,78.76 a 140,80 60 1,0 140.00,242.48 a 140,80 60 1,0 -140.00,-242.48 z" /><path id="path3" d="M 130.00,321.24 a 140,80 -60 1,0 140.00,-242.48 a 140,80 -60 1,0 -140.00,242.48 z" />
+        </defs>
+        <rect width="400" height="400" fill="url(#grid2)" />
+        <g><use href="#path2" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.5" fill="none"/><g><animateMotion id="anim1_slow_base" dur="10s" repeatCount="indefinite" rotate="auto" begin="-5s"><mpath href="#path2"/></animateMotion><animateMotion id="anim1_fast_base" dur="3.3s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path2"/></animateMotion><circle r="6" fill="#15256d" cx="0" cy="0"/></g><g><animateMotion id="anim2_slow_base" dur="10s" repeatCount="indefinite" rotate="auto" begin="0s"><mpath href="#path2"/></animateMotion><animateMotion id="anim2_fast_base" dur="3.3s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path2"/></animateMotion><circle r="4" fill="#15256d" fill-opacity="0.8" cx="0" cy="0"/></g></g>
+        <g><circle cx="200" cy="200" r="65" stroke="rgba(74, 144, 226, 0.3)" stroke-width="2"><animate attributeName="r" from="65" to="75" dur="3s" repeatCount="indefinite" begin="0s" fill="freeze" id="pulse1" /><animate attributeName="r" from="75" to="65" dur="3s" repeatCount="indefinite" begin="pulse1.end" fill="freeze" /><animate attributeName="stroke-opacity" from="0.5" to="0" dur="3s" repeatCount="indefinite" /></circle><image href="/img/rosatom_logo.svg" x="140" y="140" width="120" height="120" clip-path="url(#logoClip)"/></g>
+        <g><use href="#path1" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.6" fill="none"/><g><animateMotion id="anim3_slow_base" dur="8s" repeatCount="indefinite" rotate="auto" begin="0s"><mpath href="#path1"/></animateMotion><animateMotion id="anim3_fast_base" dur="2.6s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path1"/></animateMotion><circle r="7" fill="#10b981" cx="0" cy="0"/></g><g><animateMotion id="anim4_slow_base" dur="8s" repeatCount="indefinite" rotate="auto" begin="-4s"><mpath href="#path1"/></animateMotion><animateMotion id="anim4_fast_base" dur="2.6s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path1"/></animateMotion><circle r="5" fill="#10b981" fill-opacity="0.8" cx="0" cy="0"/></g></g>
+        <g><use href="#path3" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.6" fill="none"/><g><animateMotion id="anim5_slow_base" dur="12s" repeatCount="indefinite" rotate="auto" begin="-2s"><mpath href="#path3"/></animateMotion><animateMotion id="anim5_fast_base" dur="4s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path3"/></animateMotion><circle r="8" fill="#4a90e2" cx="0" cy="0"/></g><g><animateMotion id="anim6_slow_base" dur="12s" repeatCount="indefinite" rotate="auto" begin="-8s"><mpath href="#path3"/></animateMotion><animateMotion id="anim6_fast_base" dur="4s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path3"/></animateMotion><circle r="6" fill="#4a90e2" fill-opacity="0.8" cx="0" cy="0"/></g></g>
+      </svg>
+    </div>
 
-      <rect width="400" height="400" fill="url(#grid2)" />
-      
-      <!-- СЛОЙ 1: ЗАДНИЙ ПЛАН (Группа для Орбиты 2) -->
-      <g>
-        <use href="#path2" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.5" fill="none"/>
-        <g>
-          <animateMotion dur="10s" repeatCount="indefinite" rotate="auto" begin="-5s">
-            <mpath href="#path2"/>
-          </animateMotion>
-          <circle r="6" fill="#15256d" cx="0" cy="0"/>
-        </g>
-        <g>
-          <animateMotion dur="10s" repeatCount="indefinite" rotate="auto" begin="0s">
-            <mpath href="#path2"/>
-          </animateMotion>
-          <circle r="4" fill="#15256d" fill-opacity="0.8" cx="0" cy="0"/>
-        </g>
-      </g>
+    <!-- Слой 2: Глитч-копия #1. Анимации с суффиксом _g1 -->
+    <div class="glitch-layer">
+      <svg class="w-full h-full" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <pattern id="grid2_g1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(74, 144, 226, 0.1)" stroke-width="1"/></pattern>
+            <clipPath id="logoClip_g1"><circle cx="200" cy="200" r="60" /></clipPath>
+            <path id="path1_g1" d="M 60,200 a 140,80 0 1,0 280,0 a 140,80 0 1,0 -280,0 z" /><path id="path2_g1" d="M 130.00,78.76 a 140,80 60 1,0 140.00,242.48 a 140,80 60 1,0 -140.00,-242.48 z" /><path id="path3_g1" d="M 130.00,321.24 a 140,80 -60 1,0 140.00,-242.48 a 140,80 -60 1,0 -140.00,242.48 z" />
+        </defs>
+        <rect width="400" height="400" fill="url(#grid2_g1)" />
+        <g><use href="#path2_g1" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.5" fill="none"/><g><animateMotion id="anim1_slow_g1" dur="10s" repeatCount="indefinite" rotate="auto" begin="-5s"><mpath href="#path2_g1"/></animateMotion><animateMotion id="anim1_fast_g1" dur="3.3s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path2_g1"/></animateMotion><circle r="6" fill="#15256d" cx="0" cy="0"/></g><g><animateMotion id="anim2_slow_g1" dur="10s" repeatCount="indefinite" rotate="auto" begin="0s"><mpath href="#path2_g1"/></animateMotion><animateMotion id="anim2_fast_g1" dur="3.3s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path2_g1"/></animateMotion><circle r="4" fill="#15256d" fill-opacity="0.8" cx="0" cy="0"/></g></g>
+        <g><circle cx="200" cy="200" r="65" stroke="rgba(74, 144, 226, 0.3)" stroke-width="2"><animate attributeName="r" from="65" to="75" dur="3s" repeatCount="indefinite" begin="0s" fill="freeze" id="pulse1_g1" /><animate attributeName="r" from="75" to="65" dur="3s" repeatCount="indefinite" begin="pulse1_g1.end" fill="freeze" /><animate attributeName="stroke-opacity" from="0.5" to="0" dur="3s" repeatCount="indefinite" /></circle><image href="/img/rosatom_logo.svg" x="140" y="140" width="120" height="120" clip-path="url(#logoClip_g1)"/></g>
+        <g><use href="#path1_g1" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.6" fill="none"/><g><animateMotion id="anim3_slow_g1" dur="8s" repeatCount="indefinite" rotate="auto" begin="0s"><mpath href="#path1_g1"/></animateMotion><animateMotion id="anim3_fast_g1" dur="2.6s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path1_g1"/></animateMotion><circle r="7" fill="#10b981" cx="0" cy="0"/></g><g><animateMotion id="anim4_slow_g1" dur="8s" repeatCount="indefinite" rotate="auto" begin="-4s"><mpath href="#path1_g1"/></animateMotion><animateMotion id="anim4_fast_g1" dur="2.6s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path1_g1"/></animateMotion><circle r="5" fill="#10b981" fill-opacity="0.8" cx="0" cy="0"/></g></g>
+        <g><use href="#path3_g1" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.6" fill="none"/><g><animateMotion id="anim5_slow_g1" dur="12s" repeatCount="indefinite" rotate="auto" begin="-2s"><mpath href="#path3_g1"/></animateMotion><animateMotion id="anim5_fast_g1" dur="4s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path3_g1"/></animateMotion><circle r="8" fill="#4a90e2" cx="0" cy="0"/></g><g><animateMotion id="anim6_slow_g1" dur="12s" repeatCount="indefinite" rotate="auto" begin="-8s"><mpath href="#path3_g1"/></animateMotion><animateMotion id="anim6_fast_g1" dur="4s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path3_g1"/></animateMotion><circle r="6" fill="#4a90e2" fill-opacity="0.8" cx="0" cy="0"/></g></g>
+      </svg>
+    </div>
 
-      <!-- СЛОЙ 2: ЦЕНТРАЛЬНЫЙ ЛОГОТИП (без изменений) -->
-      <g>
-        <circle cx="200" cy="200" r="65" stroke="rgba(74, 144, 226, 0.3)" stroke-width="2">
-          <animate attributeName="r" from="65" to="75" dur="3s" repeatCount="indefinite" begin="0s" fill="freeze" id="pulse1" />
-          <animate attributeName="r" from="75" to="65" dur="3s" repeatCount="indefinite" begin="pulse1.end" fill="freeze" />
-          <animate attributeName="stroke-opacity" from="0.5" to="0" dur="3s" repeatCount="indefinite" />
-        </circle>
-        <image href="/img/rosatom_logo.svg" x="140" y="140" width="120" height="120" clip-path="url(#logoClip)"/>
-      </g>
-      
-      <!-- СЛОЙ 3: ПЕРЕДНИЙ ПЛАН -->
-      <g>
-        <use href="#path1" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.6" fill="none"/>
-        <g>
-          <animateMotion dur="8s" repeatCount="indefinite" rotate="auto" begin="0s">
-            <mpath href="#path1"/>
-          </animateMotion>
-          <circle r="7" fill="#10b981" cx="0" cy="0"/>
-        </g>
-        <g>
-          <!-- ИСПРАВЛЕНО: begin="4s" заменено на begin="-4s" -->
-          <animateMotion dur="8s" repeatCount="indefinite" rotate="auto" begin="-4s">
-            <mpath href="#path1"/>
-          </animateMotion>
-          <circle r="5" fill="#10b981" fill-opacity="0.8" cx="0" cy="0"/>
-        </g>
-      </g>
-      
-      <g>
-        <use href="#path3" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.6" fill="none"/>
-        <g>
-          <animateMotion dur="12s" repeatCount="indefinite" rotate="auto" begin="-2s">
-            <mpath href="#path3"/>
-          </animateMotion>
-          <circle r="8" fill="#4a90e2" cx="0" cy="0"/>
-        </g>
-        <g>
-          <!-- ИСПРАВЛЕНО: begin="4s" заменено на begin="-8s" -->
-          <animateMotion dur="12s" repeatCount="indefinite" rotate="auto" begin="-8s">
-            <mpath href="#path3"/>
-          </animateMotion>
-          <circle r="6" fill="#4a90e2" fill-opacity="0.8" cx="0" cy="0"/>
-        </g>
-      </g>
-      
-    </svg>
+    <!-- Слой 3: Глитч-копия #2. Анимации с суффиксом _g2 -->
+    <div class="glitch-layer">
+      <svg class="w-full h-full" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <defs>
+            <pattern id="grid2_g2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(74, 144, 226, 0.1)" stroke-width="1"/></pattern>
+            <clipPath id="logoClip_g2"><circle cx="200" cy="200" r="60" /></clipPath>
+            <path id="path1_g2" d="M 60,200 a 140,80 0 1,0 280,0 a 140,80 0 1,0 -280,0 z" /><path id="path2_g2" d="M 130.00,78.76 a 140,80 60 1,0 140.00,242.48 a 140,80 60 1,0 -140.00,-242.48 z" /><path id="path3_g2" d="M 130.00,321.24 a 140,80 -60 1,0 140.00,-242.48 a 140,80 -60 1,0 -140.00,242.48 z" />
+        </defs>
+        <rect width="400" height="400" fill="url(#grid2_g2)" />
+        <g><use href="#path2_g2" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.5" fill="none"/><g><animateMotion id="anim1_slow_g2" dur="10s" repeatCount="indefinite" rotate="auto" begin="-5s"><mpath href="#path2_g2"/></animateMotion><animateMotion id="anim1_fast_g2" dur="3.3s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path2_g2"/></animateMotion><circle r="6" fill="#15256d" cx="0" cy="0"/></g><g><animateMotion id="anim2_slow_g2" dur="10s" repeatCount="indefinite" rotate="auto" begin="0s"><mpath href="#path2_g2"/></animateMotion><animateMotion id="anim2_fast_g2" dur="3.3s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path2_g2"/></animateMotion><circle r="4" fill="#15256d" fill-opacity="0.8" cx="0" cy="0"/></g></g>
+        <g><circle cx="200" cy="200" r="65" stroke="rgba(74, 144, 226, 0.3)" stroke-width="2"><animate attributeName="r" from="65" to="75" dur="3s" repeatCount="indefinite" begin="0s" fill="freeze" id="pulse1_g2" /><animate attributeName="r" from="75" to="65" dur="3s" repeatCount="indefinite" begin="pulse1_g2.end" fill="freeze" /><animate attributeName="stroke-opacity" from="0.5" to="0" dur="3s" repeatCount="indefinite" /></circle><image href="/img/rosatom_logo.svg" x="140" y="140" width="120" height="120" clip-path="url(#logoClip_g2)"/></g>
+        <g><use href="#path1_g2" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.6" fill="none"/><g><animateMotion id="anim3_slow_g2" dur="8s" repeatCount="indefinite" rotate="auto" begin="0s"><mpath href="#path1_g2"/></animateMotion><animateMotion id="anim3_fast_g2" dur="2.6s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path1_g2"/></animateMotion><circle r="7" fill="#10b981" cx="0" cy="0"/></g><g><animateMotion id="anim4_slow_g2" dur="8s" repeatCount="indefinite" rotate="auto" begin="-4s"><mpath href="#path1_g2"/></animateMotion><animateMotion id="anim4_fast_g2" dur="2.6s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path1_g2"/></animateMotion><circle r="5" fill="#10b981" fill-opacity="0.8" cx="0" cy="0"/></g></g>
+        <g><use href="#path3_g2" stroke="#4a90e2" stroke-width="1.5" stroke-opacity="0.6" fill="none"/><g><animateMotion id="anim5_slow_g2" dur="12s" repeatCount="indefinite" rotate="auto" begin="-2s"><mpath href="#path3_g2"/></animateMotion><animateMotion id="anim5_fast_g2" dur="4s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path3_g2"/></animateMotion><circle r="8" fill="#4a90e2" cx="0" cy="0"/></g><g><animateMotion id="anim6_slow_g2" dur="12s" repeatCount="indefinite" rotate="auto" begin="-8s"><mpath href="#path3_g2"/></animateMotion><animateMotion id="anim6_fast_g2" dur="4s" begin="indefinite" rotate="auto" repeatCount="indefinite"><mpath href="#path3_g2"/></animateMotion><circle r="6" fill="#4a90e2" fill-opacity="0.8" cx="0" cy="0"/></g></g>
+      </svg>
+    </div>
+
   </div>
 </div>
     </div>
@@ -349,6 +321,56 @@
     </div>
   </div>
 </section>
+
+<script>
+// Заменяем 'DOMContentLoaded' на 'load' (или 'window.onload')
+// Это гарантирует, что скрипт запустится только после полной загрузки SVG и его анимаций.
+window.addEventListener('load', () => {
+    const heroBlock = document.querySelector('.group');
+    if (!heroBlock) return;
+
+    // Функция, которая плавно переключает анимации внутри ОДНОГО SVG
+    const switchAnimationsInSVG = (svgElement, fromSuffix, toSuffix) => {
+        // Находим все активные анимации, которые нужно остановить (например, все с суффиксом _slow)
+        const animationsToStop = svgElement.querySelectorAll(`animateMotion[id$="${fromSuffix}"]`);
+
+        animationsToStop.forEach(animToStop => {
+            // Получаем текущее время проигрывания медленной анимации
+            const currentTime = animToStop.getCurrentTime();
+            // Формируем ID быстрой анимации, которую нужно запустить
+            const animIdToStart = animToStop.id.replace(fromSuffix, toSuffix);
+            const animToStart = svgElement.querySelector(`#${animIdToStart}`);
+            
+            if (animToStart) {
+                try {
+                    // Запускаем быструю анимацию, но со смещением.
+                    // Отрицательное значение в beginElementAt() заставляет анимацию "перемотаться" вперед,
+                    // создавая иллюзию бесшовного перехода с того же места, где была медленная.
+                    animToStart.beginElementAt(-currentTime);
+                    // Немедленно останавливаем старую (медленную) анимацию.
+                    animToStop.endElement();
+                } catch(e) {
+                    // Ошибка может возникнуть, если элемент невидим (например, в скрытых glitch-слоях).
+                    // Мы ее игнорируем, так как это ожидаемое поведение.
+                }
+            }
+        });
+    };
+
+    // Находим все наши SVG слои (базовый и глитч-слои)
+    const svgs = heroBlock.querySelectorAll('.glitch-layer-base svg, .glitch-layer svg');
+
+    // При наведении мыши: ускоряем анимации во ВСЕХ слоях
+    heroBlock.addEventListener('mouseenter', () => {
+        svgs.forEach(svg => switchAnimationsInSVG(svg, '_slow', '_fast'));
+    });
+
+    // Когда мышь уходит: возвращаем медленную скорость анимации во ВСЕХ слоях
+    heroBlock.addEventListener('mouseleave', () => {
+        svgs.forEach(svg => switchAnimationsInSVG(svg, '_fast', '_slow'));
+    });
+});
+</script>
 
 <div id="footer-placeholder"></div>
 

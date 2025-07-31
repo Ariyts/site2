@@ -145,3 +145,90 @@ body {
   text-shadow: 0 0 8px #ef4444; /* Эффект свечения */
 }
 
+/* --- СТИЛИ ДЛЯ СДЕРЖАННОГО ГЛИТЧ-ЭФФЕКТА + СВЕЧЕНИЕ ЧАСТИЦ --- */
+/* --- СТИЛИ ДЛЯ ГЛИТЧ-ЭФФЕКТА И СВЕЧЕНИЯ --- */
+
+.glitch-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glitch-layer-base, .glitch-layer {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+.glitch-layer {
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+}
+.group:hover .glitch-layer {
+  opacity: 1;
+}
+
+@keyframes glitch-subtle-animation {
+  0% { transform: translate(0); }
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  75% { transform: translate(-1px, 1px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-scanline {
+    0% { clip-path: inset(0% 0 95% 0); }
+    25% { clip-path: inset(20% 0 75% 0); }
+    50% { clip-path: inset(50% 0 40% 0); }
+    75% { clip-path: inset(80% 0 10% 0); }
+    100% { clip-path: inset(95% 0 0% 0); }
+}
+
+.group:hover .glitch-layer:nth-child(2) {
+  mix-blend-mode: multiply;
+  filter: brightness(0.8) contrast(1.5);
+  animation: glitch-subtle-animation 0.7s linear both infinite;
+}
+
+.group:hover .glitch-layer:nth-child(3) {
+  mix-blend-mode: color-dodge;
+  filter: brightness(5) grayscale(1) contrast(3) sepia(0.5);
+  animation: glitch-scanline 1.2s linear both infinite;
+}
+
+.group:hover .glitch-layer-base {
+    filter: brightness(0.95);
+    transition: filter 0.2s ease-in-out;
+}
+.group .glitch-layer-base {
+    transition: filter 0.3s ease-in-out;
+}
+
+/* === ИЗМЕНЕНИЯ ЗДЕСЬ === */
+
+/* Свечение и эффекты для частиц */
+.glitch-layer-base circle {
+    /* Добавляем transition для плавного изменения filter и transform */
+    transition: filter 0.3s ease-out, transform 0.3s ease-out;
+    /* Устанавливаем transform-origin в центр, чтобы масштабирование было корректным */
+    transform-origin: center center;
+}
+
+/* При наведении на группу... */
+.group:hover .glitch-layer-base circle {
+    /* ...немного увеличиваем частицы */
+    transform: scale(1.2);
+}
+
+.group:hover .glitch-layer-base circle[fill="#10b981"] {
+  /* Добавляем blur(1px) к существующему свечению */
+  filter: drop-shadow(0 0 8px #10b981) blur(1px);
+}
+.group:hover .glitch-layer-base circle[fill="#4a90e2"] {
+  /* Добавляем blur(1px) к существующему свечению */
+  filter: drop-shadow(0 0 8px #4a90e2) blur(1px);
+}
+.group:hover .glitch-layer-base circle[fill="#15256d"] {
+  /* Добавляем blur(0.5px) для самых маленьких частиц */
+  filter: drop-shadow(0 0 6px #4a90e2) blur(0.5px);
+}
