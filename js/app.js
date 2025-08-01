@@ -1,3 +1,6 @@
+// В самом начале загрузки страницы
+const startTime = performance.now();
+
 (function() {
   'use strict';
 
@@ -468,3 +471,11 @@ function addFavicon() {
 
 // Вызываем функцию после загрузки основной структуры страницы
 document.addEventListener('DOMContentLoaded', addFavicon);
+
+// Когда страница полностью загружена (например, в window.onload)
+window.addEventListener('load', () => {
+    const endTime = performance.now();
+    const loadTime = endTime - startTime;
+    console.log(`Page load time: ${loadTime.toFixed(2)}ms`); // Результат будет в миллисекундах
+    // ... ваш код для отслеживания события
+});
