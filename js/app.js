@@ -352,6 +352,17 @@ const startTime = performance.now();
   console.log('CyberGuard website loaded successfully');
   console.log('Rosatom branding applied');
   console.log('All animations and interactions initialized');
+
+  // Этот код нужно добавить в ваш JS файл
+
+// Находим ВСЕ кнопки с классом 'js-open-modal'
+const openModalButtons = document.querySelectorAll('.js-open-modal');
+
+// Для каждой найденной кнопки добавляем обработчик клика,
+// который будет вызывать вашу функцию showConsultationModal
+openModalButtons.forEach(button => {
+  button.addEventListener('click', showConsultationModal);
+});
 })();
 
 // Additional utility functions
