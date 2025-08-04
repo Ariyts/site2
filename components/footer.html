@@ -1,83 +1,94 @@
 <!-- footer.html -->
-<footer class="bg-rosatom-dark text-white py-16">
+<footer class="bg-rosatom-dark text-gray-300 pt-20 pb-10">
     <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <div class="flex items-center space-x-3 mb-4">
-                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1">
-                        <img src="../img/fevicon.ico" alt="Росатом" class="h-6 w-auto">
-                    </div>
-                    <div>
-                        <span class="text-xl font-bold">АО Центр "Атомзащитаинформ</span>
-                        <div class="text-sm text-blue-200">Дочерняя компания Росатома</div>
-                    </div>
-                </div>
-                <p class="text-gray-400 mb-4">
-                    Защищаем ваш бизнес от киберугроз с 2009 года
-                </p>
-            </div>
+        
+        <!-- Основной блок футера (теперь 3 колонки на больших экранах) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
+            
+            <!-- 1. Блок с брендом и контактами -->
+<div>
+    <!-- 
+        Изменения здесь:
+        1. Удален текстовый блок с названием.
+        2. Ссылка <a> теперь просто block-элемент.
+        3. Размер задается напрямую на <img>: w-52 (208px) и h-auto для сохранения пропорций.
+    -->
+    <a href="/" class="block mb-6">
+        <img src="/img/logo-white.svg" alt="Логотип АО Центр Атомзащитаинформ" class="h-auto w-52">
+    </a>
+    
+    <p class="text-gray-400 text-sm mb-6">
+        Профессиональные решения для защиты информации и цифровой инфраструктуры.
+    </p>
 
+    <!-- Контактная информация (без изменений) -->
+    <div class="space-y-4 text-sm">
+        <a href="tel:+74999494633" class="flex items-center gap-x-3 text-gray-400 hover:text-white transition-colors">
+            <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            <span>+7 (499) 949-46-33</span>
+        </a>
+        <a href="mailto:cazi@rosatom.ru" class="flex items-center gap-x-3 text-gray-400 hover:text-white transition-colors">
+            <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <span>cazi@rosatom.ru</span>
+        </a>
+        <div class="flex items-start gap-x-3 text-gray-400">
+            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            <span>Москва, Старомонетный пер., д. 26</span>
+        </div>
+    </div>
+</div>
+
+            <!-- 2. Навигация: Услуги -->
             <div>
-                <h4 class="font-semibold mb-4">Услуги</h4>
-                <ul class="space-y-2 text-gray-400">
-                    
-                    <li><a href="/services/attestation.html" class="hover:text-white transition-colors">Аттестация</a></li>
-                    <li><a href="/services/certification.html" class="hover:text-white transition-colors">Сертификация</a></li>
-                    <li><a href="/services/tech-protection.html" class="hover:text-white transition-colors">Техническая защита информации</a></li>
-                    <li><a href="/services/pentest.html" class="hover:text-white transition-colors">Аудит ИБ</a></li>
-                    <li><a href="/services/development.html" class="hover:text-white transition-colors">Разработка ПО</a></li>
+                <h4 class="text-lg font-semibold text-white mb-6">Услуги</h4>
+                <ul class="space-y-3">
+                    <li><a href="/services/attestation.html" class="footer-link">Аттестация</a></li>
+                    <li><a href="/services/certification.html" class="footer-link">Сертификация СЗИ</a></li>
+                    <li><a href="/services/tech-protection.html" class="footer-link">Техническая защита</a></li>
+                    <li><a href="/services/pentest.html" class="footer-link">Аудит ИБ</a></li>
+                    <li><a href="/services/development.html" class="footer-link">Разработка ПО</a></li>
                 </ul>
             </div>
 
+            <!-- 3. Навигация: Компания -->
             <div>
-                <h4 class="font-semibold mb-4">Компания</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="/page/about.html" class="hover:text-white transition-colors">О нас</a></li>
-                    <li><a href="/page/licences.html" class="hover:text-white transition-colors">Наши лицензии</a></li>
-                    <li><a href="/page/reports.html" class="hover:text-white transition-colors">Отчетность</a></li>
-                    <li><a href="/page/contact.html" class="hover:text-white transition-colors">Контакты</a></li>
-                    <li><a href="/page/privacy-policy.html" class="hover:text-white transition-colors">Политика в области персональных данных</a></li>
-                    <li><a href="/page/personal-data-consent.html" class="hover:text-white transition-colors">Согласие на обработку персональных данных</a></li>
-                 <!--<li><a href="#" class="hover:text-white transition-colors">Партнеры</a></li> --> 
+                <h4 class="text-lg font-semibold text-white mb-6">Компания</h4>
+                <ul class="space-y-3">
+                    <li><a href="/page/about.html" class="footer-link">О нас</a></li>
+                    <li><a href="/page/licences.html" class="footer-link">Лицензии</a></li>
+                    <li><a href="/page/reports.html" class="footer-link">Отчетность</a></li>
+                    <li><a href="/page/contact.html" class="footer-link">Контакты</a></li>
+                    <li><a href="/page/privacy-policy.html" class="footer-link">Политика обработки ПДн</a></li>
                 </ul>
-            </div>
-
-            <div>
-                <h4 class="font-semibold mb-4">Контакты</h4>
-                <div class="space-y-3 text-gray-400">
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                        </svg>
-                        <span>+7 (499) 949-46-33</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                        <span>cazi@rosatom.ru</span>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <svg class="w-5 h-5 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                        <span>Москва, ул. Старомонетный переулок, дом 26</span>
-                    </div>
-
-                    
-                    </div>
-                </div>
             </div>
         </div>
 
-        <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center" >
-            <p class="text-gray-400 text-sm">&copy; 2025 АО Центр «Атомзащитаинформ». Все права защищены.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Политика конфиденциальности</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Условия использования</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Карта сайта</a>
-            </div>
+        <!-- Нижний блок: только копирайт, по центру -->
+        <div class="mt-16 pt-8 border-t border-gray-700/50">
+            <p class="text-sm text-gray-500 text-center">
+                &copy; <span id="current-year">2025</span> АО Центр «Атомзащитаинформ». Все права защищены.
+            </p>
         </div>
     </div>
 </footer>
+
+<!-- Добавьте этот скрипт перед закрывающим </body> для авто-обновления года -->
+<script>
+  // Проверяем, чтобы не дублировать скрипт, если он уже есть на странице
+  if (!document.getElementById('current-year-script')) {
+    const script = document.createElement('script');
+    script.id = 'current-year-script';
+    script.innerHTML = "document.getElementById('current-year').textContent = new Date().getFullYear();";
+    document.body.appendChild(script);
+  }
+</script>
+
+<!-- Добавьте этот CSS в ваш основной файл стилей для эффекта на ссылках -->
+<style>
+  .footer-link {
+    @apply text-gray-400 hover:text-white transition-all duration-300 inline-block;
+  }
+  .footer-link:hover {
+    @apply transform translate-x-1;
+  }
+</style>
