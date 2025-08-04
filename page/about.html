@@ -72,7 +72,7 @@
 </section>
 
 <section class="py-20 bg-white">
-   <!-- Фоновая сетка -->
+  <!-- Фоновая сетка -->
   <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
   
   <div class="container mx-auto px-6">
@@ -84,12 +84,19 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
       <!-- На шаг впереди -->
-      <div class="rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 bg-white">
-        <div class="w-16 h-16 bg-rosatom-blue bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-</svg>
+      <div class="group rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border border-gray-100">
+        <div class="relative w-16 h-16 mb-6 icon-wrapper">
+          <div class="absolute inset-0 rounded-2xl opacity-80 icon-bg bg-gradient-to-br from-sky-400 to-blue-600"></div>
+          <div class="relative w-full h-full flex items-center justify-center">
+            <!-- Иконка: Ракета как символ скорости, инноваций и лидерства -->
+            <svg class="w-9 h-9 text-white transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L15 5.5V11C15 12.1046 14.1046 13 13 13H11C9.89543 13 9 12.1046 9 11V5.5L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 11L7 21L12 17L17 21L15 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="8" r="1" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
         </div>
         <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">На шаг впереди</h3>
         <p class="text-gray-600">
@@ -97,12 +104,18 @@
         </p>
       </div>
 
-      <!-- Ответственность за результат -->
-      <div class="rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 bg-white">
-        <div class="w-16 h-16 bg-rosatom-light bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-</svg>
+            <!-- Ответственность за результат -->
+      <div class="group rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border border-gray-100">
+        <div class="relative w-16 h-16 mb-6 icon-wrapper">
+          <div class="absolute inset-0 rounded-2xl opacity-80 icon-bg bg-gradient-to-br from-cyan-400 to-sky-600"></div>
+          <div class="relative w-full h-full flex items-center justify-center">
+            <!-- Иконка: Флаг на точке как символ достижения цели и ответственности -->
+            <svg class="w-9 h-9 text-white transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 21h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 21V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 5L19 9L12 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
         </div>
         <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Ответственность за результат</h3>
         <p class="text-gray-600">
@@ -110,13 +123,17 @@
         </p>
       </div>
 
-      <!-- Эффективность -->
-      <div class="rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 bg-white">
-        <div class="w-16 h-16 bg-green-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-</svg>
+            <!-- Эффективность -->
+      <div class="group rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border border-gray-100">
+        <div class="relative w-16 h-16 mb-6 icon-wrapper">
+          <div class="absolute inset-0 rounded-2xl opacity-80 icon-bg bg-gradient-to-br from-emerald-400 to-green-600"></div>
+          <div class="relative w-full h-full flex items-center justify-center">
+            <!-- Иконка: График роста как символ повышения эффективности -->
+            <svg class="w-9 h-9 text-white transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 17L9 11L13 15L21 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 7H21V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
         </div>
         <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Эффективность</h3>
         <p class="text-gray-600">
@@ -125,14 +142,20 @@
       </div>
 
       <!-- Единая команда -->
-      <div class="rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 bg-white">
-        <div class="w-16 h-16 bg-cyber-green bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-<svg class="w-8 h-8 text-cyber-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-  <circle cx="9" cy="7" r="4"></circle>
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23 21v-2a4 4 0 00-3-3.87"></path>
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 3.13a4 4 0 010 7.75"></path>
-</svg>
+      <div class="group rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border border-gray-100">
+        <div class="relative w-16 h-16 mb-6 icon-wrapper">
+          <div class="absolute inset-0 rounded-2xl opacity-80 icon-bg bg-gradient-to-br from-teal-400 to-cyan-500"></div>
+          <div class="relative w-full h-full flex items-center justify-center">
+            <!-- Иконка: Три фигуры как символ единства и командной работы -->
+            <svg class="w-9 h-9 text-white transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M17 19C17 16.2386 14.7614 14 12 14C9.23858 14 7 16.2386 7 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="5" cy="9" r="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8.5 19C8.5 17.067 6.933 15.5 5 15.5C3.06701 15.5 1.5 17.067 1.5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="19" cy="9" r="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M22.5 19C22.5 17.067 20.933 15.5 19 15.5C17.067 15.5 15.5 17.067 15.5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
         </div>
         <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Единая команда</h3>
         <p class="text-gray-600">
@@ -141,11 +164,19 @@
       </div>
 
       <!-- Уважение -->
-      <div class="rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 bg-white">
-        <div class="w-16 h-16 bg-cyber-cyan bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-<svg class="w-8 h-8 text-cyber-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-</svg>
+      <div class="group rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border border-gray-100">
+        <div class="relative w-16 h-16 mb-6 icon-wrapper">
+          <div class="absolute inset-0 rounded-2xl opacity-80 icon-bg bg-gradient-to-br from-indigo-400 to-purple-600"></div>
+          <div class="relative w-full h-full flex items-center justify-center">
+            <!-- Иконка: Весы (классическая, узнаваемая версия) -->
+            <svg class="w-9 h-9 text-white transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 21H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 5H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 5L8 15H2L4 5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 5L16 15H22L20 5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
         </div>
         <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Уважение</h3>
         <p class="text-gray-600">
@@ -154,17 +185,23 @@
       </div>
 
       <!-- Безопасность -->
-      <div class="rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 bg-white">
-        <div class="w-16 h-16 bg-orange-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-</svg>
+      <div class="group rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border border-gray-100">
+        <div class="relative w-16 h-16 mb-6 icon-wrapper">
+          <div class="absolute inset-0 rounded-2xl opacity-80 icon-bg bg-gradient-to-br from-amber-400 to-orange-600"></div>
+          <div class="relative w-full h-full flex items-center justify-center">
+            <!-- Иконка: Щит с галочкой как символ безопасности и надёжности -->
+            <svg class="w-9 h-9 text-white transition-transform duration-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21C12 21 4 16.5 4 10V4.5L12 2L20 4.5V10C20 16.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 10.5L11.5 13L15 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
         </div>
         <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Безопасность</h3>
         <p class="text-gray-600">
           Забота о безопасности людей и окружающей среды, строгие нормы и стандарты работы.
         </p>
       </div>
+
     </div>
   </div>
 </section>
