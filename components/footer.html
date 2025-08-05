@@ -72,6 +72,33 @@
     </div>
 </footer>
 
+    <!-- Начало обновленного кода баннера cookie -->
+<div id="cookie-notice" class="hidden fixed bottom-4 right-4 z-50">
+  <div class="bg-white/80 backdrop-blur-lg rounded-xl shadow-2xl max-w-md p-6 border border-gray-200/50">
+    <div class="flex items-start gap-4">
+      <!-- Иконка -->
+      <div class="flex-shrink-0 text-blue-500 w-10 h-10 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.593 11.237C20.442 10.55 19 11.025 19 12.245V13a1 1 0 01-2 0v-1.213c0-1.79-1.19-3.374-2.92-3.854a2.91 2.91 0 00-1.079.165C11.956 7.64 11.02 7 9.875 7c-1.42 0-2.61.956-2.92 2.25C6.442 8.73 5 9.82 5 11.245V13a1 1 0 01-2 0v-1.755C3 9.42 4.442 8.245 5.907 7.763c.421-1.39 1.68-2.43 3.193-2.613C9.69.418 12.316-.487 14.546.78c1.785 1.015 2.85 2.88 2.85 4.883v.237c1.47.42 2.518 1.637 2.518 3.124v.213a1 1 0 01-1.32.9zM12 21a2 2 0 100-4 2 2 0 000 4zm-4 0a2 2 0 100-4 2 2 0 000 4zm8 0a2 2 0 100-4 2 2 0 000 4zM9 14a1 1 0 100-2 1 1 0 000 2zm6-2a1 1 0 11-2 0 1 1 0 012 0z"/>
+        </svg>
+      </div>
+      
+      <!-- Текст и кнопка -->
+      <div class="flex-grow">
+        <h3 class="font-semibold text-gray-800 text-lg mb-1">Мы ценим вашу приватность</h3>
+        <p class="text-sm text-gray-600 mb-4">
+          Мы используем файлы cookie для улучшения производительности сайта. Продолжая работу, вы соглашаетесь с нашей 
+          <a href="../page/privacy-policy.html" class="font-semibold text-blue-600 hover:underline">политикой конфиденциальности</a>.
+        </p>
+        <button id="accept-cookies" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-lg transition-colors duration-300">
+          Принять всё
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Конец обновленного кода баннера cookie -->
+
 <!-- Добавьте этот скрипт перед закрывающим </body> для авто-обновления года -->
 <script>
   // Проверяем, чтобы не дублировать скрипт, если он уже есть на странице
@@ -92,3 +119,4 @@
     @apply transform translate-x-1;
   }
 </style>
+

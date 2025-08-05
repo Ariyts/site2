@@ -233,3 +233,18 @@ body {
   filter: drop-shadow(0 0 6px #4a90e2) blur(0.5px);
 }
 
+/* Анимация для плавного появления cookie-баннера */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}

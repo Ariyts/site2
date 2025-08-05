@@ -490,3 +490,62 @@ window.addEventListener('load', () => {
     console.log(`Page load time: ${loadTime.toFixed(2)}ms`); // Результат будет в миллисекундах
     // ... ваш код для отслеживания события
 });
+
+// Убрали внешний DOMContentLoaded. Теперь это просто набор функций.
+
+// Функция для установки cookie
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/; samesite=Lax";
+}
+
+// Функция для получения cookie
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+// === ГЛАВНАЯ ФУНКЦИЯ ИНИЦИАЛИЗАЦИИ БАННЕРА ===
+// Мы будем вызывать её из другого скрипта, когда футер будет готов.
+function initializeCookieBanner() {
+  const cookieNotice = document.getElementById('cookie-notice');
+  const acceptButton = document.getElementById('accept-cookies');
+
+  // Если на странице (уже загруженной!) нет баннера, ничего не делаем.
+  // Эта проверка теперь сработает корректно.
+  if (!cookieNotice || !acceptButton) {
+    // Можно добавить console.log для отладки
+    // console.log('Элементы cookie-баннера не найдены. Возможно, он уже принят или ошибка в HTML.');
+    return;
+  }
+
+  // Проверяем, было ли дано согласие ранее
+  if (!getCookie('cookie_consent_accepted')) {
+    cookieNotice.classList.remove('hidden');
+    cookieNotice.classList.add('animate-fade-in-up');
+  }
+
+  // Обработчик нажатия на кнопку "Принять и закрыть"
+  acceptButton.addEventListener('click', function() {
+    setCookie('cookie_consent_accepted', 'true', 365);
+    
+    cookieNotice.style.transition = 'opacity 0.3s, transform 0.3s';
+    cookieNotice.style.opacity = '0';
+    cookieNotice.style.transform = 'translateY(100%)';
+
+    setTimeout(() => {
+        cookieNotice.classList.add('hidden');
+    }, 300);
+  });
+}
