@@ -32,24 +32,24 @@
   Вариант 1: Интерактивный архив
   Профессионально, наглядно и интерактивно.
 -->
-<section class="bg-gray-50 py-24">
-   <!-- Фоновая сетка -->
+<section class="bg-gray-50 py-12 sm:py-16 lg:py-24">
+   <!-- Фоновая сетка (без изменений) -->
   <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
   
   <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <!-- Текстовый блок -->
       <div class="text-center lg:text-left">
-        <h1 class="text-5xl font-bold mb-6 leading-tight text-rosatom-dark">
-          Открытость как принцип <span class="text-rosatom-blue">безопасности</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-rosatom-dark">
+          Открытость как принцип<br class="md:hidden"> <span class="text-rosatom-blue">безопасности</span>
         </h1>
-        <p class="text-xl text-gray-600 max-w-xl mx-auto lg:mx-0">
+        <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xl mx-auto lg:mx-0">
           Мы публикуем ключевые документы, подтверждающие нашу финансовую стабильность, ответственность и соответствие высоким стандартам.<br>
-      <span class="font-semibold text-rosatom-dark mt-2 inline-block">Прозрачность — основа доверия.</span>
+          <span class="font-semibold text-rosatom-dark mt-2 inline-block">Прозрачность — основа доверия.</span>
         </p>
       </div>
       
-      <!-- Визуальный блок с документами -->
+      <!-- Визуальный блок с документами (без изменений, так как он скрыт на малых экранах) -->
       <div class="hidden lg:flex justify-center items-center">
         <div class="group relative w-72 h-48 cursor-pointer">
           <!-- Карточка-документ 3 (нижняя) -->
@@ -74,75 +74,75 @@
   </div>
 </section>
 
-<section class="py-20 bg-white">
+<section class="py-12 sm:py-16 lg:py-20 bg-white">
    <!-- Фоновая сетка -->
   <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
   
   <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="bg-gray-50 rounded-2xl p-8 shadow-lg">
-        <div class="flex items-center mb-6">
-          <div class="w-16 h-16 bg-rosatom-blue bg-opacity-10 rounded-xl flex items-center justify-center mr-4">
-            <svg class="w-8 h-8 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+      <div class="bg-gray-50 rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg">
+        <div class="flex items-center mb-4 sm:mb-6">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-rosatom-blue bg-opacity-10 rounded-xl flex items-center justify-center mr-4 shrink-0">
+            <svg class="w-7 h-7 sm:w-8 sm:h-8 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-rosatom-dark">Аудиторские заключения</h3>
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-rosatom-dark">Аудиторские заключения</h3>
         </div>
-        <ul class="space-y-4">
-          <li class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm">
-            <span class="text-lg text-gray-800">Аудиторское заключение за 2019 год</span>
-            <div class="flex space-x-2">
-              <a href="../reports/Audit_2019.pdf" target="_blank" class="px-4 py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
-              <a href="../reports/Audit_2019.pdf" download class="px-4 py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
+        <ul class="space-y-3">
+          <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white p-3 sm:p-4 rounded-lg shadow-sm gap-3 sm:gap-2">
+            <span class="text-base sm:text-lg text-gray-800">Аудиторское заключение за 2019 год</span>
+            <div class="flex space-x-2 self-start sm:self-auto">
+              <a href="../reports/Audit_2019.pdf" target="_blank" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
+              <a href="../reports/Audit_2019.pdf" download class="px-3 py-1.5 sm:px-4 sm:py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
             </div>
           </li>
-          <li class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm">
-            <span class="text-lg text-gray-800">Аудиторское заключение за 2020 год</span>
-            <div class="flex space-x-2">
-              <a href="../reports/Audit_2020.pdf" target="_blank" class="px-4 py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
-              <a href="../reports/Audit_2020.pdf" download class="px-4 py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
+          <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white p-3 sm:p-4 rounded-lg shadow-sm gap-3 sm:gap-2">
+            <span class="text-base sm:text-lg text-gray-800">Аудиторское заключение за 2020 год</span>
+            <div class="flex space-x-2 self-start sm:self-auto">
+              <a href="../reports/Audit_2020.pdf" target="_blank" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
+              <a href="../reports/Audit_2020.pdf" download class="px-3 py-1.5 sm:px-4 sm:py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
             </div>
           </li>
-          <li class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm">
-            <span class="text-lg text-gray-800">Аудиторское заключение за 2021 год</span>
-            <div class="flex space-x-2">
-              <a href="../reports/Audit_2021.pdf" target="_blank" class="px-4 py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
-              <a href="../reports/Audit_2021.pdf" download class="px-4 py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
+          <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white p-3 sm:p-4 rounded-lg shadow-sm gap-3 sm:gap-2">
+            <span class="text-base sm:text-lg text-gray-800">Аудиторское заключение за 2021 год</span>
+            <div class="flex space-x-2 self-start sm:self-auto">
+              <a href="../reports/Audit_2021.pdf" target="_blank" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
+              <a href="../reports/Audit_2021.pdf" download class="px-3 py-1.5 sm:px-4 sm:py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
             </div>
           </li>
-          <li class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm">
-            <span class="text-lg text-gray-800">Аудиторское заключение за 2022 год</span>
-            <div class="flex space-x-2">
-              <a href="../reports/Audit_2022.pdf" target="_blank" class="px-4 py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
-              <a href="../reports/Audit_2022.pdf" download class="px-4 py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
+          <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white p-3 sm:p-4 rounded-lg shadow-sm gap-3 sm:gap-2">
+            <span class="text-base sm:text-lg text-gray-800">Аудиторское заключение за 2022 год</span>
+            <div class="flex space-x-2 self-start sm:self-auto">
+              <a href="../reports/Audit_2022.pdf" target="_blank" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
+              <a href="../reports/Audit_2022.pdf" download class="px-3 py-1.5 sm:px-4 sm:py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
             </div>
           </li>
-          <li class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm">
-            <span class="text-lg text-gray-800">Аудиторское заключение за 2023 год</span>
-            <div class="flex space-x-2">
-              <a href="../reports/Audit_2023.pdf" target="_blank" class="px-4 py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
-              <a href="../reports/Audit_2023.pdf" download class="px-4 py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
+          <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white p-3 sm:p-4 rounded-lg shadow-sm gap-3 sm:gap-2">
+            <span class="text-base sm:text-lg text-gray-800">Аудиторское заключение за 2023 год</span>
+            <div class="flex space-x-2 self-start sm:self-auto">
+              <a href="../reports/Audit_2023.pdf" target="_blank" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
+              <a href="../reports/Audit_2023.pdf" download class="px-3 py-1.5 sm:px-4 sm:py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
             </div>
           </li>
         </ul>
       </div>
 
-      <div class="bg-gray-50 rounded-2xl p-8 shadow-lg">
-        <div class="flex items-center mb-6">
-          <div class="w-16 h-16 bg-rosatom-light bg-opacity-10 rounded-xl flex items-center justify-center mr-4">
-            <svg class="w-8 h-8 text-rosatom-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="bg-gray-50 rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg">
+        <div class="flex items-center mb-4 sm:mb-6">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-rosatom-light bg-opacity-10 rounded-xl flex items-center justify-center mr-4 shrink-0">
+            <svg class="w-7 h-7 sm:w-8 sm:h-8 text-rosatom-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-rosatom-dark">Специальная оценка условий труда (СОУТ)</h3>
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-rosatom-dark">Специальная оценка условий труда (СОУТ)</h3>
         </div>
-        <ul class="space-y-4">
-          <li class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm">
-            <span class="text-lg text-gray-800">СОУТ за 2024 год</span>
-            <div class="flex space-x-2">
-              <a href="../reports/SOUT_2024.pdf" target="_blank" class="px-4 py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
-              <a href="../reports/SOUT_2024.pdf" download class="px-4 py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
+        <ul class="space-y-3">
+          <li class="flex flex-col sm:flex-row sm:justify-between sm:items-center bg-white p-3 sm:p-4 rounded-lg shadow-sm gap-3 sm:gap-2">
+            <span class="text-base sm:text-lg text-gray-800">СОУТ за 2024 год</span>
+            <div class="flex space-x-2 self-start sm:self-auto">
+              <a href="../reports/SOUT_2024.pdf" target="_blank" class="px-3 py-1.5 sm:px-4 sm:py-2 bg-rosatom-blue text-white rounded-lg text-sm hover:bg-rosatom-dark transition-colors">Открыть</a>
+              <a href="../reports/SOUT_2024.pdf" download class="px-3 py-1.5 sm:px-4 sm:py-2 border border-rosatom-blue text-rosatom-blue rounded-lg text-sm hover:bg-rosatom-blue hover:text-white transition-colors">Скачать</a>
             </div>
           </li>
         </ul>

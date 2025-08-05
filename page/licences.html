@@ -29,25 +29,25 @@
   Вариант 2: Современный с бэйджами
   Визуально подтверждает текст, выглядит динамично.
 -->
-<section class="relative bg-white py-20 overflow-hidden">
-   <!-- Фоновая сетка -->
+<section class="relative bg-white py-12 sm:py-16 lg:py-20 overflow-hidden">
+  <!-- Фоновая сетка (без изменений) -->
   <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
   
-  <!-- Абстрактная форма на фоне -->
+  <!-- Абстрактная форма на фоне (без изменений) -->
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <div class="h-[400px] w-[600px] rounded-full bg-gradient-to-tr from-rosatom-blue/20 to-rosatom-light/20 blur-3xl"></div>
   </div>
   
   <div class="container mx-auto px-6 text-center relative z-10">
-    <h1 class="text-5xl font-bold mb-6 leading-tight text-rosatom-dark">
-      Доверие, подтвержденное <span class="text-rosatom-blue">государством</span>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-rosatom-dark">
+      Доверие, подтвержденное<br class="md:hidden"> <span class="text-rosatom-blue">государством</span>
     </h1>
-    <p class="text-xl max-w-3xl mx-auto text-gray-600">
+    <p class="text-base sm:text-lg lg:text-xl max-w-3xl mx-auto text-gray-600">
       Мы обладаем полным набором лицензий и аттестатов ФСБ, ФСТЭК и Министерства обороны для реализации проектов любого уровня сложности и секретности.
     </p>
 
     <!-- Бэйджи ведомств с НОВЫМИ иконками -->
-    <div class="mt-12 flex justify-center items-center gap-4 md:gap-8 flex-wrap">
+    <div class="mt-8 sm:mt-12 flex justify-center items-center gap-3 sm:gap-4 md:gap-8 flex-wrap">
       <!-- ФСБ -->
       <div class="flex items-center gap-3 bg-white/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-200 shadow-sm">
         <svg class="w-6 h-6 text-rosatom-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,27 +77,25 @@
   </div>
 </section>
 
-<section class="py-20 bg-white">
-   <!-- Фоновая сетка -->
+<section class="py-12 sm:py-16 lg:py-20 bg-white">
+   <!-- Фоновая сетка (без изменений) -->
   <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
   
   <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Наши официальные документы</h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-rosatom-dark mb-4">Наши официальные документы</h2>
+      <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
         Перечень лицензий и аттестатов, подтверждающих нашу профессиональную компетентность и право на ведение заявленных видов деятельности.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12">
-       <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-        <div class="flex items-center mb-6">
-          <!-- НОВЫЙ БЛОК ИКОНКИ -->
-          <div class="relative w-16 h-16 mr-6 icon-wrapper shrink-0">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+       <div class="bg-white rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg border border-gray-100">
+        <div class="flex items-start sm:items-center mb-4 sm:mb-6">
+          <div class="relative w-12 h-12 sm:w-16 sm:h-16 mr-4 sm:mr-6 icon-wrapper shrink-0">
             <div class="absolute inset-0 rounded-2xl opacity-80 icon-bg bg-gradient-to-br from-blue-500 to-blue-700"></div>
             <div class="relative w-full h-full flex items-center justify-center">
-              <!-- Иконка: Щит с двуглавым орлом -->
-              <svg class="w-9 h-9 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-8 h-8 sm:w-9 sm:h-9 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 21C12 21 4 16.5 4 10V4.5L12 2L20 4.5V10C20 16.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M14 8L13.5 9L12 10.5L10.5 9L10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M11 11L10 12V14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -106,22 +104,20 @@
               </svg>
             </div>
           </div>
-          <h3 class="text-2xl font-bold text-rosatom-dark">Лицензии ФСБ России</h3>
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-rosatom-dark">Лицензии ФСБ России</h3>
         </div>
-        <ul class="list-disc list-outside text-gray-700 space-y-3 ml-6">
+        <ul class="list-disc list-outside text-gray-700 text-sm sm:text-base space-y-3 ml-5">
           <li>Проведение работ, связанных с использованием сведений, составляющих государственную тайну.</li>
-          <li>Осуществление разработки, производства, распространения шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем, защищенных с использованием шифровальных (криптографических) средств, выполнения работ, оказания услуг в области шифрования информации, технического обслуживания шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем, защищенных с использованием шифровальных (криптографических) средств (за исключением случая, если техническое обслуживание шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем, защищенных с использованием шифровальных (криптографических) средств, осуществляется для обеспечения собственных нужд юридического лица или индивидуального предпринимателя).</li>
+          <li>Осуществление разработки, производства, распространения шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем, защищенных с использованием шифровальных (криптографических) средств, выполнения работ, оказания услуг в области шифрования информации, технического обслуживания шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем, защищенных с использованием шифровальных (криптографических) средств (за исключением случая, если техническое обслуживание шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем, защищенных с использованием шифровальных (криптографических) средств, осуществляется для обеспечения собственных нужд юридического лица или индивидуального предпринимателя)</li>
         </ul>
       </div>
 
-      <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-        <div class="flex items-center mb-6">
-          <!-- НОВЫЙ БЛОК ИКОНКИ -->
-          <div class="relative w-16 h-16 mr-6 icon-wrapper shrink-0">
+      <div class="bg-white rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg border border-gray-100">
+        <div class="flex items-start sm:items-center mb-4 sm:mb-6">
+          <div class="relative w-12 h-12 sm:w-16 sm:h-16 mr-4 sm:mr-6 icon-wrapper shrink-0">
             <div class="absolute inset-0 rounded-2xl opacity-80 icon-bg bg-gradient-to-br from-cyan-400 to-teal-600"></div>
             <div class="relative w-full h-full flex items-center justify-center">
-              <!-- Иконка: Документ с шестеренкой -->
-              <svg class="w-9 h-9 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-8 h-8 sm:w-9 sm:h-9 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M14 2V8H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M12 15.5C13.3807 15.5 14.5 14.3807 14.5 13C14.5 11.6193 13.3807 10.5 12 10.5C10.6193 10.5 9.5 11.6193 9.5 13C9.5 14.3807 10.6193 15.5 12 15.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -129,9 +125,9 @@
               </svg>
             </div>
           </div>
-          <h3 class="text-2xl font-bold text-rosatom-dark">Лицензии ФСТЭК России</h3>
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-rosatom-dark">Лицензии ФСТЭК России</h3>
         </div>
-        <ul class="list-disc list-outside text-gray-700 space-y-3 ml-6">
+        <ul class="list-disc list-outside text-gray-700 text-sm sm:text-base space-y-3 ml-5">
           <li>Осуществление мероприятий и (или) оказание услуг в области защиты государственной тайны.</li>
           <li>Проведение работ, связанных с созданием средств защиты информации.</li>
           <li>Деятельность по разработке и производству средств защиты конфиденциальной информации (СЗКИ).</li>
@@ -139,46 +135,39 @@
         </ul>
       </div>
 
-      <div class="bg-white rounded-2xl p-8 shadow-lg col-span-1 lg:col-span-2 border border-gray-100">
-        <div class="flex items-center mb-6">
-          <!-- НОВЫЙ БЛОК ИКОНКИ -->
-          <div class="relative w-16 h-16 mr-6 icon-wrapper shrink-0">
+      <div class="bg-white rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg col-span-1 lg:col-span-2 border border-gray-100">
+        <div class="flex items-start sm:items-center mb-4 sm:mb-6">
+          <div class="relative w-12 h-12 sm:w-16 sm:h-16 mr-4 sm:mr-6 icon-wrapper shrink-0">
             <div class="absolute inset-0 rounded-2xl opacity-80 icon-bg bg-gradient-to-br from-green-500 to-emerald-700"></div>
             <div class="relative w-full h-full flex items-center justify-center">
-              <!-- Иконка: Классическая звезда -->
-              <svg class="w-9 h-9 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-8 h-8 sm:w-9 sm:h-9 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
           </div>
-          <h3 class="text-2xl font-bold text-rosatom-dark">Лицензии Министерства обороны РФ</h3>
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-rosatom-dark">Лицензии Министерства обороны РФ</h3>
         </div>
-        <ul class="list-disc list-outside text-gray-700 space-y-3 ml-6">
+        <ul class="list-disc list-outside text-gray-700 text-sm sm:text-base space-y-3 ml-5">
           <li>Проведение работ, связанных с созданием средств защиты информации (сертификация средств защиты, проведение специальных экспертиз).</li>
         </ul>
       </div>
 
-      <div class="bg-white rounded-2xl p-8 shadow-lg col-span-1 lg:col-span-2 border border-gray-100">
-        <div class="flex items-center mb-6">
-          <!-- НОВЫЙ БЛОК ИКОНКИ -->
-          <div class="relative w-16 h-16 mr-6 icon-wrapper shrink-0">
+      <div class="bg-white rounded-2xl p-5 sm:p-6 lg:p-8 shadow-lg col-span-1 lg:col-span-2 border border-gray-100">
+        <div class="flex items-start sm:items-center mb-4 sm:mb-6">
+          <div class="relative w-12 h-12 sm:w-16 sm:h-16 mr-4 sm:mr-6 icon-wrapper shrink-0">
             <div class="absolute inset-0 rounded-2xl opacity-80 icon-bg bg-gradient-to-br from-indigo-500 to-purple-700"></div>
             <div class="relative w-full h-full flex items-center justify-center text-white">
-              <!-- Иконка: Сертификат с печатью -->
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Документ и медаль с основной толщиной линии -->
-  <path d="M14 3H6C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19V9L14 3Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M14 3V9H20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="14" cy="14" r="4" stroke="currentColor" stroke-width="1.2"/>
-  
-  <!-- Изящная галочка (нарисована как тонкая линия) -->
-  <path d="M12.5 14L14 15.5L16.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+              <svg class="w-8 h-8 sm:w-9 sm:h-9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 3H6C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19V9L14 3Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 3V9H20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="14" cy="14" r="4" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M12.5 14L14 15.5L16.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
           </div>
-          <h3 class="text-2xl font-bold text-rosatom-dark">Аттестаты аккредитации</h3>
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-rosatom-dark">Аттестаты аккредитации</h3>
         </div>
-        <ul class="list-disc list-outside text-gray-700 space-y-3 ml-6">
+        <ul class="list-disc list-outside text-gray-700 text-sm sm:text-base space-y-3 ml-5">
           <li>Аттестат аккредитации органа по аттестации ФСТЭК России.</li>
           <li>Аттестат аккредитации органа по сертификации ФСТЭК России.</li>
           <li>Аттестат аккредитации испытательной лаборатории ФСТЭК России.</li>
@@ -194,17 +183,17 @@
   Вариант 3: Монументальное утверждение (без кнопок)
   Создает ощущение основательности, стабильности и государственной важности.
 -->
-  <section class="gradient-rosatom text-white py-24 relative overflow-hidden">
+<section class="gradient-rosatom text-white py-12 sm:py-16 lg:py-24 relative overflow-hidden">
   <div class="grid-pattern absolute inset-0 opacity-20"></div>
 
   <div class="container mx-auto px-6 relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
       
       <div class="text-center md:text-left">
-        <h2 class="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-          Навигация в мире сложных регуляций
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+          Навигация в мире<br class="sm:hidden"> сложных регуляций
         </h2>
-        <p class="text-xl max-w-xl mx-auto md:mx-0 opacity-90">
+        <p class="text-lg lg:text-xl max-w-xl mx-auto md:mx-0 opacity-90">
           Сфера информационной безопасности полна строгих правил. Наши лицензии подтверждают, что мы ориентируемся в этих требованиях и можем обеспечить полное соответствие вашего проекта всем нормам законодательства.
         </p>
       </div>
