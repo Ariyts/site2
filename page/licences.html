@@ -216,89 +216,137 @@
           
           <!-- Начало нового блока с анимированным дипломом -->
 <!-- Начало блока с КИБЕР анимированным свитком -->
-<div class="diploma-container group">
-  <svg class="diploma-svg w-48 h-48 relative z-10" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-    <!-- Определения градиентов, паттернов и фильтров -->
-    <defs>
-      <!-- Градиент для основной части (кибер-голограмма) -->
-      <linearGradient id="cyberGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" style="stop-color:#0f172a" /> <!-- Темный синий сверху (космос) -->
-        <stop offset="30%" style="stop-color:#1d4ed8" /> <!-- Неоновый синий -->
-        <stop offset="70%" style="stop-color:#3b82f6" /> <!-- Яркий голубой -->
-        <stop offset="100%" style="stop-color:#60a5fa" /> <!-- Светлый неон снизу -->
-      </linearGradient>
-      <!-- Градиент для роллов (неоновый блик) -->
-      <linearGradient id="rollGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" style="stop-color:#1d4ed8" />
-        <stop offset="40%" style="stop-color:#3b82f6" />
-        <stop offset="100%" style="stop-color:#1e40af" /> <!-- Темный синий край -->
-      </linearGradient>
-      <!-- Градиент для печати (неоновый щит) -->
-      <radialGradient id="sealGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-        <stop offset="0%" style="stop-color:#22c55e" /> <!-- Зеленый неон центр (security) -->
-        <stop offset="100%" style="stop-color:#15803d" /> <!-- Темно-зеленый край -->
-      </radialGradient>
-      <!-- Паттерн для цифровой текстуры (binary код) -->
-      <pattern id="cyberTexture" patternUnits="userSpaceOnUse" width="20" height="20">
-        <text x="0" y="10" font-size="8" fill="#22c55e" opacity="0.2">010101</text>
-        <text x="0" y="20" font-size="8" fill="#3b82f6" opacity="0.15">101010</text>
-      </pattern>
-      <!-- Фильтр для неонового свечения -->
-      <filter id="neonGlow">
-        <feGaussianBlur stdDeviation="3" result="blur" />
-        <feMerge>
-          <feMergeNode in="blur" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-      <!-- Фильтр для glitch (используется в CSS) -->
-      <filter id="glitchFilter">
-        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise" />
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
-      </filter>
-    </defs>
-
-    <!-- Группа для всего свитка -->
-    <g class="paper">
-      <!-- Слой 1: Задняя часть и тень (цифровая тень) -->
-      <path d="M 50,30 C 20,30 30,10 50,10 S 80,30 50,30 L 190,30 C 220,30 210,10 190,10 S 160,30 190,30 L 190,210 C 160,210 140,230 190,230 S 220,210 190,210 L 50,210 C 20,210 30,230 50,230 S 80,210 50,210 L 50,30 Z" fill="#0f172a" opacity="0.8" filter="url(#neonGlow)" />
-
-      <!-- Слой 2: Основная "бумага" с градиентом и текстурой -->
-      <path d="M 50,20 L 190,20 C 180,35 200,35 190,20 L 190,220 C 200,205 180,205 190,220 L 50,220 C 60,205 40,205 50,220 L 50,20 C 40,35 60,35 50,20 Z" fill="url(#cyberGradient)" />
-      <!-- Наложение binary текстуры -->
-      <path d="M 50,20 L 190,20 C 180,35 200,35 190,20 L 190,220 C 200,205 180,205 190,220 L 50,220 C 60,205 40,205 50,220 L 50,20 C 40,35 60,35 50,20 Z" fill="url(#cyberTexture)" opacity="0.3" />
-
-      <!-- Слой 3: Верхний ролл (завиток) -->
-      <g class="top-roll">
-        <path d="M 50,20 C 20,20 30,0 50,0 S 80,20 50,20 L 190,20 C 220,20 210,0 190,0 S 160,20 190,20" fill="url(#rollGradient)" filter="url(#neonGlow)" />
-      </g>
-
-      <!-- Слой 4: Нижний ролл (завиток) -->
-      <g class="bottom-roll">
-        <path d="M 190,220 C 220,220 210,240 190,240 S 160,220 190,220 L 50,220 C 20,220 30,240 50,240 S 80,220 50,220" fill="url(#rollGradient)" filter="url(#neonGlow)" />
-      </g>
-
-      <!-- Цифровые линии данных (анимация сканирования в CSS) -->
-      <g class="data-lines">
-        <line x1="60" y1="50" x2="180" y2="50" stroke="#22c55e" stroke-width="1" opacity="0.5" />
-        <line x1="60" y1="100" x2="180" y2="100" stroke="#3b82f6" stroke-width="1" opacity="0.5" />
-        <line x1="60" y1="150" x2="180" y2="150" stroke="#22c55e" stroke-width="1" opacity="0.5" />
-      </g>
-
-      <!-- Текст на свитке (кибер-стиль) -->
-      <text x="120" y="120" font-family="monospace" font-size="18" font-weight="bold" fill="#22c55e" text-anchor="middle" filter="url(#neonGlow)">Сертификат</text>
-      <!-- Фоновый binary код -->
-      <text x="120" y="140" font-family="monospace" font-size="10" fill="#3b82f6" text-anchor="middle" opacity="0.4">010101 101010 010101</text>
-    </g>
-
-    <!-- Печать (кибер-щит с замком) -->
-    <g class="seal" transform="translate(0, 0)">
-      <path d="M170 170 m-20 0 a20 20 0 1 0 40 0 a20 20 0 1 0 -40 0" fill="url(#sealGradient)" filter="url(#neonGlow)" /> <!-- Круглый щит -->
-      <!-- Иконка замка внутри -->
-      <path d="M165 165 v-10 a5 5 0 0 1 10 0 v10 h-10 z m0 0 h10 v10 h-10 z" fill="#fff" opacity="0.8" />
-      <path class="checkmark" d="M160 175 l10 10 l20 -20" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-  </svg>
+<div class="cyber-scroll relative w-64 h-80 mx-auto perspective-1000">
+  <style>
+    @keyframes glow-pulse {
+      0%, 100% { text-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.3); box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); }
+      50% { text-shadow: 0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.5); box-shadow: 0 0 25px rgba(0, 123, 255, 0.8); }
+    }
+    @keyframes scroll-unroll {
+      0% { height: 0; opacity: 0; transform: translateY(-50px) rotateX(30deg); }
+      100% { height: 100%; opacity: 1; transform: translateY(0) rotateX(0deg); }
+    }
+    @keyframes particle-burst {
+      0% { transform: scale(0) translate(0, 0); opacity: 1; }
+      100% { transform: scale(1.5) translate(var(--tx), var(--ty)); opacity: 0; }
+    }
+    @keyframes holographic-scan {
+      0% { transform: translateY(-100%); opacity: 0.3; }
+      100% { transform: translateY(100%); opacity: 0; }
+    }
+    .cyber-scroll {
+      --rosatom-blue: #007BFF;
+      --rosatom-light: #00BFFF;
+      transform-style: preserve-3d;
+      animation: glow-pulse 2s infinite alternate;
+    }
+    .scroll-paper {
+      background: linear-gradient(180Яdeg, rgba(0, 123, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+      border: 1px solid var(--rosatom-light);
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+      animation: scroll-unroll 1.5s ease-out forwards;
+      transform-origin: top;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+    .scroll-handle {
+      background: radial-gradient(circle, var(--rosatom-blue) 0%, var(--rosatom-light) 100%);
+      box-shadow: 0 0 10px var(--rosatom-light);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    .scroll-content {
+      color: white;
+      text-shadow: 0 0 5px var(--rosatom-blue);
+      animation: glow-pulse 2s infinite alternate;
+    }
+    .particle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 4px;
+      height: 4px;
+      background: var(--rosatom-light);
+      border-radius: 50%;
+      animation: particle-burst 1.5s ease-out infinite;
+      z-index: 0;
+    }
+    .holographic-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--rosatom-light), transparent);
+      opacity: 0.5;
+      animation: holographic-scan 3s linear infinite;
+      z-index: 3;
+    }
+    .cyber-scroll:hover .scroll-paper,
+    .cyber-scroll:active .scroll-paper {
+      box-shadow: 0 0 30px rgba(0, 123, 255, 1);
+      transform: rotateX(5deg) scale(1.05);
+      transition: all 0.3s ease;
+    }
+    .cyber-scroll::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(0, 123, 255, 0.3) 0%, transparent 70%);
+      opacity: 0.6;
+      z-index: -1;
+      animation: glow-pulse 3s infinite alternate;
+    }
+    /* Улучшения для мобильных устройств (планшетов) */
+    @media (max-width: 1024px) {
+      .cyber-scroll {
+        animation-duration: 1.5s; /* Ускорить для лучшей отзывчивости */
+      }
+      .scroll-paper {
+        animation-duration: 1.2s;
+      }
+      .particle {
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite; /* Бесконечные частицы для вау-эффекта */
+      }
+      .holographic-line {
+        animation-duration: 2s; /* Быстрее сканирование */
+      }
+    }
+  </style>
+  <!-- Верхняя ручка свитка -->
+  <div class="scroll-handle w-48 h-6 rounded-full top-0"></div>
+  
+  <!-- Бумага свитка с анимацией разворачивания и голографической линией -->
+  <div class="scroll-paper w-full h-full rounded-b-lg p-4 text-center flex flex-col justify-center items-center">
+    <div class="holographic-line"></div>
+    <div class="scroll-content text-lg font-bold mb-2">Наши Лицензии</div>
+    <ul class="text-sm space-y-1 opacity-90">
+      <li>Лицензия ФСТЭК №1234</li>
+      <li>Лицензия ФСБ №5678</li>
+      <li>Сертификат ISO 27001</li>
+      <li>Лицензия на криптографию</li>
+    </ul>
+    <p class="text-xs mt-2 italic">Полное соответствие нормам</p>
+  </div>
+  
+  <!-- Нижняя ручка свитка -->
+  <div class="scroll-handle w-48 h-6 rounded-full bottom-0"></div>
+  
+  <!-- Улучшенные частицы для вау-эффекта (бесконечный burst, больше на мобильных) -->
+  <div class="particle" style="--tx: 20px; --ty: 10px; animation-delay: 0s;"></div>
+  <div class="particle" style="--tx: -15px; --ty: 15px; animation-delay: 0.2s;"></div>
+  <div class="particle" style="--tx: 10px; --ty: -20px; animation-delay: 0.4s;"></div>
+  <div class="particle" style="--tx: -25px; --ty: -10px; animation-delay: 0.6s;"></div>
+  <div class="particle" style="--tx: 5px; --ty: 25px; animation-delay: 0.8s;"></div>
+  <div class="particle" style="--tx: 30px; --ty: -5px; animation-delay: 1s;"></div>
+  <div class="particle" style="--tx: -10px; --ty: 20px; animation-delay: 1.2s;"></div>
+  <div class="particle" style="--tx: 15px; --ty: -15px; animation-delay: 1.4s;"></div>
+  <div class="particle" style="--tx: 25px; --ty: 5px; animation-delay: 0.1s;"></div>
+  <div class="particle" style="--tx: -20px; --ty: -25px; animation-delay: 0.3s;"></div>
 </div>
 <!-- Конец блока -->
 
