@@ -88,58 +88,7 @@
 </section>
 
 
-<!-- 
-  Секция FAQ с фоном "Инженерный чертеж"
--->
-<section class="relative bg-slate-50 py-24 z-0" x-data="{ open: 1 }">
-  <!-- Фоновая сетка -->
-  <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
-  
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Часто задаваемые вопросы</h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Ответы на вопросы, которые нам задают чаще всего.
-      </p>
-    </div>
 
-    <div class="max-w-3xl mx-auto space-y-4">
-      <!-- 
-        Каждая карточка вопроса теперь имеет полупрозрачный фон и эффект размытия.
-      -->
-      <!-- Вопрос 1 -->
-      <div class="bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-gray-200/50">
-        <button @click="open = (open === 1 ? 0 : 1)" class="w-full flex justify-between items-center text-left p-6">
-          <span class="text-lg font-semibold text-rosatom-dark">Как быстро вы отвечаете на заявку?</span>
-          <svg class="w-6 h-6 text-rosatom-blue transform transition-transform" :class="{'rotate-180': open === 1}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-        </button>
-        <div x-show="open === 1" x-collapse class="px-6 pb-6 pt-0 text-gray-600">
-          <p>Мы стараемся обрабатывать все входящие заявки в течение одного рабочего дня. Наш менеджер свяжется с вами для уточнения деталей в самое ближайшее время.</p>
-        </div>
-      </div>
-      <!-- Вопрос 2 -->
-      <div class="bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-gray-200/50">
-        <button @click="open = (open === 2 ? 0 : 2)" class="w-full flex justify-between items-center text-left p-6">
-          <span class="text-lg font-semibold text-rosatom-dark">Можно ли организовать встречу в вашем офисе?</span>
-          <svg class="w-6 h-6 text-rosatom-blue transform transition-transform" :class="{'rotate-180': open === 2}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-        </button>
-        <div x-show="open === 2" x-collapse class="px-6 pb-6 pt-0 text-gray-600">
-          <p>Да, конечно. Мы всегда рады встретиться с нашими клиентами лично. Пожалуйста, согласуйте время вашего визита с менеджером по телефону или электронной почте.</p>
-        </div>
-      </div>
-      <!-- Вопрос 3 -->
-      <div class="bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-gray-200/50">
-        <button @click="open = (open === 3 ? 0 : 3)" class="w-full flex justify-between items-center text-left p-6">
-          <span class="text-lg font-semibold text-rosatom-dark">Работаете ли вы с государственными заказчиками?</span>
-          <svg class="w-6 h-6 text-rosatom-blue transform transition-transform" :class="{'rotate-180': open === 3}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-        </button>
-        <div x-show="open === 3" x-collapse class="px-6 pb-6 pt-0 text-gray-600">
-          <p>Да, работа с государственными структурами и предприятиями ОПК является одним из наших ключевых направлений. Мы обладаем всеми необходимыми лицензиями и опытом для реализации проектов любого уровня сложности.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- 
   Вариант 1: Открытый диалог
