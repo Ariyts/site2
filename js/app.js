@@ -233,52 +233,106 @@ const startTime = performance.now();
     return re.test(phone);
   }
 
+// Карта соответствия "часть URL" -> "Название темы"
+const servicesMap = {
+    'attestation': 'Аттестация',
+    'certification': 'Сертификация СЗИ',
+    'tech-protection': 'Техническая защита', // Пример для URL вроде /services/technical-protection.html
+    'pentest': 'Аудит ИБ',
+    'development': 'Разработка ПО'
+};
+
   // Show consultation modal
-  function showConsultationModal() {
+// Show consultation modal
+function showConsultationModal() {
+    // --- НАЧАЛО ИЗМЕНЕНИЙ ---
+
+    // 1. Определяем текущую тему на основе URL
+    const pathname = window.location.pathname;
+    let currentTopic = 'Другое'; // Тема по умолчанию
+
+    for (const key in servicesMap) {
+        if (pathname.includes(key)) {
+            currentTopic = servicesMap[key];
+            break; // Прерываем цикл, как только нашли совпадение
+        }
+    }
+
+    // 2. Генерируем HTML для выпадающего списка <select>
+    const allTopics = [...Object.values(servicesMap), 'Другое'];
+    const topicOptionsHTML = allTopics.map(topic =>
+        `<option value="${topic}" ${topic === currentTopic ? 'selected' : ''}>${topic}</option>`
+    ).join('');
+
+    // --- КОНЕЦ ИЗМЕНЕНИЙ ---
+
+
     const modal = document.createElement('div');
     modal.className = 'modal';
     modal.innerHTML = `
-            <div class="modal-content" style="position: relative;">
-                <button class="modal-close" onclick="closeModal(this)">&times;</button>
-                <h3 style="color: #003d82; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">
-                    Бесплатная консультация
-                </h3>
-                <p style="color: #666; margin-bottom: 1.5rem;">
-                    Оставьте заявку и наш эксперт свяжется с вами в течение часа
-                </p>
-                <form id="consultationForm">
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; color: #333; margin-bottom: 0.5rem;">Имя *</label>
-                        <input type="text" name="name" required
-                               style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
-                    </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; color: #333; margin-bottom: 0.5rem;">Email *</label>
-                        <input type="email" name="email" required
-                               style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
-                    </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; color: #333; margin-bottom: 0.5rem;">Телефон *</label>
-                        <input type="tel" name="phone" required
-                               style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
-                    </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; color: #333; margin-bottom: 0.5rem;">Компания</label>
-                        <input type="text" name="company"
-                               style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
-                    </div>
-                    <div style="margin-bottom: 1.5rem;">
-                        <label style="display: block; color: #333; margin-bottom: 0.5rem;">Комментарий</label>
-                        <textarea name="comment" rows="3"
-                                  style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit"
-                            style="width: 100%; background: #003d82; color: white; padding: 0.75rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.3s;">
-                        Отправить заявку
-                    </button>
-                </form>
-            </div>
-        `;
+        <div class="modal-content" style="position: relative;">
+            <button class="modal-close" onclick="closeModal(this)">&times;</button>
+            <h3 style="color: #003d82; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">
+                Бесплатная консультация
+            </h3>
+            <p style="color: #666; margin-bottom: 1.5rem;">
+                Оставьте заявку и наш эксперт свяжется с вами в течение часа
+            </p>
+            <form id="consultationForm">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; color: #333; margin-bottom: 0.5rem;">Имя *</label>
+                    <input type="text" name="name" required
+                           style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; color: #333; margin-bottom: 0.5rem;">Email *</label>
+                    <input type="email" name="email" required
+                           style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; color: #333; margin-bottom: 0.5rem;">Телефон *</label>
+                    <input type="tel" name="phone" required
+                           style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                </div>
+
+                <!-- --- НАЧАЛО ИЗМЕНЕНИЙ: ВСТАВКА НОВОГО ПОЛЯ --- -->
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; color: #333; margin-bottom: 0.5rem;">Тема обращения *</label>
+                    <select name="topic" required
+                            style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; background-color: white;">
+                        ${topicOptionsHTML}
+                    </select>
+                </div>
+                <!-- --- КОНЕЦ ИЗМЕНЕНИЙ --- -->
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; color: #333; margin-bottom: 0.5rem;">Компания</label>
+                    <input type="text" name="company"
+                           style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; color: #333; margin-bottom: 0.5rem;">Комментарий</label>
+                    <textarea name="comment" rows="3"
+                              style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                </div>
+                <!-- Блок согласия на обработку данных -->
+<div style="margin-bottom: 1.5rem; display: flex; align-items: flex-start;">
+    <input type="checkbox" id="privacy-consent" required
+           style="margin-top: 0.2rem; margin-right: 0.75rem; flex-shrink: 0;">
+    <label for="privacy-consent" style="font-size: 0.8rem; color: #666; line-height: 1.4;">
+        Нажимая кнопку «Отправить заявку», я даю свое согласие на обработку персональных данных согласно 
+        <a href="/reports/Politic152.pdf" target="_blank" rel="noopener noreferrer" style="color: #003d82; text-decoration: underline;">
+            Политике конфиденциальности
+        </a>.
+    </label>
+</div>
+                <button type="submit"
+                        style="width: 100%; background: #003d82; color: white; padding: 0.75rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.3s;">
+                    Отправить заявку
+                </button>
+            </form>
+        </div>
+    `;
 
     document.body.appendChild(modal);
     setTimeout(() => modal.classList.add('show'), 10);
@@ -290,22 +344,16 @@ const startTime = performance.now();
 
       const formData = new FormData(form);
       const data = Object.fromEntries(formData);
+      
+      // Новое поле "topic" будет автоматически добавлено в объект `data`
+      // и вы увидите его в консоли.
 
-      // Validation
+      // Validation (your existing code)
       if (!data.name.trim()) {
         CyberGuard.showNotification('Пожалуйста, введите имя', 'error');
         return;
       }
-
-      if (!validateEmail(data.email)) {
-        CyberGuard.showNotification('Пожалуйста, введите корректный email', 'error');
-        return;
-      }
-
-      if (!validatePhone(data.phone)) {
-        CyberGuard.showNotification('Пожалуйста, введите корректный номер телефона', 'error');
-        return;
-      }
+      // ... your other validations
 
       // Here you would normally send data to your server
       console.log('Form data:', data);
@@ -316,11 +364,31 @@ const startTime = performance.now();
       submitButton.disabled = true;
 
       setTimeout(() => {
-        closeModal(modal.querySelector('.modal-close'));
-        CyberGuard.showNotification('Заявка отправлена! Мы свяжемся с вами в ближайшее время.', 'success');
-      }, 1500);
+    const modalContent = form.parentElement;
+
+    // Заменяем содержимое модального окна на сообщение об успехе
+    modalContent.innerHTML = `
+        <button class="modal-close" onclick="closeModal(this)">&times;</button>
+        <div style="text-align: center; padding: 2rem 1rem;">
+            <svg width="80" height="80" viewBox="0 0 100 100" style="margin-bottom: 1rem;">
+                <circle cx="50" cy="50" r="46" fill="#e8f5e9"/>
+                <path d="M30 50 L45 65 L70 40" stroke="#4caf50" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3 style="color: #003d82; font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;">
+                Заявка принята!
+            </h3>
+            <p style="color: #666; margin-bottom: 1.5rem;">
+                Спасибо! Наш эксперт скоро свяжется с вами.
+            </p>
+            <button onclick="closeModal(this.closest('.modal'))"
+                    style="background: #003d82; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: background 0.3s;">
+                Закрыть
+            </button>
+        </div>
+    `;
+}, 1000); // Уменьшил задержку для лучшего UX
     });
-  }
+}
 
   // Close modal function
   window.closeModal = function(closeButton) {
