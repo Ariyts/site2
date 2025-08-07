@@ -78,8 +78,8 @@
           </div>
           <div class="flex justify-between items-end">
             <div class="text-xs text-gray-400">
-              <p>№ 12345-67890</p>
-              <p>Дата выдачи: 20.05.2024</p>
+              <p>№ <span id="daily-random-number"></span></p>
+              <p>Дата выдачи: <span id="current-date"></span></p>
             </div>
 <!-- ФИНАЛЬНАЯ ВЕРСИЯ: Сургучная печать с ленточками-ляссе -->
 <div class="relative w-28 h-28">
@@ -338,7 +338,40 @@
 </section>
 
 <div id="footer-placeholder"></div>
+<script>
+  // --- Функция для генерации "случайного" числа на основе "зерна" (seed) ---
+  // Она всегда будет выдавать одинаковый результат для одинакового seed.
+  function seededRandom(seed) {
+    const x = Math.sin(seed) * 10000;
+    return x - Math.floor(x); // Возвращаем только дробную часть, от 0 до 1
+  }
 
+  // --- Получаем сегодняшнюю дату ---
+  const today = new Date();
+  
+  // --- 1. Работа с датой (как в прошлом ответе) ---
+  const day = String(today.getDate()).padStart(2, '0');
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const year = today.getFullYear();
+  
+  const formattedDate = `${day}.${month}.${year}`;
+  document.getElementById('current-date').textContent = formattedDate;
+
+  // --- 2. Работа со случайным номером ---
+  // Создаем "зерно" из даты (например, 20240521)
+  const seed = parseInt(`${year}${month}${day}`);
+
+  // Генерируем первую часть номера (5 цифр)
+  const part1 = Math.floor(seededRandom(seed) * 90000) + 10000;
+  
+  // Генерируем вторую часть номера (5 цифр), используя немного измененное зерно, чтобы число отличалось
+  const part2 = Math.floor(seededRandom(seed + 1) * 90000) + 10000;
+  
+  const dailyNumber = `${part1}-${part2}`;
+  
+  // Вставляем сгенерированный номер на страницу
+  document.getElementById('daily-random-number').textContent = dailyNumber;
+</script>
 <script src="../components.js"></script>
 <script src="../script.js"></script>
 <script src="../js/app.js"></script>
