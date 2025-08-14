@@ -339,55 +339,77 @@ function showConsultationModal() {
 
     // Form submission handler
     const form = modal.querySelector('#consultationForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Предотвращаем стандартную отправку формы
 
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
-      
-      // Новое поле "topic" будет автоматически добавлено в объект `data`
-      // и вы увидите его в консоли.
-
-      // Validation (your existing code)
-      if (!data.name.trim()) {
-        CyberGuard.showNotification('Пожалуйста, введите имя', 'error');
-        return;
-      }
-      // ... your other validations
-
-      // Here you would normally send data to your server
-      console.log('Form data:', data);
-
-      // Simulate sending
-      const submitButton = form.querySelector('button[type="submit"]');
-      submitButton.textContent = 'Отправка...';
-      submitButton.disabled = true;
-
-      setTimeout(() => {
+    const formData = new FormData(form);
+    const submitButton = form.querySelector('button[type="submit"]');
     const modalContent = form.parentElement;
 
-    // Заменяем содержимое модального окна на сообщение об успехе
-    modalContent.innerHTML = `
-        <button class="modal-close" onclick="closeModal(this)">&times;</button>
-        <div style="text-align: center; padding: 2rem 1rem;">
-            <svg width="80" height="80" viewBox="0 0 100 100" style="margin-bottom: 1rem;">
-                <circle cx="50" cy="50" r="46" fill="#e8f5e9"/>
-                <path d="M30 50 L45 65 L70 40" stroke="#4caf50" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <h3 style="color: #003d82; font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;">
-                Заявка принята!
-            </h3>
-            <p style="color: #666; margin-bottom: 1.5rem;">
-                Спасибо! Наш эксперт скоро свяжется с вами.
-            </p>
-            <button onclick="closeModal(this.closest('.modal'))"
-                    style="background: #003d82; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: background 0.3s;">
-                Закрыть
-            </button>
-        </div>
-    `;
-}, 1000); // Уменьшил задержку для лучшего UX
+    // Убираем старые сообщения об ошибках, если они были
+    const existingError = form.querySelector('.form-error-message');
+    if (existingError) {
+        existingError.remove();
+    }
+
+    // Блокируем кнопку и показываем процесс отправки
+    submitButton.textContent = 'Отправка...';
+    submitButton.disabled = true;
+
+    // Отправляем данные на сервер с помощью fetch
+    fetch('/send_mail.php', { // Убедитесь, что путь к файлу верный!
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        // Проверяем, что сервер ответил успешно (код 200-299)
+        if (response.ok) {
+            return response.json(); // Если да, читаем ответ как JSON
+        }
+        // Если сервер ответил ошибкой (например, 404 или 500)
+        return response.json().then(errorData => {
+            // Пытаемся прочитать сообщение об ошибке от сервера
+            throw new Error(errorData.message || 'Ошибка на стороне сервера.');
+        });
+    })
+    .then(data => {
+        if (data.status === 'success') {
+            // Если PHP вернул success, показываем экран благодарности
+            modalContent.innerHTML = `
+                <button class="modal-close" onclick="closeModal(this)">&times;</button>
+                <div style="text-align: center; padding: 2rem 1rem;">
+                    <svg width="80" height="80" viewBox="0 0 100 100" style="margin-bottom: 1rem;">
+                        <circle cx="50" cy="50" r="46" fill="#e8f5e9"/>
+                        <path d="M30 50 L45 65 L70 40" stroke="#4caf50" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3 style="color: #003d82; font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;">Заявка принята!</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">Спасибо! Наш эксперт скоро свяжется с вами.</p>
+                    <button onclick="closeModal(this.closest('.modal'))" style="background: #003d82; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">Закрыть</button>
+                </div>
+            `;
+        } else {
+            // Если PHP вернул осмысленную ошибку (например, валидации)
+            throw new Error(data.message || 'Произошла неизвестная ошибка.');
+        }
+    })
+    .catch(error => {
+        // Этот блок сработает при любой ошибке: сетевой, серверной, или из блоков .then()
+        console.error('Ошибка отправки формы:', error);
+
+        // Показываем сообщение об ошибке прямо под кнопкой
+        const errorContainer = document.createElement('p');
+        errorContainer.className = 'form-error-message'; // Добавим класс для удобства
+        errorContainer.textContent = 'Ошибка: ' + error.message;
+        errorContainer.style.color = '#d93025'; // Красный цвет ошибки
+        errorContainer.style.textAlign = 'center';
+        errorContainer.style.marginTop = '1rem';
+        form.appendChild(errorContainer); // Добавляем в конец формы
+
+        // Возвращаем кнопку в исходное состояние, чтобы пользователь мог попробовать еще раз
+        submitButton.textContent = 'Отправить заявку';
+        submitButton.disabled = false;
     });
+});
 }
 
   // Close modal function

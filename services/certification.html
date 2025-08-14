@@ -87,205 +87,553 @@
 
 
 
-<section class="py-20 bg-white">
-   <!-- Фоновая сетка -->
-  <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
-  
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Наши услуги по сертификации СЗИ</h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Мы проводим полный цикл испытаний и проверок на соответствие средств защиты информации требованиям безопасности.
+<!-- Стики сабнавигация -->
+<div class="sticky top-0 z-30 border-b bg-white/70 sticky-subnav">
+  <div class="container px-6 mx-auto">
+    <nav class="flex gap-4 py-3 overflow-x-auto text-sm" aria-label="Внутренняя навигация">
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link active" href="#details">Возможности</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#process">Процесс</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#labs">Стенды и образцы</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#stack">Материалы</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#supply">Цепочка поставки</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#compliance">Соответствие</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#roles">Роли</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#cases">Кейсы</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#faq">FAQ</a>
+      <a class="px-3 py-2 ml-auto text-white rounded-lg bg-rosatom-blue hover:bg-rosatom-dark focus-ring" href="#brief">Оставить заявку</a>
+    </nav>
+  </div>
+</div>
+
+<!-- Возможности / направления -->
+<section id="details" class="py-20 bg-white section-grid-bg">
+  <div class="container px-6 mx-auto">
+    <div class="mb-16 text-center">
+      <h2 class="mb-4 text-4xl font-bold text-rosatom-dark">Сертификация средств защиты информации (СЗИ)</h2>
+      <p class="max-w-4xl mx-auto text-xl text-gray-600">
+        Ведём продукт от GAP‑анализа до сертификата: комплект КД и артефактов, испытания в нашей ИЛ, взаимодействие с ОС, включение в реестр и сопровождение версий.
+        Всё — в on‑prem контуре, под NDA и ИЗО‑требования.
       </p>
+    </div>
+
+    <!-- Основные направления -->
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- GAP -->
+      <div class="p-8 transition-all transform shadow-lg service-card group rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-rosatom-blue to-rosatom-light rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="6" y="3.5" width="12" height="16" rx="2" stroke="white" stroke-width="1.7" fill="white" fill-opacity=".06"/>
+            <path d="M8.5 9h7M8.5 12h4" stroke="white" stroke-width="1.7" stroke-linecap="round"/>
+            <circle cx="15.5" cy="15.5" r="2.5" stroke="white" stroke-width="1.7"/>
+            <path d="M17.3 17.3l2 2" stroke="white" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">GAP‑анализ и консалтинг</h3>
+        <p class="mb-4 text-gray-600">Оценка готовности под ФСТЭК/ФСБ/CC, план‑график, риски, дорожная карта устранения несоответствий.</p>
+      </div>
+
+      <!-- Документация -->
+      <div class="p-8 transition-all transform shadow-lg service-card rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-rosatom-light to-rosatom-blue rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 4h7l3 3v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" stroke="white" stroke-width="1.7" fill="white" fill-opacity=".06"/>
+            <path d="M9 9h6M9 12h6M9 15h4" stroke="white" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">Комплект КД и артефактов</h3>
+        <p class="mb-4 text-gray-600">ТЗ/ТУ/РЭ/ПМИ/ЭД/методики, эксплуатационные регламенты. SBOM/VEX, SCA и лицензии.</p>
+      </div>
+
+      <!-- Испытания в ИЛ -->
+      <div class="p-8 transition-all transform shadow-lg service-card group rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-green-500 to-cyan-400 rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 3v5l-4 7a3 3 0 0 0 2.6 4.5h8.8A3 3 0 0 0 19 15l-4-7V3" stroke="white" stroke-width="1.7"/>
+            <path d="M9 8h6" stroke="white" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">Испытания в нашей ИЛ</h3>
+        <p class="mb-4 text-gray-600">Функционал, стойкость, НДВ: протоколы, ответы на замечания, ретесты. Изолированные контуры.</p>
+      </div>
+
+      <!-- ФСТЭК -->
+      <div class="p-8 transition-all transform shadow-lg service-card rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-purple-500 to-fuchsia-500 rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 12l3 3a3 3 0 0 0 4.2 0l3.8-3.8" stroke="white" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M3 12l4-4 4 4M13 8l4-4 4 4" stroke="white" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">Сертификация ФСТЭК</h3>
+        <p class="mb-4 text-gray-600">Оформление заявки, взаимодействие с ОС, включение в реестр. Сопровождение версий.</p>
+      </div>
+
+      <!-- СКЗИ -->
+      <div class="p-8 transition-all transform shadow-lg service-card rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3l7 4v5c0 5-4 8-7 9-3-1-7-4-7-9V7l7-4z" stroke="white" stroke-width="1.7" fill="white" fill-opacity=".08"/>
+            <rect x="9" y="12" width="6" height="5" rx="1.2" fill="white" fill-opacity=".15" stroke="white" stroke-width="1.7"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">СКЗИ (ФСБ)</h3>
+        <p class="mb-4 text-gray-600">ГОСТ‑криптография, требования к ключам/модулям, стенды с СКЗИ‑провайдерами и HSM.</p>
+      </div>
+
+      <!-- CC -->
+      <div class="p-8 transition-all transform shadow-lg service-card rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-emerald-500 to-cyan-400 rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 8h12M6 12h9M6 16h6" stroke="white" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">Common Criteria (CC)</h3>
+        <p class="mb-4 text-gray-600">ISO/IEC 15408 (EAL): ST/ADV/AGD/ATE/ALC‑пакеты, взаимодействие с оценочным центром.</p>
+      </div>
+    </div>
+
+    <!-- Сертификационный комплект — на практике -->
+    <div class="grid grid-cols-1 gap-8 mt-20 lg:grid-cols-3">
+      <div class="lg:col-span-1">
+        <h3 class="mb-3 text-2xl font-bold text-rosatom-dark">Сертификационный комплект — на практике</h3>
+        <p class="text-gray-600">Собираем и ведём пакет: от заявки и SBOM/VEX — до протоколов и ответов ОС/ИЛ. Всё прозрачно и воспроизводимо.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-6 lg:col-span-2 md:grid-cols-2">
+        <div class="flex items-start gap-4 card">
+          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
+            <svg class="w-6 h-6 text-rosatom-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-width="2" d="M8 6h8l2 2v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8l2-2z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="mb-1 font-semibold">Заявка и план‑график</div>
+            <div class="text-sm text-gray-600">Комплект документов, договор, коммуникации с ОС и профильными подразделениями.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 card">
+          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
+            <svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-width="2" d="M4 7h16M7 12h10M9 17h6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="mb-1 font-semibold">SBOM/VEX и лицензии</div>
+            <div class="text-sm text-gray-600">CycloneDX, VEX, SCA, проверка лицензий. Трассировка компонент по релизам.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 card">
+          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
+            <svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-width="2" d="M5 12l4 4L19 6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="mb-1 font-semibold">Предсертиф. испытания</div>
+            <div class="text-sm text-gray-600">Функционал, НДВ, устойчивость. Устранение несоответствий до предъявления.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 card">
+          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
+            <svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-width="2" d="M7 8h10M7 12h7M7 16h5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="mb-1 font-semibold">Материалы и ответы</div>
+            <div class="text-sm text-gray-600">Протоколы, пояснения, Q&A с ОС/ИЛ, организация ретестов по замечаниям.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Процесс -->
+<section id="process" class="py-20 bg-slate-50 relative overflow-hidden">
+  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+  <div class="container mx-auto px-6 relative">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Как мы сертифицируем СЗИ</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card shimmer relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 01</div>
+        <div class="text-xl font-semibold mb-2">Старт и GAP‑анализ</div>
+        <p class="text-gray-600">Требования ФСТЭК/ФСБ/CC, оценка готовности, риски, план‑график и ресурсы.</p>
+      </div>
+      <div class="card relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 02</div>
+        <div class="text-xl font-semibold mb-2">КД и артефакты</div>
+        <p class="text-gray-600">ТЗ, ТУ, РЭ, ПМИ, ЭД, методики. SBOM/VEX, SCA/лицензии, регламенты эксплуатации и выпуска.</p>
+      </div>
+      <div class="card relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 03</div>
+        <div class="text-xl font-semibold mb-2">Стенды и предъявление</div>
+        <p class="text-gray-600">Сборки, образцы, ключи/СКЗИ, эталонные конфигурации. Разрешающие письма и предъявление в ИЛ.</p>
+      </div>
+      <div class="card relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 04</div>
+        <div class="text-xl font-semibold mb-2">Испытания в нашей ИЛ</div>
+        <p class="text-gray-600">Функциональные, стойкость, НДВ. Протоколы, ответы на замечания, ретесты.</p>
+      </div>
+      <div class="card relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 05</div>
+        <div class="text-xl font-semibold mb-2">Решение ОС и реестр</div>
+        <p class="text-gray-600">Взаимодействие с органом по сертификации, оформление сертификата, включение в реестр СЗИ.</p>
+      </div>
+      <div class="card relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 06</div>
+        <div class="text-xl font-semibold mb-2">Сопровождение версии</div>
+        <p class="text-gray-600">Актуализация сертификата при обновлениях, регресс‑испытания, поддержка продления.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="#brief" class="inline-flex items-center gap-2 bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all focus-ring">
+        Запросить дорожную карту сертификации
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 7l5 5-5 5M6 12h12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Стенды и образцы -->
+<section id="labs" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Стенды и образцы</h2>
+      <p class="text-xl text-gray-600">Испытания проводим в собственной ИЛ: изолированные контуры, on‑prem хранение, воспроизводимость результатов.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-        <div class="w-16 h-16 bg-rosatom-blue bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.11C6.23 15.414 9.11 13 12 13c4.97 0 9-3.582 9-8s-4.03-8-9-8-9 3.582-9 8c0 1.02.193 2.008.544 2.946L3 12.5M21 12a9 9 0 00-9-9"></path>
-          </svg>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">ОС и платформы</div>
+        <div class="text-gray-600 text-sm">Astra Linux, ALT, РЕД ОС, Windows; x86‑64, ARM (по запросу).</div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">Сети и трафик</div>
+        <div class="text-gray-600 text-sm">L2/L3 стенды, VLAN/VXLAN, VPN/IPsec/TLS, генераторы и реплеи трафика, зеркалирование.</div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">Криптография и ключи</div>
+        <div class="text-gray-600 text-sm">СКЗИ‑провайдеры (КриптоПро/ViPNet и др.), HSM/токены, тестовые сертификаты и политики.</div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">Виртуализация и CI</div>
+        <div class="text-gray-600 text-sm">KVM/VMware, эталонные образы, on‑prem GitLab, freeze‑окна, контроль состава сборок.</div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">Логирование и доказательства</div>
+        <div class="text-gray-600 text-sm">Журналы, скринкасты/фотофиксация, хронометраж, чек‑листы — для воспроизводимости.</div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">Безопасность и доступ</div>
+        <div class="text-gray-600 text-sm">NDA, ИЗО‑контуры, допуск по спискам, хранение артефактов и отчётов — на наших/ваших серверах.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Материалы, методики и инструменты -->
+<section id="stack" class="py-20 bg-slate-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Материалы и методики</h2>
+      <p class="text-xl text-gray-600">Формируем полный комплект документов и методик — под класс СЗИ и требования регуляторов.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-3">Документация</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">ТЗ</span><span class="chip">ТУ</span><span class="chip">РЭ</span><span class="chip">ПМИ</span><span class="chip">ЭД</span><span class="chip">Методики</span><span class="chip">Модель нарушителя</span><span class="chip">Профиль защиты (CC)</span>
         </div>
-        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Консультация и поддержка</h3>
-        <p class="text-gray-600 mb-4">
-          Предоставляем оперативную помощь и консультации на всех этапах сертификации.
-        </p>
-        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
-          <li>Помощь в решении любых вопросов</li>
-          <li>Разъяснение требований</li>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-3">Испытания и QA</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">Функциональные</span><span class="chip">НДВ</span><span class="chip">Стойкость</span><span class="chip">Fuzzing</span><span class="chip">SAST</span><span class="chip">DAST</span><span class="chip">Coverage</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-3">Типы СЗИ</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">Межсетевые экраны</span><span class="chip">IDS/IPS</span><span class="chip">СЗИ от НСД</span><span class="chip">Контроль целостности</span><span class="chip">Антивирусы</span><span class="chip">DLP</span><span class="chip">СЗИ БД</span><span class="chip">СЗИ виртуализации</span><span class="chip">СКЗИ (VPN/TLS)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Цепочка поставки -->
+<section id="supply" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Контроль цепочки поставки</h2>
+      <p class="text-xl text-gray-600">Прозрачность состава, управляемость релизов и воспроизводимость — как часть сертификации.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">Артефакты и репозитории</div>
+        <div class="text-gray-600 text-sm">On‑prem GitLab, Nexus/Harbor, контроль составов релизов, freeze‑окна и трассировка.</div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">SBOM и VEX</div>
+        <div class="text-gray-600 text-sm">CycloneDX, VEX, управление уязвимостями компонент, отчётность для ОС/ИЛ.</div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">SCA и лицензии</div>
+        <div class="text-gray-600 text-sm">Проверка лицензий, политика OSS, матрица совместимости и рисков.</div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">Подпись и аттестации</div>
+        <div class="text-gray-600 text-sm">Подпись артефактов (GPG/Cosign), контроль изменений, attestations и журналирование.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Соответствие требованиям -->
+<section id="compliance" class="py-20 gradient-rosatom text-white relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Регуляторика и стандарты</h2>
+      <p class="text-xl opacity-90">Работаем под ваши цели сертификации и рынки сбыта.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+        <div class="text-2xl font-bold mb-2">ФСТЭК</div>
+        <div class="opacity-90">Сертификация СЗИ: функционал, стойкость, НДВ; сопровождение до включения в реестр.</div>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+        <div class="text-2xl font-bold mb-2">ФСБ (СКЗИ)</div>
+        <div class="opacity-90">Шифровальные средства: требования к криптографии, ключевой инфраструктуре и испытаниям.</div>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+        <div class="text-2xl font-bold mb-2">Common Criteria</div>
+        <div class="opacity-90">ISO/IEC 15408 (EAL), ST/ADV/AGD/ATE/ALC — подготовка и сопровождение оценивания.</div>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+        <div class="text-2xl font-bold mb-2">ГОСТ / ISO</div>
+        <div class="opacity-90">ГОСТ Р, ISO/IEC 27001/27002, 27034 — по запросу.</div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="#brief" class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus-ring">Получить консультацию</a>
+    </div>
+  </div>
+  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+</section>
+
+<!-- Роли и ответственность -->
+<section id="roles" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Роли и ответственность</h2>
+      <p class="text-xl text-gray-600">Прозрачно распределяем зоны ответственности — сроки и риски под контролем.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">Заказчик</div>
+        <ul class="text-gray-600 text-sm space-y-2">
+          <li>• Владелец продукта, цели и классы СЗИ</li>
+          <li>• Сборки/образцы, аппаратные платформы, доступы</li>
+          <li>• Исходные коды — при необходимости методик (объём согласуется)</li>
+          <li>• Устранение несоответствий и изменений</li>
         </ul>
       </div>
-
-      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-        <div class="w-16 h-16 bg-rosatom-light bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-rosatom-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Подготовка документации</h3>
-        <p class="text-gray-600 mb-4">
-          Анализ и подготовка технической документации для прохождения сертификации.
-        </p>
-        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
-          <li>Анализ технической документации СЗИ</li>
-          <li>Актуализация сведений</li>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">rosatom (Испытательная лаборатория)</div>
+        <ul class="text-gray-600 text-sm space-y-2">
+          <li>• GAP‑анализ, комплект КД и артефактов</li>
+          <li>• Подготовка стендов, проведение испытаний, протоколы</li>
+          <li>• SBOM/VEX, SCA/лицензии, контроль изменений</li>
+          <li>• Взаимодействие с ОС, ответы на замечания, ретесты</li>
         </ul>
       </div>
-
-      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-        <div class="w-16 h-16 bg-green-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Подача Заявки на сертификацию</h3>
-        <p class="text-gray-600 mb-4">
-          Обеспечиваем помощь и сопровождение при подаче официальной Заявки на сертификацию СЗИ.
-        </p>
-        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
-          <li>Подготовка пакета документов</li>
-          <li>Взаимодействие с органами сертификации</li>
-        </ul>
-      </div>
-
-      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-        <div class="w-16 h-16 bg-orange-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Формирование перечня компонентов (SBOM)</h3>
-        <p class="text-gray-600 mb-4">
-          Методическая и консультационная помощь при формировании SBOM-файлов.
-        </p>
-        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
-          <li>Идентификация заимствованных компонентов</li>
-          <li>Структурирование данных</li>
-        </ul>
-      </div>
-
-      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-        <div class="w-16 h-16 bg-purple-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9a2 2 0 00-2-2h-7a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v-6a2 2 0 012-2h2"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Проведение сертификационных испытаний</h3>
-        <p class="text-gray-600 mb-4">
-          Лабораторные испытания по выявлению уязвимостей и недекларированных возможностей.
-        </p>
-        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
-          <li>Тестирование на проникновение (пентест)</li>
-          <li>Анализ безопасности кода</li>
-        </ul>
-      </div>
-
-      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-        <div class="w-16 h-16 bg-cyan-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Оценка соответствия и заключение</h3>
-        <p class="text-gray-600 mb-4">
-          Оценка соответствия требованиям безопасности и выдача технического заключения.
-        </p>
-        <ul class="list-disc list-inside text-sm text-rosatom-blue font-medium ml-4">
-          <li>Комплексная оценка</li>
-          <li>Выдача технического заключения</li>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-2">Орган по сертификации (ОС)</div>
+        <ul class="text-gray-600 text-sm space-y-2">
+          <li>• Регистрация заявки и план‑графика</li>
+          <li>• Надзор за испытаниями и комплектом материалов</li>
+          <li>• Принятие решения о выдаче сертификата</li>
+          <li>• Включение в реестр и контроль актуализаций</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-20 bg-gray-50">
-   <!-- Фоновая сетка -->
-  <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
-  
+<!-- Кейсы -->
+<section id="cases" class="py-20 bg-slate-50 section-grid-bg">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Сопровождение сертификационных материалов</h2>
-      <p class="text-xl text-gray-600">Мы обеспечиваем полное сопровождение на всех этапах взаимодействия с регулирующими органами.</p>
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Примеры работ (обезличенно)</h2>
+      <p class="text-xl text-gray-600">Фокус на результате и предсказуемости сроков.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div class="text-center">
-        <div class="w-20 h-20 bg-rosatom-blue rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2m-2 4h2m-2 4h2m10-10l2 2m0 0l-2 2m2-2H9"></path>
-          </svg>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <article class="card tilt-hover">
+        <div class="text-sm text-gray-500 mb-2">ФСТЭК</div>
+        <h3 class="text-xl font-semibold mb-3">СЗИ от НСД для корпоративной платформы</h3>
+        <p class="text-gray-600">GAP‑анализ, комплект КД, предсертиф. испытания, предъявление и протоколы. Включение в реестр.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm">
+          <span class="chip">С первого предъявления</span><span class="chip">Срок ~5 мес</span>
         </div>
-        <h3 class="text-2xl font-semibold mb-3 text-rosatom-dark">Взаимодействие с Органами</h3>
-        <p class="text-gray-600 text-lg">
-          Сопровождаем материалы сертификационных испытаний в Органе по сертификации.
-        </p>
-      </div>
-
-      <div class="text-center">
-        <div class="w-20 h-20 bg-rosatom-light rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-          </svg>
+      </article>
+      <article class="card tilt-hover">
+        <div class="text-sm text-gray-500 mb-2">ФСБ (СКЗИ)</div>
+        <h3 class="text-xl font-semibold mb-3">VPN‑шлюз с ГОСТ‑TLS</h3>
+        <p class="text-gray-600">Стенды с СКЗИ, ключевая инфраструктура, испытания стойкости. Ретест по замечаниям — пройден.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm">
+          <span class="chip">Ретест 1/1</span><span class="chip">Подпись релизов</span>
         </div>
-        <h3 class="text-2xl font-semibold mb-3 text-rosatom-dark">Сопровождение в ФОС</h3>
-        <p class="text-gray-600 text-lg">
-          Полное сопровождение в Федеральном органе по сертификации до получения конечного результата.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-16 bg-white">
-   <!-- Фоновая сетка -->
-  <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
-  
-  <div class="container mx-auto px-6 text-center">
-    <div class="bg-gradient-to-r from-rosatom-blue to-rosatom-light rounded-2xl p-12 text-white">
-      <h2 class="text-3xl font-bold mb-4">Надежная сертификация для вашего СЗИ</h2>
-      <p class="text-xl mb-8 opacity-90">
-        Доверьте сертификацию профессионалам — мы обеспечим соответствие всем требованиям и стандартам.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <div class="text-4xl font-bold mb-2">99%</div>
-          <div class="text-lg opacity-90">Успешных сертификаций</div>
+      </article>
+      <article class="card tilt-hover">
+        <div class="text-sm text-gray-500 mb-2">Common Criteria</div>
+        <h3 class="text-xl font-semibold mb-3">Подготовка к оцениванию по CC</h3>
+        <p class="text-gray-600">ST/ADV/AGD/ATE/ALC‑пакеты, предоценка, согласование с оценочным центром. Запуск процедуры оценивания.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm">
+          <span class="chip">EAL — по профилю</span><span class="chip">Audit‑ready</span>
         </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">ФСТЭК</div>
-          <div class="text-lg opacity-90">Аккредитованные специалисты</div>
-        </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">15+</div>
-          <div class="text-lg opacity-90">Лет опыта в безопасности</div>
-        </div>
-      </div>
-      <button class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-        Получить консультацию
-      </button>
+      </article>
     </div>
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Частые вопросы</h2>
+      <p class="text-xl text-gray-600">Сроки, входные данные и нюансы сертификации.</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-4">
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Сколько занимает сертификация?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">Зависит от класса СЗИ и готовности продукта. Ориентиры: ФСТЭК ~3–6 мес., СКЗИ ~6–12 мес., CC — индивидуально. Финальную оценку даём после брифа и GAP‑анализа.</div>
+      </details>
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Нужны ли исходные коды?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">В ряде методик возможна передача исходников (например, для НДВ/стойкости). Формат и объём согласуются с ИЛ/ОС заранее.</div>
+      </details>
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Можно ли развивать продукт параллельно?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">Да. Релиз‑ветвления, freeze‑окна, версионирование артефактов. Для обновлений — пакет на актуализацию сертификата.</div>
+      </details>
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Где хранятся КД, протоколы и артефакты?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">Строго on‑prem: наши/ваши серверы, ИЗО‑контуры, доступ по спискам. NDA — по умолчанию.</div>
+      </details>
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Какие входные данные нужны на старте?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">Цели и классы СЗИ, состав продукта, платформы, планы релизов, доступность образцов/ключей/СКЗИ, текущая документация и процессы сборки.</div>
+      </details>
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Работаете с Common Criteria?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">Да. Готовим ST/ADV/AGD/ATE/ALC‑пакеты, сопровождаем взаимодействие с оценочным центром. Уровень EAL определяется по профилю защиты и результатам GAP.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Итоговый CTA -->
 <section class="gradient-rosatom text-white py-20 relative">
   <div class="grid-pattern absolute inset-0 opacity-20"></div>
   <div class="container mx-auto px-6 text-center relative z-10">
-    <h2 class="text-4xl font-bold mb-4">Готовы сертифицировать СЗИ?</h2>
-    <p class="text-xl mb-8 max-w-2xl mx-auto">
-      Свяжитесь с нами для детального обсуждения и запуска процесса сертификации ваших средств защиты.
-    </p>
+    <h2 class="text-4xl font-bold mb-4">Начните сертификацию СЗИ</h2>
+    <p class="text-xl mb-8 max-w-2xl mx-auto">Проведём GAP‑анализ, подготовим комплект и сопроводим до получения сертификата.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <button class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg">
+      <a href="#brief" class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg focus-ring">
         Оставить заявку
-      </button>
-      <button class="border border-white text-white hover:bg-white hover:text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all">
-        +7 (495) 123-45-67
-      </button>
+      </a>
+      <a href="tel:+74951234567" class="border border-white text-white hover:bg-white hover:text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all focus-ring">
+        +7 (495) 123‑45‑67
+      </a>
     </div>
   </div>
 </section>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  // Плавный скролл и активный пункт сабнавигации
+  const links = document.querySelectorAll('.scroll-link');
+  const sections = [...links].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  links.forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (!target) return;
+    const y = target.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top: y, behavior: (window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth') });
+  }));
+  const onScroll = () => {
+    const pos = window.scrollY + 100;
+    sections.forEach((sec) => {
+      const id = '#' + sec.id;
+      const link = document.querySelector(`.scroll-link[href="${id}"]`);
+      if (!link) return;
+      const inView = pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight;
+      link.classList.toggle('active', inView);
+      link.classList.toggle('text-rosatom-blue', inView);
+      link.classList.toggle('bg-rosatom-blue/10', inView);
+    });
+  };
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Анимация счетчиков (если добавите элементы с data-counter)
+  const counters = document.querySelectorAll('[data-counter]');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const to = parseInt(el.dataset.to, 10) || 0;
+        const plus = el.dataset.counter?.includes('+') ? '+' : '';
+        const dur = 1200; const startTime = performance.now();
+        const step = (now) => {
+          const p = Math.min((now - startTime) / dur, 1);
+          el.textContent = Math.floor(p * to) + plus;
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+        io.unobserve(el);
+      }
+    });
+  }, { threshold: 0.6 });
+  counters.forEach(el => io.observe(el));
+</script>
 
 <div id="footer-placeholder"></div>
 

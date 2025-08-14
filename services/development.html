@@ -63,94 +63,44 @@
       <!-- 
         ИСПРАВЛЕННАЯ ВИЗУАЛИЗАЦИЯ (встроена в правую колонку)
       -->
-      <div class="hidden lg:flex justify-center items-center h-96">
-        <div class="w-full max-w-lg h-full rounded-2xl bg-white shadow-2xl border font-mono text-sm overflow-hidden flex flex-col">
-          <!-- Заголовок окна IDE -->
-          <div class="flex-shrink-0 flex items-center gap-1.5 p-4 border-b z-10 bg-white relative">
-            <div class="w-3 h-3 rounded-full bg-gray-300"></div>
-            <div class="w-3 h-3 rounded-full bg-gray-300"></div>
-            <div class="w-3 h-3 rounded-full bg-gray-300"></div>
-            <!-- Внутренняя тень для эффекта глубины -->
-            <div class="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-gray-100 to-transparent -z-10"></div>
-          </div>
-          
-          <!-- Область для кода с маской -->
-          <div class="relative flex-grow overflow-hidden">
-            <!-- Анимированный контейнер -->
-            <div class="absolute inset-x-0 top-0 p-4 animate-waterfall">
-              <!-- Блок кода (дублируется для бесшовной анимации) -->
-              <pre class="code-block"><code class="language-csharp">
-<span class="text-gray-400">// --- Data Processing Module ---</span>
-<span class="text-blue-600">namespace</span> <span class="text-gray-800">SecureAnalytics</span>
-{
-    <span class="text-blue-600">public</span> <span class="text-blue-600">class</span> <span class="text-teal-600">DataProcessor</span>
-    {
-        <span class="text-blue-600">public</span> <span class="text-teal-600">List</span>&lt;<span class="text-blue-600">double</span>&gt; Data { <span class="text-blue-600">get</span>; <span class="text-blue-600">private</span> <span class="text-blue-600">set</span>; }
-
-        <span class="text-blue-600">public</span> <span class="text-teal-600">DataProcessor</span>(<span class="text-teal-600">IEnumerable</span>&lt;<span class="text-blue-600">double</span>&gt; initialData)
-        {
-            Data = <span class="text-purple-600">new</span> <span class="text-teal-600">List</span>&lt;<span class="text-blue-600">double</span>&gt;(initialData);
-            <span class="text-gray-800">Console</span>.<span class="text-yellow-600">WriteLine</span>(<span class="text-green-600">"Processor Initialized."</span>);
-        }
-
-        <span class="text-gray-400">/// &lt;summary&gt;</span>
-        <span class="text-gray-400">/// Calculates the average value of the dataset.</span>
-        <span class="text-gray-400">/// &lt;/summary&gt;</span>
-        <span class="text-blue-600">public</span> <span class="text-blue-600">double</span> <span class="text-yellow-600">CalculateAverage</span>()
-        {
-            <span class="text-blue-600">if</span> (Data.Count == <span class="text-orange-600">0</span>)
-                <span class="text-purple-600">return</span> <span class="text-orange-600">0</span>;
-
-            <span class="text-blue-600">double</span> sum = <span class="text-orange-600">0</span>;
-            <span class="text-blue-600">foreach</span> (<span class="text-blue-600">var</span> value <span class="text-blue-600">in</span> Data)
-            {
-                sum += value;
-            }
-            <span class="text-purple-600">return</span> sum / Data.Count;
-        }
-    }
-}
-              </code></pre>
-              <!-- Точная копия блока кода для бесшовности -->
-              <pre class="code-block"><code class="language-csharp">
-<span class="text-gray-400">// --- Data Processing Module ---</span>
-<span class="text-blue-600">namespace</span> <span class="text-gray-800">SecureAnalytics</span>
-{
-    <span class="text-blue-600">public</span> <span class="text-blue-600">class</span> <span class="text-teal-600">DataProcessor</span>
-    {
-        <span class="text-blue-600">public</span> <span class="text-teal-600">List</span>&lt;<span class="text-blue-600">double</span>&gt; Data { <span class="text-blue-600">get</span>; <span class="text-blue-600">private</span> <span class="text-blue-600">set</span>; }
-
-        <span class="text-blue-600">public</span> <span class="text-teal-600">DataProcessor</span>(<span class="text-teal-600">IEnumerable</span>&lt;<span class="text-blue-600">double</span>&gt; initialData)
-        {
-            Data = <span class="text-purple-600">new</span> <span class="text-teal-600">List</span>&lt;<span class="text-blue-600">double</span>&gt;(initialData);
-            <span class="text-gray-800">Console</span>.<span class="text-yellow-600">WriteLine</span>(<span class="text-green-600">"Processor Initialized."</span>);
-        }
-
-        <span class="text-gray-400">/// &lt;summary&gt;</span>
-        <span class="text-gray-400">/// Calculates the average value of the dataset.</span>
-        <span class="text-gray-400">/// &lt;/summary&gt;</span>
-        <span class="text-blue-600">public</span> <span class="text-blue-600">double</span> <span class="text-yellow-600">CalculateAverage</span>()
-        {
-            <span class="text-blue-600">if</span> (Data.Count == <span class="text-orange-600">0</span>)
-                <span class="text-purple-600">return</span> <span class="text-orange-600">0</span>;
-
-            <span class="text-blue-600">double</span> sum = <span class="text-orange-600">0</span>;
-            <span class="text-blue-600">foreach</span> (<span class="text-blue-600">var</span> value <span class="text-blue-600">in</span> Data)
-            {
-                sum += value;
-            }
-            <span class="text-purple-600">return</span> sum / Data.Count;
-        }
-    }
-}
-              </code></pre>
-            </div>
-            <!-- Градиентная маска для плавного исчезновения -->
-            <div class="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-white to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white to-transparent"></div>
-          </div>
-        </div>
+      <!-- Правая колонка: улучшенное "окно IDE" -->
+<!-- Правая колонка: анимация "код печатается" -->
+<div class="hidden lg:flex justify-center items-center h-96">
+  <div class="group ide w-full max-w-lg h-full rounded-2xl bg-white/80 backdrop-blur-sm shadow-2xl border overflow-hidden flex flex-col" data-typing>
+    <!-- Верхняя панель -->
+    <div class="flex-shrink-0 flex items-center gap-2 p-3 border-b bg-white/70 backdrop-blur">
+      <div class="flex gap-1.5">
+        <span class="w-3 h-3 rounded-full bg-red-400/90 ring-1 ring-red-500/30"></span>
+        <span class="w-3 h-3 rounded-full bg-amber-400/90 ring-1 ring-amber-500/30"></span>
+        <span class="w-3 h-3 rounded-full bg-emerald-400/90 ring-1 ring-emerald-500/30"></span>
       </div>
+      <div class="ml-auto text-xs text-slate-600 px-2 py-1 rounded bg-slate-100/80">
+        DataProcessor.cs
+      </div>
+    </div>
+
+    <!-- Область кода -->
+    <div class="relative flex-grow bg-white font-mono text-[13px] leading-6 antialiased">
+      <!-- Едва заметные линии для фактуры -->
+      <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(2,6,23,0.035)_1px,transparent_1px)] bg-[size:100%_24px]"></div>
+      <!-- Мягкая маска сверху/снизу -->
+      <div class="pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_8%,black_92%,transparent)]"></div>
+
+      <!-- Подсветка активной строки -->
+      <div class="active-line pointer-events-none absolute left-4 right-4 top-4 h-6 rounded bg-rosatom-blue/10"></div>
+
+      <pre class="relative z-10 h-full overflow-hidden p-4">
+<code id="typed" class="block whitespace-pre"></code>
+      </pre>
+    </div>
+
+    <!-- Нижний статус-бар -->
+    <div class="flex-shrink-0 border-t bg-white/70 px-3 py-2 text-[11px] text-slate-500 flex items-center justify-between">
+      <span>UTF‑8 • LF</span>
+      <span class="status-loc">Ln 1, Col 1</span>
+    </div>
+  </div>
+</div>
 
     </div>
   </div>
@@ -158,121 +108,591 @@
 
 
 
-<section class="py-20 bg-white">
-   <!-- Фоновая сетка -->
-  <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
-  
+<!-- Стики сабнавигация -->
+<!-- Стики сабнавигация -->
+<div class="sticky top-0 z-30 border-b bg-white/70 sticky-subnav">
+  <div class="container px-6 mx-auto">
+    <nav class="flex gap-4 py-3 overflow-x-auto text-sm" aria-label="Внутренняя навигация">
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link active" href="#details">Возможности</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#process">Процесс</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#stack">Технологии</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#compliance">Соответствие</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#cases">Кейсы</a>
+      <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#faq">FAQ</a>
+      <a class="px-3 py-2 ml-auto text-white rounded-lg bg-rosatom-blue hover:bg-rosatom-dark focus-ring" href="#brief">Оставить заявку</a>
+    </nav>
+  </div>
+</div>
+
+<!-- Что разрабатываем -->
+<section id="details" class="py-20 bg-white section-grid-bg">
+  <div class="container px-6 mx-auto">
+    <div class="mb-16 text-center">
+      <h2 class="mb-4 text-4xl font-bold text-rosatom-dark">Что разрабатываем</h2>
+      <p class="max-w-3xl mx-auto text-xl text-gray-600">
+        Web и Desktop‑приложения, интеграции и миграции. Работаем на ваших или наших серверах, без внешних сервисов. Если не нашли нужное — адаптируем решение под задачу.
+      </p>
+    </div>
+
+    <!-- Сетка с направлениями -->
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Web и микросервисы -->
+      <div class="p-8 transition-all transform shadow-lg service-card group rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-rosatom-blue to-rosatom-light rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="10" rx="2" stroke="white" stroke-width="1.6"/>
+            <path d="M7 9h6M7 12h10" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">Web‑платформы и сервисы</h3>
+        <p class="mb-4 text-gray-600">
+          B2B/B2E системы, REST/gRPC API, роли и доступы, наблюдаемость и отказоустойчивость. Проектируем под рост нагрузки.
+        </p>
+      </div>
+
+      <!-- Десктоп -->
+      <div class="p-8 transition-all transform shadow-lg service-card rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-rosatom-light to-rosatom-blue rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="11" rx="2" stroke="white" stroke-width="1.6"/>
+            <path d="M8 19h8M12 16v3" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">Десктоп‑приложения</h3>
+        <p class="mb-4 text-gray-600">
+          Astra Linux, ALT, РЕД ОС и Windows. WPF/WinUI/Qt/Electron, офлайн‑режимы, работа с периферией, интеграция с СЗИ.
+        </p>
+      </div>
+
+      <!-- Интеграции -->
+      <div class="p-8 transition-all transform shadow-lg service-card rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-purple-500 to-fuchsia-500 rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M12 5v14" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="3.2" stroke="white" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">Интеграции и шины данных</h3>
+        <p class="mb-4 text-gray-600">
+          ETL/ELT, 1С/ESB, AD/LDAP, внешние API, очереди и ретраи. Наблюдаемость, idempotency, dead‑letter очереди.
+        </p>
+      </div>
+
+      <!-- Миграция -->
+      <div class="p-8 transition-all transform shadow-lg service-card rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-green-500 to-cyan-400 rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M8 7h8M8 12h8M8 17h8" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M4 12l3-3m-3 3l3 3M20 12l-3-3m3 3l-3 3" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">Миграция и импортозамещение</h3>
+        <p class="mb-4 text-gray-600">
+          Переезд на Astra/ALT/РЕД ОС, замена проприетарных зависимостей, сохранение UX и функциональности.
+        </p>
+      </div>
+
+      <!-- Закрытая информация -->
+      <div class="p-8 transition-all transform shadow-lg service-card rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3l7 4v5c0 5-4 8-7 9-3-1-7-4-7-9V7l7-4z" stroke="white" stroke-width="1.6" fill="white" fill-opacity=".08" stroke-linejoin="round"/>
+            <rect x="9" y="12" width="6" height="5" rx="1.2" fill="white" fill-opacity=".15" stroke="white" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">ПО для закрытой информации</h3>
+        <p class="mb-4 text-gray-600">
+          Криптография, контроль доступа, журналирование. Интеграция сертифицированных СЗИ и подготовка к проверкам.
+        </p>
+      </div>
+
+      <!-- Автоматизация -->
+      <div class="p-8 transition-all transform shadow-lg service-card group rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+        <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-rosatom-blue to-rosatom-light rounded-2xl shadow-lg ring-1 ring-black/10">
+          <div class="absolute inset-0 opacity-60 bg-[radial-gradient(120%_100%_at_0%_0%,rgba(255,255,255,0.55),transparent_55%)]"></div>
+          <svg class="relative w-9 h-9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3.5" y="4" width="6.5" height="4.5" rx="1.2" fill="white" fill-opacity=".15" stroke="white" stroke-opacity=".95" stroke-width="1.6" />
+            <rect x="14" y="4" width="6.5" height="4.5" rx="1.2" fill="white" fill-opacity=".15" stroke="white" stroke-opacity=".95" stroke-width="1.6" />
+            <rect x="9" y="15.5" width="6" height="4.5" rx="1.2" fill="white" fill-opacity=".15" stroke="white" stroke-opacity=".95" stroke-width="1.6" />
+            <path d="M10 6h4" stroke="white" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M12 8v6" stroke="white" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h3 class="mb-3 text-xl font-semibold text-rosatom-dark">Автоматизация бизнес‑процессов</h3>
+        <p class="mb-4 text-gray-600">
+          Внутренние сервисы, workflow и согласования, роли и маршрутизация задач, журналирование и аудиты.
+        </p>
+      </div>
+    </div>
+
+    <!-- Безопасность -->
+    <div class="grid grid-cols-1 gap-8 mt-20 lg:grid-cols-3">
+      <div class="lg:col-span-1">
+        <h3 class="mb-3 text-2xl font-bold text-rosatom-dark">Безопасность — по умолчанию</h3>
+        <p class="text-gray-600">Secure SDLC, анализ угроз, SAST/DAST, SBOM, подпись артефактов и контроль цепочки поставки. Все инструменты — on‑prem.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-6 lg:col-span-2 md:grid-cols-2">
+        <div class="flex items-start gap-4 card">
+          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
+            <svg class="w-6 h-6 text-rosatom-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <div class="mb-1 font-semibold">Threat Modeling</div>
+            <div class="text-sm text-gray-600">STRIDE, шаблоны злоупотреблений, контроль рисков на этапе архитектуры.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 card">
+          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
+            <svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <div>
+            <div class="mb-1 font-semibold">SAST/DAST + Code Review</div>
+            <div class="text-sm text-gray-600">SonarQube, OWASP ZAP, секрет‑скан, проверка зависимостей и policy‑checks перед merge.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 card">
+          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
+            <svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17l3-3m0 0l3-3m-3 3l-3-3m3 3v6" />
+            </svg>
+          </div>
+          <div>
+            <div class="mb-1 font-semibold">CI/CD и подпись</div>
+            <div class="text-sm text-gray-600">On‑prem GitLab CI, Nexus/Harbor, SBOM (CycloneDX), подпись релизов (GPG/Cosign), отслеживание цепочки поставки.</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 card">
+          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
+            <svg class="w-6 h-6 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+            </svg>
+          </div>
+          <div>
+            <div class="mb-1 font-semibold">Аттестация и внедрение СЗИ</div>
+            <div class="text-sm text-gray-600">Интегрируем сертифицированные СЗИ и готовим материалы для оценки соответствия.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Процесс -->
+<section id="process" class="py-20 bg-slate-50 relative overflow-hidden">
+  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+  <div class="container mx-auto px-6 relative">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Как мы работаем</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Прозрачно. Предсказуемо. С фокусом на результат и безопасность.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card shimmer relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 01</div>
+        <div class="text-xl font-semibold mb-2">Дискавери и требования</div>
+        <p class="text-gray-600">Интервью, приоритизация, NFR, карта угроз. Выход: PRD/бэклог, архитектурный черновик, план тестирования.</p>
+      </div>
+      <div class="card relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 02</div>
+        <div class="text-xl font-semibold mb-2">Проектирование и UX</div>
+        <p class="text-gray-600">Прототипы, UX‑флоу, ADR, чек‑листы безопасности, согласование KPI и DoD.</p>
+      </div>
+      <div class="card relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 03</div>
+        <div class="text-xl font-semibold mb-2">Разработка и CI/CD</div>
+        <p class="text-gray-600">Git‑flow, code review, SAST/DAST, nightly сборки, отчеты по метрикам и рискам (on‑prem).</p>
+      </div>
+      <div class="card relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 04</div>
+        <div class="text-xl font-semibold mb-2">Тестирование</div>
+        <p class="text-gray-600">Unit/UI/интеграционные, нагрузочные, бэкап/restore, безопасностные тесты, покрытие.</p>
+      </div>
+      <div class="card relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 05</div>
+        <div class="text-xl font-semibold mb-2">Внедрение</div>
+        <p class="text-gray-600">Релиз, миграции, blue‑green/canary, обучение, эксплуатационная документация.</p>
+      </div>
+      <div class="card relative">
+        <div class="text-sm text-gray-500 mb-2">Этап 06</div>
+        <div class="text-xl font-semibold mb-2">Поддержка и развитие</div>
+        <p class="text-gray-600">SLA/SLO, мониторинг, патчи безопасности, roadmap развития, регулярные демо.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="#brief" class="inline-flex items-center gap-2 bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all focus-ring">
+        Запросить план проекта
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 7l5 5-5 5M6 12h12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Технологии -->
+<section id="stack" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Технологический стек</h2>
+      <p class="text-xl text-gray-600">Подбираем инструменты под задачу и требования безопасности. Всё — на on‑prem инфраструктуре.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-3">Frontend</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">Vue</span><span class="chip">Angular</span><span class="chip">Next.js</span><span class="chip">Vite</span><span class="chip">Tailwind</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-3">Backend</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">.NET (ASP.NET Core)</span><span class="chip">Python (FastAPI/Django)</span><span class="chip">Node.js (по необходимости)</span><span class="chip">gRPC</span><span class="chip">REST</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-3">Desktop / OS</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">Astra Linux</span><span class="chip">ALT</span><span class="chip">РЕД ОС</span><span class="chip">Windows</span><span class="chip">WPF</span><span class="chip">WinUI</span><span class="chip">Qt</span><span class="chip">Electron</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-3">Data & Messaging</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">PostgreSQL</span><span class="chip">MS SQL</span><span class="chip">Redis</span><span class="chip">RabbitMQ</span><span class="chip">ETL/ELT</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="font-semibold text-rosatom-dark mb-3">DevSecOps (on‑prem)</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">GitLab CI</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Ansible</span><span class="chip">Nexus/Harbor</span><span class="chip">SonarQube</span><span class="chip">OWASP ZAP</span><span class="chip">Trivy</span><span class="chip">SBOM (CycloneDX)</span><span class="chip">GPG/Cosign</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Соответствие требованиям -->
+<section id="compliance" class="py-20 gradient-rosatom text-white relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Соответствие и документация</h2>
+      <p class="text-xl opacity-90">Только то, что напрямую связано с разработкой: функциональные меры, интеграция СЗИ и комплект документов.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+        <div class="text-2xl font-bold mb-2">152‑ФЗ</div>
+        <div class="opacity-90">Персональные данные: модели угроз, уровни защищенности, приватность по умолчанию (Privacy by Design).</div>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+        <div class="text-2xl font-bold mb-2">187‑ФЗ</div>
+        <div class="opacity-90">КИИ: категорирование, планы обеспечения безопасности, контроль изменений на уровне кода и инфраструктуры.</div>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+        <div class="text-2xl font-bold mb-2">ФСТЭК / ФСБ</div>
+        <div class="opacity-90">Интеграция сертифицированных СЗИ и криптосредств, сопровождение испытаний (в части ПО).</div>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
+        <div class="text-2xl font-bold mb-2">ГОСТ 19/34</div>
+        <div class="opacity-90">Разработка и сопровождение документации ПО: ТЗ, ТП, ЭД, руководства по ГОСТ (по запросу).</div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="#brief" class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus-ring">Получить консультацию</a>
+    </div>
+  </div>
+  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+</section>
+
+<!-- Кейсы -->
+<section id="cases" class="py-20 bg-white section-grid-bg">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Наши компетенции в разработке ПО</h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Мы предлагаем полный спектр услуг по разработке, миграции и обеспечению кибербезопасности программного обеспечения.
-      </p>
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Кейсы и результаты</h2>
+      <p class="text-xl text-gray-600">Без раскрытия заказчиков. Метрики, которые важны бизнесу и безопасности.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-        <div class="w-16 h-16 bg-rosatom-blue bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-rosatom-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h4a2 2 0 002-2v-3.375M17.25 5L21 8.75m0 0L14.25 12H12l-2.75-2.75M21 8.75L14.25 12"></path>
-          </svg>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <article class="card tilt-hover">
+        <div class="text-sm text-gray-500 mb-2">Web‑платформа</div>
+        <h3 class="text-xl font-semibold mb-3">Единая система заявок</h3>
+        <p class="text-gray-600">RBAC, интеграции с AD/LDAP и почтой, мониторинг и алерты, отчеты для аудиторов.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm">
+          <span class="chip">-35% TTR</span><span class="chip">SLA 99.9%</span>
         </div>
-        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Автоматизация бизнес-процессов</h3>
-        <p class="text-gray-600 mb-4">
-          Создаем программные комплексы для эффективной автоматизации внутренних бизнес-процессов вашей компании.
-        </p>
-      </div>
-
-      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-        <div class="w-16 h-16 bg-rosatom-light bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-rosatom-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h4a2 2 0 002-2v-3.375M17.25 5L21 8.75m0 0L14.25 12H12l-2.75-2.75M21 8.75L14.25 12"></path>
-          </svg>
+      </article>
+      <article class="card tilt-hover">
+        <div class="text-sm text-gray-500 mb-2">Миграция на Astra</div>
+        <h3 class="text-xl font-semibold mb-3">Переезд комплекса учета</h3>
+        <p class="text-gray-600">Замена зависимостей, портирование UI, тест‑план, обучение эксплуатации. Без простоев.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm">
+          <span class="chip">-35% CAPEX</span><span class="chip">0 простоев</span>
         </div>
-        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Десктоп-приложения</h3>
-        <p class="text-gray-600 mb-4">
-          Разрабатываем надежные десктоп-приложения для операционных систем Astra Linux и Windows.
-        </p>
-      </div>
-
-      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-        <div class="w-16 h-16 bg-green-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
-          </svg>
+      </article>
+      <article class="card tilt-hover">
+        <div class="text-sm text-gray-500 mb-2">Десктоп + СЗИ</div>
+        <h3 class="text-xl font-semibold mb-3">Модуль защищенного обмена</h3>
+        <p class="text-gray-600">Криптография, контроль доступа, журналирование, интеграция с сертифицированными СЗИ.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm">
+          <span class="chip">Audit‑ready</span><span class="chip">Подпись релизов</span>
         </div>
-        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">Миграция систем</h3>
-        <p class="text-gray-600 mb-4">
-          Осуществляем бесшовную миграцию программного обеспечения с Windows на Astra Linux с сохранением функциональности.
-        </p>
-      </div>
-
-      <div class="service-card rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-        <div class="w-16 h-16 bg-purple-500 bg-opacity-10 rounded-xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v3h8z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-3 text-rosatom-dark">ПО для закрытой информации</h3>
-        <p class="text-gray-600 mb-4">
-          Разрабатываем специализированное ПО для обработки закрытой информации с учетом самых строгих требований безопасности.
-        </p>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="py-16 bg-white">
-   <!-- Фоновая сетка -->
-  <div class="absolute inset-0 h-full w-full bg-transparent bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] opacity-50 -z-10"></div>
-  
-  <div class="container mx-auto px-6 text-center">
-    <div class="bg-gradient-to-r from-rosatom-blue to-rosatom-light rounded-2xl p-12 text-white">
-      <h2 class="text-3xl font-bold mb-4">Ваш надежный партнер в разработке ПО</h2>
-      <p class="text-xl mb-8 opacity-90">
-        Создаем инновационные решения, которые гарантируют безопасность и эффективность вашего бизнеса.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <div class="text-4xl font-bold mb-2">100%</div>
-          <div class="text-lg opacity-90">Сохранность данных</div>
-        </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">ОС</div>
-          <div class="text-lg opacity-90">Поддержка различных платформ</div>
-        </div>
-        <div>
-          <div class="text-4xl font-bold mb-2">5+</div>
-          <div class="text-lg opacity-90">Лет в разработке</div>
-        </div>
-      </div>
-      <button class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-        Получить консультацию
-      </button>
+<!-- FAQ -->
+<section id="faq" class="py-20 bg-slate-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Частые вопросы</h2>
+      <p class="text-xl text-gray-600">Ключевые моменты — быстро и по делу.</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-4">
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Как оцениваем сроки и стоимость?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">За 1–3 рабочих дня формируем оценку по краткому брифу и уточняющей сессии. Даём вилку и фиксируем MVP‑объем.</div>
+      </details>
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Работаете ли по NDA и в изолированных контурах?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">Да. Подписываем NDA, работаем на наших on‑prem серверах или в вашем контуре. Без использования внешних сервисов.</div>
+      </details>
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Делаете мобильные приложения?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">Нет, мы сфокусированы на web и desktop.</div>
+      </details>
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Поможете пройти аттестацию/оценку соответствия?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">Да. Интегрируем сертифицированные СЗИ и готовим пакет документов по 152‑ФЗ/187‑ФЗ (в части разработки).</div>
+      </details>
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Кому принадлежат права на код?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">Исключительные права передаются Заказчику. Портфолио‑упоминания — только с вашего согласия.</div>
+      </details>
+      <details class="card !p-6 group">
+        <summary class="cursor-pointer list-none flex items-center justify-between">
+          <span class="font-semibold">Можно подключиться к «горящему» проекту?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mt-3 text-gray-600">Да. Делаем экспресс‑аудит кода/процессов за 3–5 дней и выдаём план стабилизации и релиза.</div>
+      </details>
     </div>
   </div>
 </section>
 
+<!-- Итоговый CTA -->
 <section class="gradient-rosatom text-white py-20 relative">
   <div class="grid-pattern absolute inset-0 opacity-20"></div>
   <div class="container mx-auto px-6 text-center relative z-10">
-    <h2 class="text-4xl font-bold mb-4">Начните свой IT-проект сегодня!</h2>
-    <p class="text-xl mb-8 max-w-2xl mx-auto">
-      Свяжитесь с нами, чтобы обсудить ваши потребности и получить индивидуальное решение.
-    </p>
+    <h2 class="text-4xl font-bold mb-4">Начните проект сегодня</h2>
+    <p class="text-xl mb-8 max-w-2xl mx-auto">Расскажите о задачах — соберём оптимальную команду и план запуска.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <button class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg">
+      <a href="#brief" class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg focus-ring">
         Оставить заявку
-      </button>
-      <button class="border border-white text-white hover:bg-white hover:text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all">
-        +7 (495) 123-45-67
-      </button>
+      </a>
+      <a href="tel:+74951234567" class="border border-white text-white hover:bg-white hover:text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all focus-ring">
+        +7 (495) 123‑45‑67
+      </a>
     </div>
   </div>
 </section>
 
-<div id="footer-placeholder"></div>
 
+
+<div id="footer-placeholder"></div>
+<script>
+    // Плавный скролл и активный пункт сабнавигации
+    const links = document.querySelectorAll('.scroll-link');
+    const sections = [...links].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    links.forEach(a => a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      const y = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: (window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth') });
+    }));
+    const onScroll = () => {
+      const pos = window.scrollY + 100;
+      sections.forEach((sec, i) => {
+        const id = '#' + sec.id;
+        const link = document.querySelector(`.scroll-link[href="${id}"]`);
+        if (!link) return;
+        const inView = pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight;
+        link.classList.toggle('active', inView);
+        link.classList.toggle('text-rosatom-blue', inView);
+        link.classList.toggle('bg-rosatom-blue/10', inView);
+      });
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Анимация счетчиков
+    const counters = document.querySelectorAll('[data-counter]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const to = parseInt(el.dataset.to, 10) || 0;
+          const plus = el.dataset.counter.includes('+') ? '+' : '';
+          let start = 0;
+          const dur = 1200; const startTime = performance.now();
+          const step = (now) => {
+            const p = Math.min((now - startTime) / dur, 1);
+            const val = Math.floor(p * to);
+            el.textContent = val + plus;
+            if (p < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(el => io.observe(el));
+  </script>
+
+  <script>
+(() => {
+  const container = document.querySelector('[data-typing]');
+  if (!container) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const codeEl = container.querySelector('#typed');
+  const locEl = container.querySelector('.status-loc');
+  const activeLineEl = container.querySelector('.active-line');
+
+  // Ваш код (можно заменить на любой)
+  const lines = [
+`// --- Data Processing Module ---
+namespace SecureAnalytics
+{
+    public class DataProcessor
+    {
+        public List<double> Data { get; private set; }
+
+        public DataProcessor(IEnumerable<double> initialData)
+        {
+            Data = new List<double>(initialData);
+            Console.WriteLine("Processor Initialized.");
+        }
+
+        /// <summary>
+        /// Calculates the average value of the dataset.
+        /// </summary>
+        public double CalculateAverage()
+        {
+            if (Data.Count == 0)
+                return 0;
+
+            double sum = 0;
+            foreach (var value in Data)
+            {
+                sum += value;
+            }
+            return sum / Data.Count;
+        }
+    }
+}`
+  ];
+  const code = lines.join('\n');
+
+  const speed = {
+    base: 26,          // базовая задержка, мс
+    variance: 18,      // случайный разброс
+    newlinePause: 180, // пауза на переносе строки
+  };
+  const pauseOnEnd = 1200; // пауза перед перезапуском
+  const loop = true;       // циклично печатать
+  let i = 0;
+  let paused = false;
+  let timer = null;
+
+  function getLnCol(idx) {
+    const sub = code.slice(0, idx);
+    const ln = sub.split('\n').length;
+    const col = sub.length - sub.lastIndexOf('\n');
+    return [ln, col];
+  }
+
+  function render() {
+    codeEl.textContent = code.slice(0, i);
+    const [ln, col] = getLnCol(i);
+    if (locEl) locEl.textContent = `Ln ${ln}, Col ${col}`;
+    if (activeLineEl) activeLineEl.style.setProperty('--line-i', ln - 1);
+  }
+
+  function nextDelay(ch) {
+    let d = speed.base + Math.random() * speed.variance;
+    if (ch === '\n') d += speed.newlinePause;
+    if (/[.,;:]/.test(ch)) d += 40;
+    if (/[(){}[```]/.test(ch)) d += 20;
+    if (/\s/.test(ch)) d -= 8;
+    return Math.max(12, d);
+  }
+
+  function tick() {
+    if (paused) return;
+    if (i >= code.length) {
+      if (!loop || prefersReduced) return;
+      timer = setTimeout(() => {
+        i = 0;
+        render();
+        tick();
+      }, pauseOnEnd);
+      return;
+    }
+    const ch = code[i++];
+    render();
+    timer = setTimeout(tick, nextDelay(ch));
+  }
+
+  // Hover: пауза/продолжение
+  container.addEventListener('mouseenter', () => {
+    paused = true;
+    container.classList.add('paused');
+    if (timer) clearTimeout(timer);
+  });
+  container.addEventListener('mouseleave', () => {
+    if (prefersReduced || i >= code.length) return;
+    paused = false;
+    container.classList.remove('paused');
+    tick();
+  });
+
+  // Старт
+  if (prefersReduced) {
+    i = code.length;
+    render();
+  } else {
+    tick();
+  }
+})();
+</script>
 <script src="../components.js"></script>
 <script src="../script.js"></script>
 <script src="../js/app.js"></script>

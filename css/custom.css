@@ -98,26 +98,46 @@ body {
   animation: scanline 3s linear infinite;
 }
 
-/* Для разработки - падающий текст */
-/* --- Стили для анимации водопада кода --- */
-
-/* 1. Определяем анимацию, которая сдвигает блок вверх на его собственную высоту */
+/* Плавная бесконечная прокрутка двух одинаковых блоков кода */
 @keyframes waterfall {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-50%); /* Сдвигаем ровно на высоту одного блока кода */
-  }
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); } /* сдвиг на высоту первого блока */
 }
 
-/* 2. Применяем анимацию к контейнеру с двумя блоками кода */
+/* Едва заметный двигающийся блик */
+@keyframes scan {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(316px); } /* ширина блока - ширина луча */
+  100% { transform: translateX(0); }
+}
+.animate-scan {
+  animation: scan 4s linear infinite;
+}
+
 .animate-waterfall {
-  /* Длительность анимации (30 секунд) можно настроить под себя */
-  animation: waterfall 30s linear infinite;
+  animation: waterfall var(--code-speed, 26s) linear infinite;
+  will-change: transform;
 }
 
-/* 3. Гарантируем, что блоки кода не будут переноситься */
+/* Остановка анимации при ховере окна */
+.group:hover .animate-waterfall,
+.group:hover .animate-scan {
+  animation-play-state: paused;
+}
+
+.animate-scan {
+  animation: scan 8s linear infinite;
+}
+
+/* Подстраиваемся под prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-waterfall,
+  .animate-scan {
+    animation: none !important;
+  }
+}
+
+/* Гарантируем, что код не ломается на строки */
 .code-block {
   white-space: pre;
 }
@@ -247,4 +267,36 @@ body {
 
 .animate-fade-in-up {
   animation: fadeInUp 0.5s ease-out forwards;
+}
+
+
+/* Мигающий курсор на конце напечатанного текста */
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+#typed::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  background: #2563eb; /* замените на ваш rosatom-blue, если нужен */
+  vertical-align: -2px;
+  animation: caret-blink 1s steps(1) infinite;
+}
+.ide.paused #typed::after { animation-play-state: paused; opacity: 1; }
+
+/* Активная строка под курсором */
+.ide .active-line {
+  --lh: 1.5rem; /* leading-6 */
+  position: absolute;
+  transform: translateY(calc(var(--line-i, 0) * var(--lh)));
+  transition: transform 120ms ease-out, opacity 200ms ease-out;
+  opacity: 0.85;
+}
+
+/* Уважение prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  #typed::after { display: none; }
 }
