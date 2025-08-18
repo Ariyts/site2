@@ -639,3 +639,134 @@ function initializeCookieBanner() {
     }, 300);
   });
 }
+// Back-to-top с кольцевым индикатором прогресса (глобально, автосоздание)
+(() => {
+  if (window.__backToTopInit) return;
+  window.__backToTopInit = true;
+
+  const SHOW_AT = 250; // px прокрутки, после которых показываем кнопку
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  let btn, ringEl, circumference = 0, maxScroll = 1;
+
+  function createBtn() {
+    // Если уже есть (на случай хардкодной вставки), используем её
+    btn = document.getElementById('backToTop');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.id = 'backToTop';
+      btn.type = 'button';
+      btn.setAttribute('aria-label', 'Наверх');
+      btn.className = [
+        'fixed bottom-6 right-6 z-[80] grid place-items-center rounded-full',
+        'bg-rosatom-blue/90 text-white shadow-lg border border-white/20',
+        'hover:bg-rosatom-dark transition-all transform backdrop-blur',
+        'p-3 sm:p-3.5',
+        'opacity-0 pointer-events-none translate-y-1 scale-95',
+        'focus-ring'
+      ].join(' ');
+
+      btn.innerHTML = `
+        <div class="relative">
+          <!-- Кольцо прогресса (трек + активный) -->
+          <svg class="-rotate-90 w-11 h-11" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <circle cx="22" cy="22" r="20" stroke="currentColor" class="text-white/20" stroke-width="3"></circle>
+            <circle cx="22" cy="22" r="20" data-ring stroke="currentColor" class="text-white" stroke-width="3" stroke-linecap="round"></circle>
+          </svg>
+          <!-- Иконка стрелки вверх -->
+          <svg class="w-5 h-5 absolute inset-0 m-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="M5 10l7-7 7 7M12 3v18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <span class="sr-only">Наверх</span>
+      `;
+      document.body.appendChild(btn);
+    }
+
+    ringEl = btn.querySelector('[data-ring]');
+    initRing();
+  }
+
+  function initRing() {
+    if (!ringEl) return;
+    // r = 20 (см. SVG выше)
+    const r = Number(ringEl.getAttribute('r') || 20);
+    circumference = 2 * Math.PI * r;
+    ringEl.style.strokeDasharray = String(circumference);
+    ringEl.style.strokeDashoffset = String(circumference);
+  }
+
+  function calcMaxScroll() {
+    const doc = document.documentElement;
+    const body = document.body;
+    const scrollHeight = Math.max(doc.scrollHeight, body.scrollHeight);
+    const viewport = window.innerHeight;
+    return Math.max(1, scrollHeight - viewport);
+  }
+
+  function updateProgress() {
+    if (!ringEl) return;
+    const y = window.scrollY || window.pageYOffset;
+    const p = Math.min(1, Math.max(0, y / maxScroll));
+    ringEl.style.strokeDashoffset = String(circumference * (1 - p));
+  }
+
+  function show() {
+    if (!btn) return;
+    btn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-1', 'scale-95');
+    btn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0', 'scale-100');
+  }
+  function hide() {
+    if (!btn) return;
+    btn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-1', 'scale-95');
+    btn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0', 'scale-100');
+  }
+
+  function syncVisibility() {
+    (window.scrollY > SHOW_AT) ? show() : hide();
+  }
+
+  function syncAll() {
+    maxScroll = calcMaxScroll();
+    syncVisibility();
+    updateProgress();
+  }
+
+  function onClick(e) {
+    if (!btn) return;
+    if (e.target === btn || (e.target.closest && e.target.closest('#backToTop'))) {
+      window.scrollTo({ top: 0, behavior: prefersReduced.matches ? 'auto' : 'smooth' });
+    }
+  }
+
+  function start() {
+    createBtn();
+    syncAll();
+
+    window.addEventListener('scroll', () => {
+      syncVisibility();
+      updateProgress();
+    }, { passive: true });
+
+    window.addEventListener('resize', syncAll);
+    window.addEventListener('orientationchange', syncAll);
+    window.addEventListener('load', syncAll);
+    document.addEventListener('click', onClick);
+
+    // Поддержка динамической высоты страницы (ленти, подгрузки и т.п.)
+    if ('ResizeObserver' in window) {
+      const ro = new ResizeObserver(() => syncAll());
+      ro.observe(document.documentElement);
+      ro.observe(document.body);
+    } else {
+      // Фолбэк: периодическая проверка
+      setInterval(syncAll, 1000);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
+})();
