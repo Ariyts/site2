@@ -100,7 +100,7 @@
       <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#roles">Роли</a>
       <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#cases">Кейсы</a>
       <a class="px-3 py-2 text-gray-600 rounded-lg hover:text-rosatom-blue focus-ring scroll-link" href="#faq">FAQ</a>
-      <a class="px-3 py-2 ml-auto text-white rounded-lg bg-rosatom-blue hover:bg-rosatom-dark focus-ring" href="#brief">Оставить заявку</a>
+      <a class="js-open-modal px-3 py-2 ml-auto text-white rounded-lg bg-rosatom-blue hover:bg-rosatom-dark focus-ring" href="#brief">Оставить заявку</a>
     </nav>
   </div>
 </div>
@@ -256,259 +256,697 @@
 </section>
 
 <!-- Процесс -->
-<section id="process" class="py-20 bg-slate-50 relative overflow-hidden">
-  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+<section id="process" class="relative overflow-hidden py-24 text-white">
+  <!-- Фон в цветах Росатома -->
+  <div class="absolute inset-0 -z-10 blueprint-bg" aria-hidden="true"></div>
+  <div class="absolute inset-0 -z-10 blueprint-grid opacity-60" aria-hidden="true"></div>
+  <div class="absolute inset-0 -z-10 pointer-events-none">
+    <div class="absolute -left-24 -top-24 h-80 w-80 rounded-full bg-rosatom-blue/25 blur-3xl"></div>
+    <div class="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-rosatom-light/25 blur-3xl"></div>
+  </div>
+
   <div class="container mx-auto px-6 relative">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Как мы сертифицируем СЗИ</h2>
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-4xl font-bold mb-4">Как мы сертифицируем СЗИ</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="card shimmer relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 01</div>
-        <div class="text-xl font-semibold mb-2">Старт и GAP‑анализ</div>
-        <p class="text-gray-600">Требования ФСТЭК/ФСБ/CC, оценка готовности, риски, план‑график и ресурсы.</p>
-      </div>
-      <div class="card relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 02</div>
-        <div class="text-xl font-semibold mb-2">КД и артефакты</div>
-        <p class="text-gray-600">ТЗ, ТУ, РЭ, ПМИ, ЭД, методики. SBOM/VEX, SCA/лицензии, регламенты эксплуатации и выпуска.</p>
-      </div>
-      <div class="card relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 03</div>
-        <div class="text-xl font-semibold mb-2">Стенды и предъявление</div>
-        <p class="text-gray-600">Сборки, образцы, ключи/СКЗИ, эталонные конфигурации. Разрешающие письма и предъявление в ИЛ.</p>
-      </div>
-      <div class="card relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 04</div>
-        <div class="text-xl font-semibold mb-2">Испытания в нашей ИЛ</div>
-        <p class="text-gray-600">Функциональные, стойкость, НДВ. Протоколы, ответы на замечания, ретесты.</p>
-      </div>
-      <div class="card relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 05</div>
-        <div class="text-xl font-semibold mb-2">Решение ОС и реестр</div>
-        <p class="text-gray-600">Взаимодействие с органом по сертификации, оформление сертификата, включение в реестр СЗИ.</p>
-      </div>
-      <div class="card relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 06</div>
-        <div class="text-xl font-semibold mb-2">Сопровождение версии</div>
-        <p class="text-gray-600">Актуализация сертификата при обновлениях, регресс‑испытания, поддержка продления.</p>
+    <!-- «Плата» -->
+    <div class="board relative max-w-6xl mx-auto rounded-3xl p-6 md:p-10 bg-white/5 ring-1 ring-white/10 backdrop-blur">
+      <!-- Магистрали -->
+      <div class="trace-h top-row" aria-hidden="true"></div>
+      <div class="trace-h bottom-row" aria-hidden="true"></div>
+
+      <!-- Ответвления к модулям -->
+      <div class="tap tap-1" aria-hidden="true"></div>
+      <div class="tap tap-2" aria-hidden="true"></div>
+      <div class="tap tap-3" aria-hidden="true"></div>
+      <div class="tap tap-4" aria-hidden="true"></div>
+      <div class="tap tap-5" aria-hidden="true"></div>
+      <div class="tap tap-6" aria-hidden="true"></div>
+
+      <!-- Модули -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+        <div class="module module-top">
+          <div class="pin" aria-hidden="true"></div>
+          <div class="chip">
+            <div class="label">Этап 01</div>
+            <div class="title">Старт и GAP‑анализ</div>
+            <div class="desc">Требования ФСТЭК/ФСБ/CC, оценка готовности, риски, план‑график и ресурсы.</div>
+          </div>
+        </div>
+        <div class="module module-top">
+          <div class="pin" aria-hidden="true"></div>
+          <div class="chip">
+            <div class="label">Этап 02</div>
+            <div class="title">КД и артефакты</div>
+            <div class="desc">ТЗ, ТУ, РЭ, ПМИ, ЭД, методики. SBOM/VEX, SCA/лицензии, регламенты эксплуатации и выпуска.</div>
+          </div>
+        </div>
+        <div class="module module-top">
+          <div class="pin" aria-hidden="true"></div>
+          <div class="chip">
+            <div class="label">Этап 03</div>
+            <div class="title">Стенды и предъявление</div>
+            <div class="desc">Сборки, образцы, ключи/СКЗИ, эталонные конфигурации. Разрешающие письма и предъявление в ИЛ.</div>
+          </div>
+        </div>
+
+        <div class="module module-bottom">
+          <div class="pin" aria-hidden="true"></div>
+          <div class="chip">
+            <div class="label">Этап 04</div>
+            <div class="title">Испытания в нашей ИЛ</div>
+            <div class="desc">Функциональные, стойкость, НДВ. Протоколы, ответы на замечания, ретесты.</div>
+          </div>
+        </div>
+        <div class="module module-bottom">
+          <div class="pin" aria-hidden="true"></div>
+          <div class="chip">
+            <div class="label">Этап 05</div>
+            <div class="title">Решение ОС и реестр</div>
+            <div class="desc">Взаимодействие с органом по сертификации, оформление сертификата, включение в реестр СЗИ.</div>
+          </div>
+        </div>
+        <div class="module module-bottom">
+          <div class="pin" aria-hidden="true"></div>
+          <div class="chip">
+            <div class="label">Этап 06</div>
+            <div class="title">Сопровождение версии</div>
+            <div class="desc">Актуализация сертификата при обновлениях, регресс‑испытания, поддержка продления.</div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="text-center mt-12">
-      <a href="#brief" class="inline-flex items-center gap-2 bg-rosatom-blue hover:bg-rosatom-dark text-white px-8 py-4 rounded-lg font-semibold transition-all focus-ring">
+      <a href="#brief" class="js-open-modal inline-flex items-center gap-2 bg-white text-rosatom-blue hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all focus-ring">
         Запросить дорожную карту сертификации
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 7l5 5-5 5M6 12h12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
   </div>
+
+  <!-- Стили -->
+  <style>
+    /* Брендовый фон (тёмно-синий с мягкими пятнами и градиентной подложкой) */
+    #process .blueprint-bg {
+      background:
+        radial-gradient(60rem 60rem at 85% -10%, rgba(96,165,250,.20), transparent 60%),
+        radial-gradient(50rem 50rem at -10% 90%, rgba(37,99,235,.22), transparent 60%),
+        linear-gradient(180deg, #0b1220 0%, #0e1730 100%);
+    }
+    /* Чертёжная сетка поверх фона */
+    #process .blueprint-grid {
+      background:
+        linear-gradient(to right, rgba(255,255,255,.08) 1px, transparent 1px) 0 0/40px 40px,
+        linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px) 0 0/40px 40px;
+    }
+
+    /* Магистрали (горизонтальные трассы) */
+    #process .trace-h {
+      position: absolute; left: 6%; right: 6%; height: 2px; border-radius: 9999px;
+      background: linear-gradient(90deg, rgba(96,165,250,0.7), rgba(37,99,235,0.7));
+      box-shadow: 0 0 16px rgba(96,165,250,0.25);
+      overflow: hidden; z-index: 1;
+    }
+    #process .trace-h::after {
+      content: ""; position: absolute; inset: 0;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,0) 0 12px, rgba(255,255,255,0.35) 12px 16px);
+      opacity: .55; mix-blend-mode: screen;
+      animation: trace-move 7s linear infinite;
+    }
+    #process .trace-h.top-row { top: 30%; }
+    #process .trace-h.bottom-row { top: 74%; }
+    @keyframes trace-move { to { transform: translateX(-28px); } }
+
+    /* Вертикальные ответвления к модулям (md+) */
+    #process .tap { display: none; }
+    @media (min-width: 768px) {
+      #process .tap {
+        display: block;
+        position: absolute; width: 2px; height: 84px;
+        background: linear-gradient(180deg, rgba(96,165,250,0.8), rgba(37,99,235,0.8));
+        box-shadow: 0 0 12px rgba(96,165,250,0.25);
+        z-index: 1;
+      }
+      /* 3 колонки в ряду */
+      #process .tap-1 { left: 13.5%; top: calc(30% - 84px); }
+      #process .tap-2 { left: 50%; transform: translateX(-50%); top: calc(30% - 84px); }
+      #process .tap-3 { right: 13.5%; top: calc(30% - 84px); }
+      #process .tap-4 { left: 13.5%; top: 74%; }
+      #process .tap-5 { left: 50%; transform: translateX(-50%); top: 74%; }
+      #process .tap-6 { right: 13.5%; top: 74%; }
+    }
+
+    /* Модули/чипы */
+    #process .module { position: relative; display: grid; place-items: center; }
+    #process .chip {
+      width: 100%; max-width: 22rem;
+      position: relative;
+      border-radius: 1rem; padding: 1.25rem 1.25rem;
+      background:
+        linear-gradient(0deg, rgba(12,18,35,0.75), rgba(12,18,35,0.75)) padding-box,
+        linear-gradient(120deg, rgba(96,165,250,.55), rgba(37,99,235,.55)) border-box;
+      border: 1px dashed transparent;
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      box-shadow: 0 10px 28px rgba(2,6,23,0.45), inset 0 0 0 1px rgba(255,255,255,0.06);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    #process .chip:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(2,6,23,0.55), 0 0 20px rgba(96,165,250,0.14);
+    }
+    /* Угловые маркеры */
+    #process .chip::before,
+    #process .chip::after {
+      content: ""; position: absolute; width: 24px; height: 24px; border: 1px solid rgba(147,197,253,.55);
+      opacity: .65; pointer-events: none;
+    }
+    #process .chip::before { top: 10px; left: 10px; border-right: 0; border-bottom: 0; border-radius: 6px 0 0 0; }
+    #process .chip::after  { bottom: 10px; right: 10px; border-left: 0; border-top: 0; border-radius: 0 0 6px 0; }
+
+    /* Пины (контакты) у чипов */
+    #process .pin {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      left: -12px; height: 30px; width: 6px; border-radius: 2px;
+      background: linear-gradient(180deg, #60A5FA, #2563EB);
+      box-shadow: 0 0 12px rgba(96,165,250,0.35);
+    }
+    #process .module-bottom .pin { left: auto; right: -12px; }
+
+    /* Типографика внутри чипа */
+    #process .label { font-size: .82rem; color: #93c5fd; opacity: .95; margin-bottom: .5rem; letter-spacing: .01em; }
+    #process .title { font-weight: 600; color: #e5f0ff; margin-bottom: .5rem; font-size: 1.25rem; }
+    #process .desc  { color: #cfe0ff; opacity: .95; }
+
+    /* Плавное появление (без JS) */
+    #process .chip { opacity: 0; animation: chip-in .5s ease-out forwards; }
+    #process .grid > .module:nth-child(1) .chip { animation-delay: .15s; }
+    #process .grid > .module:nth-child(2) .chip { animation-delay: .27s; }
+    #process .grid > .module:nth-child(3) .chip { animation-delay: .39s; }
+    #process .grid > .module:nth-child(4) .chip { animation-delay: .51s; }
+    #process .grid > .module:nth-child(5) .chip { animation-delay: .63s; }
+    #process .grid > .module:nth-child(6) .chip { animation-delay: .75s; }
+    @keyframes chip-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+    /* Мобильный: трассы/ответвления скрываем */
+    @media (max-width: 767px) {
+      #process .trace-h, #process .tap, #process .pin { display: none !important; }
+      #process .board { padding: 1rem; }
+    }
+
+    /* Reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+      #process .trace-h::after, #process .chip { animation: none !important; opacity: 1 !important; }
+    }
+  </style>
 </section>
 
 <!-- Стенды и образцы -->
-<section id="labs" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
+<section id="labs" class="relative py-24 bg-gradient-to-b from-white to-slate-50">
+  <!-- декоративное свечение -->
+  <div class="pointer-events-none absolute inset-x-0 top-0 mx-auto h-40 w-[60%] rounded-full bg-gradient-to-b from-rosatom-dark/10 to-transparent blur-3xl"></div>
+
+  <div class="container mx-auto max-w-7xl px-6">
     <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Стенды и образцы</h2>
-      <p class="text-xl text-gray-600">Испытания проводим в собственной ИЛ: изолированные контуры, on‑prem хранение, воспроизводимость результатов.</p>
+      <h2 class="text-4xl font-bold text-rosatom-dark tracking-tight mb-4">Стенды и образцы</h2>
+      <p class="mx-auto max-w-3xl text-xl text-gray-600">
+        Испытания проводим в собственной ИЛ: изолированные контуры, on‑prem хранение, воспроизводимость результатов.
+      </p>
+      <div class="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 rounded"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">ОС и платформы</div>
-        <div class="text-gray-600 text-sm">Astra Linux, ALT, РЕД ОС, Windows; x86‑64, ARM (по запросу).</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+      <!-- Card 1 -->
+      <div class="card group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rosatom-dark/10 text-rosatom-dark">
+                <!-- CPU icon -->
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" class="stroke-current">
+                  <rect x="7" y="7" width="10" height="10" rx="2" stroke-width="1.8"></rect>
+                  <rect x="10" y="10" width="4" height="4" rx="1" stroke-width="1.8"></rect>
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <div class="font-semibold text-rosatom-dark mb-2">ОС и платформы</div>
+                <div class="text-gray-600 text-sm">Astra Linux, ALT, РЕД ОС, Windows; x86‑64, ARM (по запросу).</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Сети и трафик</div>
-        <div class="text-gray-600 text-sm">L2/L3 стенды, VLAN/VXLAN, VPN/IPsec/TLS, генераторы и реплеи трафика, зеркалирование.</div>
+
+      <!-- Card 2 -->
+      <div class="card group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rosatom-dark/10 text-rosatom-dark">
+                <!-- Network icon -->
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" class="stroke-current">
+                  <circle cx="6" cy="7" r="2.2" stroke-width="1.8"></circle>
+                  <circle cx="18" cy="7" r="2.2" stroke-width="1.8"></circle>
+                  <circle cx="12" cy="17" r="2.2" stroke-width="1.8"></circle>
+                  <path d="M8 8.5l3 6M16 8.5l-3 6M8 7h8" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <div class="font-semibold text-rosatom-dark mb-2">Сети и трафик</div>
+                <div class="text-gray-600 text-sm">L2/L3 стенды, VLAN/VXLAN, VPN/IPsec/TLS, генераторы и реплеи трафика, зеркалирование.</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Криптография и ключи</div>
-        <div class="text-gray-600 text-sm">СКЗИ‑провайдеры (КриптоПро/ViPNet и др.), HSM/токены, тестовые сертификаты и политики.</div>
+
+      <!-- Card 3 -->
+      <div class="card group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rosatom-dark/10 text-rosatom-dark">
+                <!-- Key/Crypto icon -->
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" class="stroke-current">
+                  <circle cx="17" cy="7" r="3" stroke-width="1.8"></circle>
+                  <path d="M14 10l-9 9h3l2-2h2l2-2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <div class="font-semibold text-rosatom-dark mb-2">Криптография и ключи</div>
+                <div class="text-gray-600 text-sm">СКЗИ‑провайдеры (КриптоПро/ViPNet и др.), HSM/токены, тестовые сертификаты и политики.</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Виртуализация и CI</div>
-        <div class="text-gray-600 text-sm">KVM/VMware, эталонные образы, on‑prem GitLab, freeze‑окна, контроль состава сборок.</div>
+
+      <!-- Card 4 -->
+      <div class="card group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rosatom-dark/10 text-rosatom-dark">
+                <!-- Layers/Virtualization icon -->
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" class="stroke-current">
+                  <path d="M12 4L4 8l8 4 8-4-8-4z" stroke-width="1.8" stroke-linejoin="round"></path>
+                  <path d="M4 12l8 4 8-4" stroke-width="1.8" stroke-linejoin="round"></path>
+                  <path d="M4 16l8 4 8-4" stroke-width="1.8" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <div class="font-semibold text-rosatom-dark mb-2">Виртуализация и CI</div>
+                <div class="text-gray-600 text-sm">KVM/VMware, эталонные образы, on‑prem GitLab, freeze‑окна, контроль состава сборок.</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Логирование и доказательства</div>
-        <div class="text-gray-600 text-sm">Журналы, скринкасты/фотофиксация, хронометраж, чек‑листы — для воспроизводимости.</div>
+
+      <!-- Card 5 -->
+      <div class="card group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rosatom-dark/10 text-rosatom-dark">
+                <!-- Logs/Checklist icon -->
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" class="stroke-current">
+                  <rect x="4.5" y="4.5" width="15" height="15" rx="2.5" stroke-width="1.8"></rect>
+                  <path d="M8 8.5h8M8 12h8M8 15.5h8" stroke-width="1.8" stroke-linecap="round"></path>
+                  <path d="M6.5 12l1.2 1.2 2-2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <div class="font-semibold text-rosatom-dark mb-2">Логирование и доказательства</div>
+                <div class="text-gray-600 text-sm">Журналы, скринкасты/фотофиксация, хронометраж, чек‑листы — для воспроизводимости.</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Безопасность и доступ</div>
-        <div class="text-gray-600 text-sm">NDA, ИЗО‑контуры, допуск по спискам, хранение артефактов и отчётов — на наших/ваших серверах.</div>
+
+      <!-- Card 6 -->
+      <div class="card group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rosatom-dark/10 text-rosatom-dark">
+                <!-- Security/Lock icon -->
+                <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" class="stroke-current">
+                  <path d="M7 10V8a5 5 0 0 1 10 0v2" stroke-width="1.8" stroke-linecap="round"></path>
+                  <rect x="5" y="10" width="14" height="10" rx="2.5" stroke-width="1.8"></rect>
+                  <circle cx="12" cy="15" r="1.5" stroke-width="1.8"></circle>
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <div class="font-semibold text-rosatom-dark mb-2">Безопасность и доступ</div>
+                <div class="text-gray-600 text-sm">NDA, ИЗО‑контуры, допуск по спискам, хранение артефактов и отчётов — на наших/ваших серверах.</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- Материалы, методики и инструменты -->
-<section id="stack" class="py-20 bg-slate-50">
-  <div class="container mx-auto px-6">
+<section id="stack" class="relative py-24 bg-slate-50">
+  <!-- декоративное свечение -->
+  <div class="pointer-events-none absolute inset-x-0 top-0 mx-auto h-40 w-[60%] rounded-full bg-gradient-to-b from-rosatom-dark/10 to-transparent blur-3xl"></div>
+
+  <div class="container mx-auto max-w-7xl px-6">
     <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Материалы и методики</h2>
-      <p class="text-xl text-gray-600">Формируем полный комплект документов и методик — под класс СЗИ и требования регуляторов.</p>
+      <h2 class="text-4xl font-bold text-rosatom-dark tracking-tight mb-4">Материалы и методики</h2>
+      <p class="mx-auto max-w-3xl text-xl text-gray-600">
+        Формируем полный комплект документов и методик — под класс СЗИ и требования регуляторов.
+      </p>
+      <div class="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 rounded"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-3">Документация</div>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">ТЗ</span><span class="chip">ТУ</span><span class="chip">РЭ</span><span class="chip">ПМИ</span><span class="chip">ЭД</span><span class="chip">Методики</span><span class="chip">Модель нарушителя</span><span class="chip">Профиль защиты (CC)</span>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <!-- Card 1 -->
+      <div class="group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="font-semibold text-rosatom-dark mb-3">Документация</div>
+            <div class="flex flex-wrap gap-2">
+              <span title="Техническое задание" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">ТЗ</span>
+              <span title="Технические условия" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">ТУ</span>
+              <span title="Руководство по эксплуатации" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">РЭ</span>
+              <span title="Программа и методика испытаний" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">ПМИ</span>
+              <span title="Эксплуатационная документация" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">ЭД</span>
+              <span title="Методики испытаний" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">Методики</span>
+              <span title="Модель нарушителя" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">Модель нарушителя</span>
+              <span title="Профиль защиты (Common Criteria)" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">Профиль защиты (CC)</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-3">Испытания и QA</div>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">Функциональные</span><span class="chip">НДВ</span><span class="chip">Стойкость</span><span class="chip">Fuzzing</span><span class="chip">SAST</span><span class="chip">DAST</span><span class="chip">Coverage</span>
+
+      <!-- Card 2 -->
+      <div class="group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="font-semibold text-rosatom-dark mb-3">Испытания и QA</div>
+            <div class="flex flex-wrap gap-2">
+              <span title="Функциональные испытания" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">Функциональные</span>
+              <span title="Отсутствие недекларированных возможностей" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">НДВ</span>
+              <span title="Оценка стойкости" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">Стойкость</span>
+              <span title="Fuzzing — генерация псевдослучайных входных данных" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">Fuzzing</span>
+              <span title="Static Application Security Testing" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">SAST</span>
+              <span title="Dynamic Application Security Testing" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">DAST</span>
+              <span title="Покрытие тестами" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30">Coverage</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-3">Типы СЗИ</div>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">Межсетевые экраны</span><span class="chip">IDS/IPS</span><span class="chip">СЗИ от НСД</span><span class="chip">Контроль целостности</span><span class="chip">Антивирусы</span><span class="chip">DLP</span><span class="chip">СЗИ БД</span><span class="chip">СЗИ виртуализации</span><span class="chip">СКЗИ (VPN/TLS)</span>
+
+      <!-- Card 3 -->
+      <div class="group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="font-semibold text-rosatom-dark mb-3">Типы СЗИ</div>
+            <div class="flex flex-wrap gap-2">
+              <span title="Межсетевые экраны" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30">Межсетевые экраны</span>
+              <span title="Системы обнаружения и предотвращения вторжений" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">IDS/IPS</span>
+              <span title="Средства защиты от несанкционированного доступа" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">СЗИ от НСД</span>
+              <span title="Контроль целостности" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">Контроль целостности</span>
+              <span title="Антивирусные средства защиты" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-росатом-dark hover:ring-rosatom-dark/30 ">Антивирусы</span>
+              <span title="Data Loss Prevention" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">DLP</span>
+              <span title="Средства защиты баз данных" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">СЗИ БД</span>
+              <span title="Средства защиты виртуализационной инфраструктуры" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">СЗИ виртуализации</span>
+              <span title="Средства криптографической защиты информации" class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-sm text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-all hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30 ">СКЗИ (VPN/TLS)</span>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- Цепочка поставки -->
-<section id="supply" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
+<section id="supply" class="relative py-24 bg-white">
+  <!-- декоративное свечение -->
+  <div class="pointer-events-none absolute inset-x-0 top-0 mx-auto h-40 w-[60%] rounded-full bg-gradient-to-b from-rosatom-dark/10 to-transparent blur-3xl"></div>
+
+  <div class="container mx-auto max-w-7xl px-6">
     <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Контроль цепочки поставки</h2>
-      <p class="text-xl text-gray-600">Прозрачность состава, управляемость релизов и воспроизводимость — как часть сертификации.</p>
+      <h2 class="text-4xl font-bold text-rosatom-dark tracking-tight mb-4">Контроль цепочки поставки</h2>
+      <p class="mx-auto max-w-3xl text-xl text-gray-600">
+        Прозрачность состава, управляемость релизов и воспроизводимость — как часть сертификации.
+      </p>
+      <div class="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 rounded"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Артефакты и репозитории</div>
-        <div class="text-gray-600 text-sm">On‑prem GitLab, Nexus/Harbor, контроль составов релизов, freeze‑окна и трассировка.</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <!-- Card 1 -->
+      <div class="group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="min-w-0">
+              <div class="font-semibold text-rosatom-dark mb-2">Артефакты и репозитории</div>
+              <div class="text-gray-600 text-sm">On‑prem GitLab, Nexus/Harbor, контроль составов релизов, freeze‑окна и трассировка.</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">SBOM и VEX</div>
-        <div class="text-gray-600 text-sm">CycloneDX, VEX, управление уязвимостями компонент, отчётность для ОС/ИЛ.</div>
+
+      <!-- Card 2 -->
+      <div class="group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="min-w-0">
+              <div class="font-semibold text-rosatom-dark mb-2">SBOM и VEX</div>
+              <div class="text-gray-600 text-sm">CycloneDX, VEX, управление уязвимостями компонент, отчётность для ОС/ИЛ.</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">SCA и лицензии</div>
-        <div class="text-gray-600 text-sm">Проверка лицензий, политика OSS, матрица совместимости и рисков.</div>
+
+      <!-- Card 3 -->
+      <div class="group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="min-w-0">
+              <div class="font-semibold text-rosatom-dark mb-2">SCA и лицензии</div>
+              <div class="text-gray-600 text-sm">Проверка лицензий, политика OSS, матрица совместимости и рисков.</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Подпись и аттестации</div>
-        <div class="text-gray-600 text-sm">Подпись артефактов (GPG/Cosign), контроль изменений, attestations и журналирование.</div>
+
+      <!-- Card 4 -->
+      <div class="group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="min-w-0">
+              <div class="font-semibold text-rosatom-dark mb-2">Подпись и аттестации</div>
+              <div class="text-gray-600 text-sm">Подпись артефактов (GPG/Cosign), контроль изменений, attestations и журналирование.</div>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- Соответствие требованиям -->
-<section id="compliance" class="py-20 gradient-rosatom text-white relative overflow-hidden">
-  <div class="container mx-auto px-6 relative z-10">
+<section id="compliance" class="relative py-24 gradient-rosatom text-white overflow-hidden">
+  <!-- акцентные подсветки -->
+  <div aria-hidden="true" class="pointer-events-none absolute -top-24 -left-20 h-80 w-80 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.18),transparent_60%)] blur-2xl"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute bottom-[-6rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_60%)] blur-2xl"></div>
+  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+
+  <div class="container mx-auto max-w-7xl px-6 relative z-10">
     <div class="text-center mb-12">
       <h2 class="text-4xl font-bold mb-4">Регуляторика и стандарты</h2>
       <p class="text-xl opacity-90">Работаем под ваши цели сертификации и рынки сбыта.</p>
+      <div class="mx-auto mt-6 h-px w-24 bg-white/30"></div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
-        <div class="text-2xl font-bold mb-2">ФСТЭК</div>
-        <div class="opacity-90">Сертификация СЗИ: функционал, стойкость, НДВ; сопровождение до включения в реестр.</div>
+      <!-- Card 1 -->
+      <div class="group relative">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/10 p-6 border border-white/15 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/[0.12] hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+          <div class="pointer-events-none absolute inset-x-0 -top-px h-1.5 bg-gradient-to-r from-white/50 via-white/20 to-transparent"></div>
+          <div class="text-2xl font-bold mb-2">ФСТЭК</div>
+          <div class="opacity-90">Сертификация СЗИ: функционал, стойкость, НДВ; сопровождение до включения в реестр.</div>
+        </div>
       </div>
-      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
-        <div class="text-2xl font-bold mb-2">ФСБ (СКЗИ)</div>
-        <div class="opacity-90">Шифровальные средства: требования к криптографии, ключевой инфраструктуре и испытаниям.</div>
+
+      <!-- Card 2 -->
+      <div class="group relative">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/10 p-6 border border-white/15 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/[0.12] hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+          <div class="pointer-events-none absolute inset-x-0 -top-px h-1.5 bg-gradient-to-r from-white/50 via-white/20 to-transparent"></div>
+          <div class="text-2xl font-bold mb-2">ФСБ (СКЗИ)</div>
+          <div class="opacity-90">Шифровальные средства: требования к криптографии, ключевой инфраструктуре и испытаниям.</div>
+        </div>
       </div>
-      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
-        <div class="text-2xl font-bold mb-2">Common Criteria</div>
-        <div class="opacity-90">ISO/IEC 15408 (EAL), ST/ADV/AGD/ATE/ALC — подготовка и сопровождение оценивания.</div>
+
+      <!-- Card 3 -->
+      <div class="group relative">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/10 p-6 border border-white/15 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/[0.12] hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+          <div class="pointer-events-none absolute inset-x-0 -top-px h-1.5 bg-gradient-to-r from-white/50 via-white/20 to-transparent"></div>
+          <div class="text-2xl font-bold mb-2">Common Criteria</div>
+          <div class="opacity-90">ISO/IEC 15408 (EAL), ST/ADV/AGD/ATE/ALC — подготовка и сопровождение оценивания.</div>
+        </div>
       </div>
-      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
-        <div class="text-2xl font-bold mb-2">ГОСТ / ISO</div>
-        <div class="opacity-90">ГОСТ Р, ISO/IEC 27001/27002, 27034 — по запросу.</div>
+
+      <!-- Card 4 -->
+      <div class="group relative">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/10 p-6 border border-white/15 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/[0.12] hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+          <div class="pointer-events-none absolute inset-x-0 -top-px h-1.5 bg-gradient-to-r from-white/50 via-white/20 to-transparent"></div>
+          <div class="text-2xl font-bold mb-2">ГОСТ / ISO</div>
+          <div class="opacity-90">ГОСТ Р, ISO/IEC 27001/27002, 27034 — по запросу.</div>
+        </div>
       </div>
     </div>
 
     <div class="text-center mt-12">
-      <a href="#brief" class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus-ring">Получить консультацию</a>
+      <a href="#brief" class="js-open-modal inline-flex items-center justify-center gap-2 rounded-xl bg-white text-rosatom-blue px-8 py-4 font-semibold shadow-md shadow-black/10 ring-1 ring-black/5 transition-all hover:-translate-y-0.5 hover:bg-gray-50 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
+        Получить консультацию
+      </a>
     </div>
   </div>
-  <div class="grid-pattern absolute inset-0 opacity-20"></div>
 </section>
 
 <!-- Роли и ответственность -->
-<section id="roles" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
+<section id="roles" class="relative py-24 bg-white">
+  <!-- декоративное свечение -->
+  <div class="pointer-events-none absolute inset-x-0 top-0 mx-auto h-40 w-[60%] rounded-full bg-gradient-to-b from-rosatom-dark/10 to-transparent blur-3xl"></div>
+
+  <div class="container mx-auto max-w-7xl px-6">
     <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Роли и ответственность</h2>
-      <p class="text-xl text-gray-600">Прозрачно распределяем зоны ответственности — сроки и риски под контролем.</p>
+      <h2 class="text-4xl font-bold text-rosatom-dark tracking-tight mb-4">Роли и ответственность</h2>
+      <p class="mx-auto max-w-3xl text-xl text-gray-600">Прозрачно распределяем зоны ответственности — сроки и риски под контролем.</p>
+      <div class="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 rounded"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Заказчик</div>
-        <ul class="text-gray-600 text-sm space-y-2">
-          <li>• Владелец продукта, цели и классы СЗИ</li>
-          <li>• Сборки/образцы, аппаратные платформы, доступы</li>
-          <li>• Исходные коды — при необходимости методик (объём согласуется)</li>
-          <li>• Устранение несоответствий и изменений</li>
-        </ul>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <!-- Заказчик -->
+      <div class="group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full overflow-hidden rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg">
+            <div class="pointer-events-none absolute inset-x-0 -top-px h-1.5 bg-gradient-to-r from-rosatom-dark/30 via-rosatom-dark/10 to-transparent"></div>
+            <div class="font-semibold text-rosatom-dark mb-3">Заказчик</div>
+            <ul class="text-gray-600 text-sm space-y-2 [&>li]:rounded-lg [&>li]:px-3 [&>li]:py-2 [&>li]:border [&>li]:border-slate-200/70 [&>li]:bg-gradient-to-br [&>li]:from-slate-50 [&>li]:to-white [&>li]:transition-colors [&>li]:duration-200 hover:[&>li:hover]:from-white hover:[&>li:hover]:to-slate-50">
+              <li>• Владелец продукта, цели и классы СЗИ</li>
+              <li>• Сборки/образцы, аппаратные платформы, доступы</li>
+              <li>• Исходные коды — при необходимости методик (объём согласуется)</li>
+              <li>• Устранение несоответствий и изменений</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">rosatom (Испытательная лаборатория)</div>
-        <ul class="text-gray-600 text-sm space-y-2">
-          <li>• GAP‑анализ, комплект КД и артефактов</li>
-          <li>• Подготовка стендов, проведение испытаний, протоколы</li>
-          <li>• SBOM/VEX, SCA/лицензии, контроль изменений</li>
-          <li>• Взаимодействие с ОС, ответы на замечания, ретесты</li>
-        </ul>
+
+      <!-- rosatom (Испытательная лаборатория) -->
+      <div class="group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full overflow-hidden rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg">
+            <div class="pointer-events-none absolute inset-x-0 -top-px h-1.5 bg-gradient-to-r from-rosatom-dark/30 via-rosatom-dark/10 to-transparent"></div>
+            <div class="font-semibold text-rosatom-dark mb-3">rosatom (Испытательная лаборатория)</div>
+            <ul class="text-gray-600 text-sm space-y-2 [&>li]:rounded-lg [&>li]:px-3 [&>li]:py-2 [&>li]:border [&>li]:border-slate-200/70 [&>li]:bg-gradient-to-br [&>li]:from-slate-50 [&>li]:to-white [&>li]:transition-colors [&>li]:duration-200 hover:[&>li:hover]:from-white hover:[&>li:hover]:to-slate-50">
+              <li>• GAP‑анализ, комплект КД и артефактов</li>
+              <li>• Подготовка стендов, проведение испытаний, протоколы</li>
+              <li>• SBOM/VEX, SCA/лицензии, контроль изменений</li>
+              <li>• Взаимодействие с ОС, ответы на замечания, ретесты</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Орган по сертификации (ОС)</div>
-        <ul class="text-gray-600 text-sm space-y-2">
-          <li>• Регистрация заявки и план‑графика</li>
-          <li>• Надзор за испытаниями и комплектом материалов</li>
-          <li>• Принятие решения о выдаче сертификата</li>
-          <li>• Включение в реестр и контроль актуализаций</li>
-        </ul>
+
+      <!-- Орган по сертификации (ОС) -->
+      <div class="group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full overflow-hidden rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg">
+            <div class="pointer-events-none absolute inset-x-0 -top-px h-1.5 bg-gradient-to-r from-rosatom-dark/30 via-rosatom-dark/10 to-transparent"></div>
+            <div class="font-semibold text-rosatom-dark mb-3">Орган по сертификации (ОС)</div>
+            <ul class="text-gray-600 text-sm space-y-2 [&>li]:rounded-lg [&>li]:px-3 [&>li]:py-2 [&>li]:border [&>li]:border-slate-200/70 [&>li]:bg-gradient-to-br [&>li]:from-slate-50 [&>li]:to-white [&>li]:transition-colors [&>li]:duration-200 hover:[&>li:hover]:from-white hover:[&>li:hover]:to-slate-50">
+              <li>• Регистрация заявки и план‑графика</li>
+              <li>• Надзор за испытаниями и комплектом материалов</li>
+              <li>• Принятие решения о выдаче сертификата</li>
+              <li>• Включение в реестр и контроль актуализаций</li>
+            </ul>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- Кейсы -->
-<section id="cases" class="py-20 bg-slate-50 section-grid-bg">
-  <div class="container mx-auto px-6">
+<section id="cases" class="relative py-24 bg-slate-50 section-grid-bg">
+  <!-- декоративное свечение -->
+  <div class="pointer-events-none absolute inset-x-0 top-0 mx-auto h-32 w-[60%] rounded-full bg-gradient-to-b from-rosatom-dark/10 to-transparent blur-3xl"></div>
+
+  <div class="container mx-auto max-w-7xl px-6">
     <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Примеры работ (обезличенно)</h2>
-      <p class="text-xl text-gray-600">Фокус на результате и предсказуемости сроков.</p>
+      <h2 class="text-4xl font-bold text-rosatom-dark tracking-tight mb-4">Примеры работ (обезличенно)</h2>
+      <p class="mx-auto max-w-2xl text-xl text-gray-600">Фокус на результате и предсказуемости сроков.</p>
+      <div class="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 rounded"></div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <article class="card tilt-hover">
-        <div class="text-sm text-gray-500 mb-2">ФСТЭК</div>
-        <h3 class="text-xl font-semibold mb-3">СЗИ от НСД для корпоративной платформы</h3>
-        <p class="text-gray-600">GAP‑анализ, комплект КД, предсертиф. испытания, предъявление и протоколы. Включение в реестр.</p>
-        <div class="mt-4 flex flex-wrap gap-2 text-sm">
-          <span class="chip">С первого предъявления</span><span class="chip">Срок ~5 мес</span>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+      <!-- Case 1 -->
+      <article class="card tilt-hover group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full overflow-hidden rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="pointer-events-none absolute inset-x-0 -top-px h-1.5 bg-gradient-to-r from-rosatom-dark/30 via-rosatom-dark/10 to-transparent"></div>
+
+            <div class="mb-3 inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-medium text-gray-600">ФСТЭК</div>
+            <h3 class="text-xl font-semibold text-rosatom-dark mb-3">СЗИ от НСД для корпоративной платформы</h3>
+            <p class="text-gray-600">GAP‑анализ, комплект КД, предсертиф. испытания, предъявление и протоколы. Включение в реестр.</p>
+
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-colors hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30">С первого предъявления</span>
+              <span class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-colors hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30">Срок ~5 мес</span>
+            </div>
+          </div>
         </div>
       </article>
-      <article class="card tilt-hover">
-        <div class="text-sm text-gray-500 mb-2">ФСБ (СКЗИ)</div>
-        <h3 class="text-xl font-semibold mb-3">VPN‑шлюз с ГОСТ‑TLS</h3>
-        <p class="text-gray-600">Стенды с СКЗИ, ключевая инфраструктура, испытания стойкости. Ретест по замечаниям — пройден.</p>
-        <div class="mt-4 flex flex-wrap gap-2 text-sm">
-          <span class="chip">Ретест 1/1</span><span class="chip">Подпись релизов</span>
+
+      <!-- Case 2 -->
+      <article class="card tilt-hover group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full overflow-hidden rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="pointer-events-none absolute inset-x-0 -top-px h-1.5 bg-gradient-to-r from-rosatom-dark/30 via-rosatom-dark/10 to-transparent"></div>
+
+            <div class="mb-3 inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-medium text-gray-600">ФСБ (СКЗИ)</div>
+            <h3 class="text-xl font-semibold text-rosatom-dark mb-3">VPN‑шлюз с ГОСТ‑TLS</h3>
+            <p class="text-gray-600">Стенды с СКЗИ, ключевая инфраструктура, испытания стойкости. Ретест по замечаниям — пройден.</p>
+
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-colors hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30">Ретест 1/1</span>
+              <span class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-colors hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30">Подпись релизов</span>
+            </div>
+          </div>
         </div>
       </article>
-      <article class="card tilt-hover">
-        <div class="text-sm text-gray-500 mb-2">Common Criteria</div>
-        <h3 class="text-xl font-semibold mb-3">Подготовка к оцениванию по CC</h3>
-        <p class="text-gray-600">ST/ADV/AGD/ATE/ALC‑пакеты, предоценка, согласование с оценочным центром. Запуск процедуры оценивания.</p>
-        <div class="mt-4 flex flex-wrap gap-2 text-sm">
-          <span class="chip">EAL — по профилю</span><span class="chip">Audit‑ready</span>
+
+      <!-- Case 3 -->
+      <article class="card tilt-hover group relative">
+        <div class="rounded-2xl bg-gradient-to-br from-slate-200/80 to-slate-50/50 p-[1px]">
+          <div class="relative h-full overflow-hidden rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
+            <div class="pointer-events-none absolute inset-x-0 -top-px h-1.5 bg-gradient-to-r from-rosatom-dark/30 via-rosatom-dark/10 to-transparent"></div>
+
+            <div class="mb-3 inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-medium text-gray-600">Common Criteria</div>
+            <h3 class="text-xl font-semibold text-rosatom-dark mb-3">Подготовка к оцениванию по CC</h3>
+            <p class="text-gray-600">ST/ADV/AGD/ATE/ALC‑пакеты, предоценка, согласование с оценочным центром. Запуск процедуры оценивания.</p>
+
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-colors hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30">EAL — по профилю</span>
+              <span class="chip inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-slate-700 shadow-sm ring-1 ring-inset ring-slate-200/60 transition-colors hover:bg-rosatom-dark/5 hover:text-rosatom-dark hover:ring-rosatom-dark/30">Audit‑ready</span>
+            </div>
+          </div>
         </div>
       </article>
+
     </div>
   </div>
 </section>
@@ -575,7 +1013,7 @@
     <h2 class="text-4xl font-bold mb-4">Начните сертификацию СЗИ</h2>
     <p class="text-xl mb-8 max-w-2xl mx-auto">Проведём GAP‑анализ, подготовим комплект и сопроводим до получения сертификата.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#brief" class="bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg focus-ring">
+      <a href="#brief" class="js-open-modal bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg focus-ring">
         Оставить заявку
       </a>
       <a href="tel:+74951234567" class="border border-white text-white hover:bg-white hover:text-rosatom-blue px-8 py-4 rounded-lg font-semibold transition-all focus-ring">
