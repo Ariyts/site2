@@ -3,7 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // --- НАСТРОЙКИ ---
-    $to = "goskripko@gmail.com"; // Ваш email, куда придет письмо
+    $to = "geoskripko@rosatom.ru"; // Ваш email, куда придет письмо
     $from = "no-reply@vash-domen.ru"; // Email, с которого будет отправлено письмо. ЗАМЕНИТЕ НА СВОЙ!
     $subject = "Новая заявка на консультацию с сайта";
     // --- КОНЕЦ НАСТРОЕК ---

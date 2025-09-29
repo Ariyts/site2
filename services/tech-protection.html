@@ -121,7 +121,7 @@
     </div>
 
     <!-- Основные направления -->
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
       <!-- Проектирование и внедрение -->
       <div class="p-8 transition-all transform shadow-lg service-card group rounded-2xl hover:shadow-2xl hover:-translate-y-2">
         <div class="relative flex items-center justify-center w-16 h-16 mb-6 overflow-hidden bg-gradient-to-br from-rosatom-blue to-rosatom-light rounded-2xl shadow-lg ring-1 ring-black/10">
@@ -178,49 +178,139 @@
 
     <!-- Инженерные мероприятия -->
     <div class="grid grid-cols-1 gap-8 mt-20 lg:grid-cols-3">
-      <div class="lg:col-span-1">
-        <h3 class="mb-3 text-2xl font-bold text-rosatom-dark">Инженерный подход — по умолчанию</h3>
-        <p class="text-gray-600">От обследования и проектной документации до измерений, протоколов и обученного персонала. Решения — воспроизводимые и документированные.</p>
+  <!-- Левая панель с обновлённым акцентом -->
+  <div class="lg:col-span-1 relative overflow-hidden p-8 rounded-3xl border border-slate-200/70 bg-white shadow-[0_10px_30px_-12px_rgba(2,6,23,0.15)]">
+    <!-- Декоративные пятна -->
+    <div class="pointer-events-none absolute -top-16 -right-16 w-56 h-56 rounded-full bg-rosatom-blue/10 blur-2xl"></div>
+    <div class="pointer-events-none absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-rosatom-blue/5 blur-3xl"></div>
+
+    <!-- Акцент вместо "синей линии" -->
+    <div class="relative mb-6"> <div class="h-px w-28 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full"></div> </div>
+
+    <h3 class="mb-3 text-2xl font-bold text-rosatom-dark">Инженерный подход — по умолчанию</h3>
+    <p class="text-gray-600">
+      От обследования и проектной документации до измерений, протоколов и обученного персонала. Решения — воспроизводимые и документированные.
+    </p>
+  </div>
+
+  <!-- Правые карточки с живыми иконками -->
+  <div class="grid grid-cols-1 gap-6 lg:col-span-2 md:grid-cols-2">
+
+    <!-- Обследование и модель угроз -->
+    <div class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/30 via-transparent to-rosatom-blue/30 hover:from-rosatom-blue/50 hover:to-rosatom-light/50 transition-all duration-300">
+      <div class="relative z-10 flex items-start gap-4 rounded-2xl bg-white/90 backdrop-blur-xl p-5 ring-1 ring-slate-900/5 shadow-sm hover:shadow-lg transition">
+        <div class="relative flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-xl bg-rosatom-blue/10 ring-1 ring-rosatom-blue/20 overflow-hidden">
+          <div class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 bg-[radial-gradient(rgba(0,169,224,0.35)_1px,transparent_1px)] bg-[size:10px_10px]"></div>
+          <svg class="relative z-10 w-7 h-7 drop-shadow-[0_6px_12px_rgba(0,169,224,0.35)]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="grad-threat" x1="0" y1="0" x2="24" y2="24">
+                <stop offset="0%" stop-color="#00A9E0"/>
+                <stop offset="100%" stop-color="#7CD1F9"/>
+              </linearGradient>
+            </defs>
+            <!-- Радарные дуги -->
+            <path d="M4 10c4-4 12-4 16 0" stroke="url(#grad-threat)" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>
+            <path d="M6.5 12.5c3-3 8-3 11 0" stroke="url(#grad-threat)" stroke-width="1.6" stroke-linecap="round" opacity=".6"/>
+            <!-- Лупа -->
+            <circle cx="10" cy="10" r="3.8" stroke="url(#grad-threat)" stroke-width="1.7"/>
+            <path d="M12.7 12.7L16.5 16.5" stroke="url(#grad-threat)" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- Точка-метка -->
+            <circle cx="11.8" cy="8.8" r=".6" fill="#00A9E0"/>
+          </svg>
+        </div>
+        <div>
+          <div class="mb-1 font-semibold text-rosatom-dark">Обследование и модель угроз</div>
+          <div class="text-sm text-gray-600">Аудит объекта, инвентаризация, проект решений, ведомости объёмов и спецификации.</div>
+        </div>
       </div>
-      <div class="grid grid-cols-1 gap-6 lg:col-span-2 md:grid-cols-2">
-        <div class="flex items-start gap-4 card">
-          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
-            <svg class="w-6 h-6 text-rosatom-blue" viewBox="0 0 24 24" fill="none"><path d="M7 8h10M7 12h10M7 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <div>
-            <div class="mb-1 font-semibold">Обследование и модель угроз</div>
-            <div class="text-sm text-gray-600">Аудит объекта, инвентаризация, проект решений, ведомости объёмов и спецификации.</div>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 card">
-          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
-            <svg class="w-6 h-6 text-rosatom-blue" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div>
-            <div class="mb-1 font-semibold">Сертифицированные СЗИ</div>
-            <div class="text-sm text-gray-600">Подбор, поставка и корректная настройка согласно ЭД, с журналированием и трассировкой.</div>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 card">
-          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
-            <svg class="w-6 h-6 text-rosatom-blue" viewBox="0 0 24 24" fill="none"><path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="2"/><path d="M4 11h16" stroke="currentColor" stroke-width="2"/></svg>
-          </div>
-          <div>
-            <div class="mb-1 font-semibold">Монтаж и ПНР</div>
-            <div class="text-sm text-gray-600">Кабельные журналы, маркировка, схемы, акты скрытых работ, ПНР и инструктаж персонала.</div>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 card">
-          <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-rosatom-blue/10">
-            <svg class="w-6 h-6 text-rosatom-blue" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div>
-            <div class="mb-1 font-semibold">Испытания и контроль</div>
-            <div class="text-sm text-gray-600">Измерения ПЭМИН/акустики, функциональные испытания, протоколы и рекомендации.</div>
-          </div>
-        </div>
-      </div>
+      <span class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.25),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
     </div>
+
+    <!-- Сертифицированные СЗИ -->
+    <div class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/30 via-transparent to-rosatom-blue/30 hover:from-rosatom-blue/50 hover:to-rosatom-light/50 transition-all duration-300">
+      <div class="relative z-10 flex items-start gap-4 rounded-2xl bg-white/90 backdrop-blur-xl p-5 ring-1 ring-slate-900/5 shadow-sm hover:shadow-lg transition">
+        <div class="relative flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-xl bg-rosatom-blue/10 ring-1 ring-rosatom-blue/20 overflow-hidden">
+          <div class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 bg-[radial-gradient(rgba(0,169,224,0.35)_1px,transparent_1px)] bg-[size:10px_10px]"></div>
+          <svg class="relative z-10 w-7 h-7 drop-shadow-[0_6px_12px_rgba(0,169,224,0.35)]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="grad-cert" x1="0" y1="0" x2="24" y2="24">
+                <stop offset="0%" stop-color="#00A9E0"/>
+                <stop offset="100%" stop-color="#7CD1F9"/>
+              </linearGradient>
+            </defs>
+            <!-- Щит -->
+            <path d="M12 3l6 2v5c0 4.6-3 8.6-6 10-3-1.4-6-5.4-6-10V5l6-2z" stroke="url(#grad-cert)" stroke-width="1.7" fill="none" stroke-linejoin="round"/>
+            <!-- Чек -->
+            <path d="M9.5 12.2l1.8 1.8 3.6-3.6" stroke="url(#grad-cert)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Розетка-лента -->
+            <circle cx="12" cy="6.4" r="1.1" fill="#00A9E0" opacity=".9"/>
+          </svg>
+        </div>
+        <div>
+          <div class="mb-1 font-semibold text-rosatom-dark">Сертифицированные СЗИ</div>
+          <div class="text-sm text-gray-600">Подбор, поставка и корректная настройка согласно ЭД, с журналированием и трассировкой.</div>
+        </div>
+      </div>
+      <span class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.25),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+    </div>
+
+    <!-- Монтаж и ПНР -->
+    <div class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/30 via-transparent to-rosatom-blue/30 hover:from-rosatom-blue/50 hover:to-rosatom-light/50 transition-all duration-300">
+      <div class="relative z-10 flex items-start gap-4 rounded-2xl bg-white/90 backdrop-blur-xl p-5 ring-1 ring-slate-900/5 shadow-sm hover:shadow-lg transition">
+        <div class="relative flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-xl bg-rosatom-blue/10 ring-1 ring-rosatom-blue/20 overflow-hidden">
+          <div class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 bg-[radial-gradient(rgba(0,169,224,0.35)_1px,transparent_1px)] bg-[size:10px_10px]"></div>
+          <svg class="relative z-10 w-7 h-7 drop-shadow-[0_6px_12px_rgba(0,169,224,0.35)]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="grad-pnr" x1="0" y1="0" x2="24" y2="24">
+                <stop offset="0%" stop-color="#00A9E0"/>
+                <stop offset="100%" stop-color="#7CD1F9"/>
+              </linearGradient>
+            </defs>
+            <!-- Панель/стойка -->
+            <rect x="4" y="6" width="16" height="12" rx="2" stroke="url(#grad-pnr)" stroke-width="1.7"/>
+            <path d="M7 10h10M7 14h10" stroke="url(#grad-pnr)" stroke-width="1.7" stroke-linecap="round"/>
+            <!-- Болт -->
+            <path d="M14.5 4.5l2 2m-9-1l2 2" stroke="url(#grad-pnr)" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+          </svg>
+        </div>
+        <div>
+          <div class="mb-1 font-semibold text-rosatom-dark">Монтаж и ПНР</div>
+          <div class="text-sm text-gray-600">Кабельные журналы, маркировка, схемы, акты скрытых работ, ПНР и инструктаж персонала.</div>
+        </div>
+      </div>
+      <span class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.25),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+    </div>
+
+    <!-- Испытания и контроль -->
+    <div class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/30 via-transparent to-rosatom-blue/30 hover:from-rosatom-blue/50 hover:to-rosatom-light/50 transition-all duration-300">
+      <div class="relative z-10 flex items-start gap-4 rounded-2xl bg-white/90 backdrop-blur-xl p-5 ring-1 ring-slate-900/5 shadow-sm hover:shadow-lg transition">
+        <div class="relative flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-xl bg-rosatom-blue/10 ring-1 ring-rosatom-blue/20 overflow-hidden">
+          <div class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 bg-[radial-gradient(rgba(0,169,224,0.35)_1px,transparent_1px)] bg-[size:10px_10px]"></div>
+          <svg class="relative z-10 w-7 h-7 drop-shadow-[0_6px_12px_rgba(0,169,224,0.35)]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="grad-test" x1="0" y1="0" x2="24" y2="24">
+                <stop offset="0%" stop-color="#00A9E0"/>
+                <stop offset="100%" stop-color="#7CD1F9"/>
+              </linearGradient>
+            </defs>
+            <!-- Экран/площадка -->
+            <rect x="4" y="6" width="16" height="10" rx="2" stroke="url(#grad-test)" stroke-width="1.7"/>
+            <!-- Волновая форма -->
+            <path d="M6.5 11.5c1.2 0 1.6-2 2.4-2 1 0 1 4 2 4s1.2-4 2.2-4 1 2 2.6 2" stroke="url(#grad-test)" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+            <!-- Чек -->
+            <path d="M15 14.5l1.5 1.5 3-3" stroke="url(#grad-test)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="mb-1 font-semibold text-rosatom-dark">Испытания и контроль</div>
+          <div class="text-sm text-gray-600">Измерения ПЭМИН/акустики, функциональные испытания, протоколы и рекомендации.</div>
+        </div>
+      </div>
+      <span class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.25),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+    </div>
+
+  </div>
+</div>
 
   </div>
 </section>
@@ -228,6 +318,12 @@
 <!-- Категории и уровни защищенности -->
 <section id="levels" class="py-20 bg-slate-50 relative overflow-hidden">
   <div class="grid-pattern absolute inset-0 opacity-20"></div>
+
+  <!-- Мягкая подсветка фона -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80rem] h-[30rem] bg-[radial-gradient(ellipse_at_top,rgba(0,169,224,0.10),transparent_60%)]"></div>
+  </div>
+
   <div class="container mx-auto px-6 relative">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold text-rosatom-dark mb-4">Категории и уровни защищенности</h2>
@@ -235,91 +331,168 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-1">Персональные данные (152‑ФЗ)</div>
-        <div class="text-sm text-gray-500 mb-3">Уровни защищенности 1–4</div>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">СКЗИ/шифрование</span><span class="chip">Сегментация</span><span class="chip">Журналирование</span><span class="chip">DLP/EDR</span><span class="chip">УЦ/ЭП</span>
+
+      <!-- Персональные данные (152‑ФЗ) -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/25 via-transparent to-rosatom-light/25 hover:from-rosatom-blue/45 hover:to-rosatom-light/45 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <!-- Вертикальный акцент-рейл -->
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-80"></div>
+
+          <!-- Заголовок + бейдж -->
+          <div class="mb-4">
+            <div class="font-semibold text-rosatom-dark mb-1">Персональные данные (152‑ФЗ)</div>
+            <div class="inline-flex items-center gap-2 text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10">
+              Уровни защищенности 1–4
+            </div>
+          </div>
+
+          <!-- Чипы -->
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">СКЗИ/шифрование</span><span class="chip">Сегментация</span><span class="chip">Журналирование</span><span class="chip">DLP/EDR</span><span class="chip">УЦ/ЭП</span>
+          </div>
+
+          <!-- Декоративная подсветка на ховер -->
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
-      </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-1">КИИ (187‑ФЗ)</div>
-        <div class="text-sm text-gray-500 mb-3">Категории значимости 1–3</div>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">Категорирование</span><span class="chip">Планы безопасности</span><span class="chip">SIEM/журналы</span><span class="chip">Резервирование</span><span class="chip">Аудит доступа</span>
+      </article>
+
+      <!-- КИИ (187‑ФЗ) -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/25 via-transparent to-rosatom-light/25 hover:from-rosatom-blue/45 hover:to-rosatom-light/45 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <!-- Вертикальный акцент-рейл -->
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-80"></div>
+
+          <!-- Заголовок + бейдж -->
+          <div class="mb-4">
+            <div class="font-semibold text-rosatom-dark mb-1">КИИ (187‑ФЗ)</div>
+            <div class="inline-flex items-center gap-2 text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10">
+              Категории значимости 1–3
+            </div>
+          </div>
+
+          <!-- Чипы -->
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">Категорирование</span><span class="chip">Планы безопасности</span><span class="chip">SIEM/журналы</span><span class="chip">Резервирование</span><span class="chip">Аудит доступа</span>
+          </div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
-      </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-1">Иные режимы</div>
-        <div class="text-sm text-gray-500 mb-3">Коммерческая/служебная тайна</div>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">Режимные зоны</span><span class="chip">Контроль носителей</span><span class="chip">ПЭМИН/акустика</span><span class="chip">Контроль каналов</span><span class="chip">Регламенты</span>
+      </article>
+
+      <!-- Иные режимы -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/25 via-transparent to-rosatom-light/25 hover:from-rosatom-blue/45 hover:to-rosatom-light/45 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <!-- Вертикальный акцент-рейл -->
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-80"></div>
+
+          <!-- Заголовок + бейдж -->
+          <div class="mb-4">
+            <div class="font-semibold text-rosatom-dark mb-1">Иные режимы</div>
+            <div class="inline-flex items-center gap-2 text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10">
+              Коммерческая/служебная тайна
+            </div>
+          </div>
+
+          <!-- Чипы -->
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">Режимные зоны</span><span class="chip">Контроль носителей</span><span class="chip">ПЭМИН/акустика</span><span class="chip">Контроль каналов</span><span class="chip">Регламенты</span>
+          </div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
-      </div>
+      </article>
+
     </div>
   </div>
 </section>
 
 <!-- Защита переговорных и ПЭМИН -->
-<section id="rooms" class="py-20 bg-white section-grid-bg">
+<section id="rooms" class="py-20 bg-white section-grid-bg relative overflow-hidden">
+  <!-- Мягкая подсветка фона -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute -top-24 -right-20 w-[42rem] h-[42rem] bg-[radial-gradient(ellipse_at_top_right,rgba(0,169,224,0.10),transparent_60%)]"></div>
+    <div class="absolute -bottom-20 -left-24 w-[36rem] h-[36rem] bg-[radial-gradient(ellipse_at_bottom_left,rgba(124,209,249,0.10),transparent_65%)]"></div>
+  </div>
+
   <div class="container mx-auto px-6">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold text-rosatom-dark mb-4">Защита переговорных и ПЭМИН</h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">Комплексная защита от утечек по акустическим и электромагнитным каналам — с измерениями и протоколами.</p>
     </div>
 
+    <!-- Карточки направлений (без иконок) -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="card">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-rosatom-blue/10 flex items-center justify-center">
-            <svg class="w-6 h-6 text-rosatom-blue" viewBox="0 0 24 24" fill="none"><path d="M4 12c4-4 12-4 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <!-- Акустическая защита -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <!-- Декор -->
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(0,169,224,0.22),transparent_45%),conic-gradient(from_90deg,rgba(0,169,224,0.12),transparent_70%)]"></div>
+          <div class="mb-3">
+            <div class="font-semibold text-rosatom-dark">Акустическая защита</div>
+            <div class="mt-1 h-px w-16 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full"></div>
           </div>
-          <div class="font-semibold">Акустическая защита</div>
+          <div class="text-sm text-gray-600">Акустический аудит, звукоизоляция, шумогенерация, защита ВКС/конференц‑связи.</div>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
-        <div class="text-sm text-gray-600">Акустический аудит, звукоизоляция, шумогенерация, защита ВКС/конференц‑связи.</div>
-      </div>
+      </article>
 
-      <div class="card">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-rosatom-blue/10 flex items-center justify-center">
-            <svg class="w-6 h-6 text-rosatom-blue" viewBox="0 0 24 24" fill="none"><path d="M5 13c3-3 11-3 14 0M7 17c2-2 8-2 10 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <!-- Виброакустика -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(0,169,224,0.22),transparent_45%),conic-gradient(from_90deg,rgba(0,169,224,0.12),transparent_70%)]"></div>
+          <div class="mb-3">
+            <div class="font-semibold text-rosatom-dark">Виброакустика</div>
+            <div class="mt-1 h-px w-16 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full"></div>
           </div>
-          <div class="font-semibold">Виброакустика</div>
+          <div class="text-sm text-gray-600">Виброзаграждение ограждающих конструкций, интерфейсов и инженерных линий.</div>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
-        <div class="text-sm text-gray-600">Виброзаграждение ограждающих конструкций, интерфейсов и инженерных линий.</div>
-      </div>
+      </article>
 
-      <div class="card">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-rosatom-blue/10 flex items-center justify-center">
-            <svg class="w-6 h-6 text-rosatom-blue" viewBox="0 0 24 24" fill="none"><path d="M3 9c5.5-5.5 12.5-5.5 18 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="18" r="1.2" fill="currentColor"/></svg>
+      <!-- ПЭМИН/ЭМП -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(0,169,224,0.22),transparent_45%),conic-gradient(from_90deg,rgba(0,169,224,0.12),transparent_70%)]"></div>
+          <div class="mb-3">
+            <div class="font-semibold text-rosatom-dark">ПЭМИН/ЭМП</div>
+            <div class="mt-1 h-px w-16 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full"></div>
           </div>
-          <div class="font-semibold">ПЭМИН/ЭМП</div>
+          <div class="text-sm text-gray-600">Измерения ПЭМИН, экранирование, фильтрация питания/линий, контроль ЗК.</div>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
-        <div class="text-sm text-gray-600">Измерения ПЭМИН, экранирование, фильтрация питания/линий, контроль ЗК.</div>
-      </div>
+      </article>
 
-      <div class="card">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-rosatom-blue/10 flex items-center justify-center">
-            <svg class="w-6 h-6 text-rosatom-blue" viewBox="0 0 24 24" fill="none"><path d="M4 8h16M6 12h12M8 16h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <!-- Инженерные каналы -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(0,169,224,0.22),transparent_45%),conic-gradient(from_90deg,rgba(0,169,224,0.12),transparent_70%)]"></div>
+          <div class="mb-3">
+            <div class="font-semibold text-rosatom-dark">Инженерные каналы</div>
+            <div class="mt-1 h-px w-16 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full"></div>
           </div>
-          <div class="font-semibold">Инженерные каналы</div>
+          <div class="text-sm text-gray-600">Герметизация, маркировка и контроль линий, защита от закладок и несанкционированных подключений.</div>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
-        <div class="text-sm text-gray-600">Герметизация, маркировка и контроль линий, защита от закладок и несанкционированных подключений.</div>
-      </div>
+      </article>
     </div>
 
+    <!-- Что получите / Как проводим -->
     <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div class="lg:col-span-1">
-        <div class="font-semibold text-rosatom-dark mb-2">Что получите</div>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">Протоколы измерений</span><span class="chip">Схемы и паспорта</span><span class="chip">Инструкции</span><span class="chip">План контроля</span>
+        <div class="relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm">
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-80"></div>
+          <div class="font-semibold text-rosatom-dark mb-2">Что получите</div>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">Протоколы измерений</span><span class="chip">Схемы и паспорта</span><span class="chip">Инструкции</span><span class="chip">План контроля</span>
+          </div>
         </div>
       </div>
       <div class="lg:col-span-2">
-        <div class="font-semibold text-rosatom-dark mb-2">Как проводим</div>
-        <p class="text-gray-600">Безопасно для эксплуатации: подготовка вне окон работы, работы по сегментам, переключения с откатом, финальные измерения и обучение персонала.</p>
+        <div class="relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm">
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-80"></div>
+          <div class="font-semibold text-rosatom-dark mb-2">Как проводим</div>
+          <p class="text-gray-600">Безопасно для эксплуатации: подготовка вне окон работы, работы по сегментам, переключения с откатом, финальные измерения и обучение персонала.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -328,43 +501,93 @@
 <!-- Процесс -->
 <section id="process" class="py-20 bg-slate-50 relative overflow-hidden">
   <div class="grid-pattern absolute inset-0 opacity-20"></div>
+
+  <!-- Мягкая фонова подсветка -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[90rem] h-[28rem] bg-[radial-gradient(ellipse_at_top,rgba(0,169,224,0.10),transparent_55%)]"></div>
+  </div>
+
   <div class="container mx-auto px-6 relative">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Как мы работаем</h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">Прозрачно и предсказуемо: обследование — проект — внедрение — испытания — сопровождение.</p>
     </div>
 
+    <!-- Верхний трек прогресса (desktop) -->
+    <div class="relative mb-12 hidden md:block">
+      <div class="h-px w-full bg-slate-200 rounded-full"></div>
+      <div class="progress-line absolute top-0 left-0 h-px w-0 rounded-full bg-gradient-to-r from-rosatom-blue via-rosatom-light to-transparent"></div>
+      <div class="absolute -top-2 left-0 right-0 flex justify-between">
+        <span class="block w-3 h-3 rounded-full bg-rosatom-blue/70 shadow-[0_0_0_4px_rgba(0,169,224,0.12)]"></span>
+        <span class="block w-3 h-3 rounded-full bg-rosatom-blue/70 shadow-[0_0_0_4px_rgba(0,169,224,0.12)]"></span>
+        <span class="block w-3 h-3 rounded-full bg-rosatom-blue/70 shadow-[0_0_0_4px_rgba(0,169,224,0.12)]"></span>
+        <span class="block w-3 h-3 rounded-full bg-rosatom-blue/70 shadow-[0_0_0_4px_rgba(0,169,224,0.12)]"></span>
+        <span class="block w-3 h-3 rounded-full bg-rosatom-blue/70 shadow-[0_0_0_4px_rgba(0,169,224,0.12)]"></span>
+        <span class="block w-3 h-3 rounded-full bg-rosatom-blue/70 shadow-[0_0_0_4px_rgba(0,169,224,0.12)]"></span>
+      </div>
+    </div>
+
+    <!-- Карточки этапов -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="card shimmer relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 01</div>
-        <div class="text-xl font-semibold mb-2">Обследование и ТЗ</div>
-        <p class="text-gray-600">Сбор данных, модель угроз, границы ОИ, техническое задание и план-график.</p>
-      </div>
-      <div class="card relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 02</div>
-        <div class="text-xl font-semibold mb-2">Проект ТЗИ</div>
-        <p class="text-gray-600">Схемы, спецификации, ведомости, проектная документация и согласования.</p>
-      </div>
-      <div class="card relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 03</div>
-        <div class="text-xl font-semibold mb-2">Поставка и монтаж</div>
-        <p class="text-gray-600">Сертифицированные СЗИ, монтаж, маркировка, ПНР, обучение персонала.</p>
-      </div>
-      <div class="card relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 04</div>
-        <div class="text-xl font-semibold mb-2">Настройка и документация</div>
-        <p class="text-gray-600">Политики, инструкции, эксплуатационная документация, планы реагирования.</p>
-      </div>
-      <div class="card relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 05</div>
-        <div class="text-xl font-semibold mb-2">Испытания/оценка</div>
-        <p class="text-gray-600">Функциональные испытания, измерения ПЭМИН/акустики, протоколы, подготовка к аттестации.</p>
-      </div>
-      <div class="card relative">
-        <div class="text-sm text-gray-500 mb-2">Этап 06</div>
-        <div class="text-xl font-semibold mb-2">Сопровождение</div>
-        <p class="text-gray-600">SLA, периодический контроль, реагирование, актуализация мер защиты.</p>
-      </div>
+      <!-- Этап 01 -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/25 via-transparent to-rosatom-light/25 hover:from-rosatom-blue/45 hover:to-rosatom-light/45 transition-all duration-300">
+        <div class="relative h-full rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition group-hover:shadow-xl group-hover:-translate-y-1">
+          <div class="inline-flex items-center text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10 mb-2">Этап 01</div>
+          <div class="text-xl font-semibold mb-2 text-rosatom-dark">Обследование и ТЗ</div>
+          <p class="text-gray-600">Сбор данных, модель угроз, границы ОИ, техническое задание и план-график.</p>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(55%_55%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- Этап 02 -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/25 via-transparent to-rosatom-light/25 hover:from-rosatom-blue/45 hover:to-rosatom-light/45 transition-all duration-300">
+        <div class="relative h-full rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition group-hover:shadow-xl group-hover:-translate-y-1">
+          <div class="inline-flex items-center text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10 mb-2">Этап 02</div>
+          <div class="text-xl font-semibold mb-2 text-rosatom-dark">Проект ТЗИ</div>
+          <p class="text-gray-600">Схемы, спецификации, ведомости, проектная документация и согласования.</p>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(55%_55%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- Этап 03 -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/25 via-transparent to-rosatom-light/25 hover:from-rosatom-blue/45 hover:to-rosatom-light/45 transition-all duration-300">
+        <div class="relative h-full rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition group-hover:shadow-xl group-hover:-translate-y-1">
+          <div class="inline-flex items-center text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10 mb-2">Этап 03</div>
+          <div class="text-xl font-semibold mb-2 text-rosatom-dark">Поставка и монтаж</div>
+          <p class="text-gray-600">Сертифицированные СЗИ, монтаж, маркировка, ПНР, обучение персонала.</p>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(55%_55%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- Этап 04 -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/25 via-transparent to-rosatom-light/25 hover:from-rosatom-blue/45 hover:to-rosatom-light/45 transition-all duration-300">
+        <div class="relative h-full rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition group-hover:shadow-xl group-hover:-translate-y-1">
+          <div class="inline-flex items-center text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10 mb-2">Этап 04</div>
+          <div class="text-xl font-semibold mb-2 text-rosatom-dark">Настройка и документация</div>
+          <p class="text-gray-600">Политики, инструкции, эксплуатационная документация, планы реагирования.</p>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(55%_55%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- Этап 05 -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/25 via-transparent to-rosatom-light/25 hover:from-rosatom-blue/45 hover:to-rosatom-light/45 transition-all duration-300">
+        <div class="relative h-full rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition group-hover:shadow-xl group-hover:-translate-y-1">
+          <div class="inline-flex items-center text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10 mb-2">Этап 05</div>
+          <div class="text-xl font-semibold mb-2 text-rosatom-dark">Испытания/оценка</div>
+          <p class="text-gray-600">Функциональные испытания, измерения ПЭМИН/акустики, протоколы, подготовка к аттестации.</p>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(55%_55%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- Этап 06 -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/25 via-transparent to-rosatom-light/25 hover:from-rosatom-blue/45 hover:to-rosatom-light/45 transition-all duration-300">
+        <div class="relative h-full rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition group-hover:shadow-xl group-hover:-translate-y-1">
+          <div class="inline-flex items-center text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10 mb-2">Этап 06</div>
+          <div class="text-xl font-semibold mb-2 text-rosatom-dark">Сопровождение</div>
+          <p class="text-gray-600">SLA, периодический контроль, реагирование, актуализация мер защиты.</p>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(55%_55%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
     </div>
 
     <div class="text-center mt-12">
@@ -376,8 +599,36 @@
   </div>
 </section>
 
+<!-- Прогресс-лента: анимация при появлении -->
+<script>
+  (function () {
+    const root = document.querySelector('#process');
+    if (!root) return;
+    const line = root.querySelector('.progress-line');
+    if (!line) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          if (!reduce) {
+            line.style.transition = 'width 1200ms ease';
+          }
+          line.style.width = '100%';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    io.observe(line);
+  })();
+</script>
+
 <!-- СЗИ и технологии -->
-<section id="stack" class="py-20 bg-white">
+<section id="stack" class="py-20 bg-white relative overflow-hidden">
+  <!-- Мягкая фонова подсветка -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[90rem] h-[28rem] bg-[radial-gradient(ellipse_at_top,rgba(0,169,224,0.10),transparent_55%)]"></div>
+  </div>
+
   <div class="container mx-auto px-6">
     <div class="text-center mb-12">
       <h2 class="text-4xl font-bold text-rosatom-dark mb-4">СЗИ и технологии</h2>
@@ -385,90 +636,205 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-3">Сетевые и системные</div>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">NGFW</span><span class="chip">WAF</span><span class="chip">IDS/IPS</span><span class="chip">NAC</span><span class="chip">SIEM</span><span class="chip">EDR</span><span class="chip">DLP</span><span class="chip">VPN</span>
+
+      <!-- Сетевые и системные -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300 tilt-hover">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div class="mb-3">
+            <div class="font-semibold text-rosatom-dark mb-1">Сетевые и системные</div>
+            <div class="h-px w-16 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full"></div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">NGFW</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">WAF</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">IDS/IPS</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">NAC</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">SIEM</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">EDR</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">DLP</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">VPN</span>
+          </div>
+
+          <!-- Декоративная подсветка -->
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_80%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
-      </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-3">Криптография и PKI</div>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">СКЗИ</span><span class="chip">ГОСТ‑TLS</span><span class="chip">PKI</span><span class="chip">HSM</span><span class="chip">ЭП/УКЭП</span><span class="chip">IPsec</span><span class="chip">L2TP</span><span class="chip">TLS Offload</span>
+      </article>
+
+      <!-- Криптография и PKI -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300 tilt-hover">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div class="mb-3">
+            <div class="font-semibold text-rosatom-dark mb-1">Криптография и PKI</div>
+            <div class="h-px w-16 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full"></div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">СКЗИ</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">ГОСТ‑TLS</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">PKI</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">HSM</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">ЭП/УКЭП</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">IPsec</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">L2TP</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">TLS Offload</span>
+          </div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_80%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
-      </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-3">Инженерные решения</div>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">Экранирование</span><span class="chip">Фильтры ПЭМИН</span><span class="chip">Акуст. защита</span><span class="chip">Виброакустика</span><span class="chip">Шумогенераторы</span><span class="chip">Контроль утечек</span>
+      </article>
+
+      <!-- Инженерные решения -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300 tilt-hover">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div class="mb-3">
+            <div class="font-semibold text-rosatom-dark mb-1">Инженерные решения</div>
+            <div class="h-px w-16 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full"></div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">Экранирование</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">Фильтры ПЭМИН</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">Акуст. защита</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">Виброакустика</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">Шумогенераторы</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">Контроль утечек</span>
+          </div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_80%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
-      </div>
+      </article>
+
     </div>
   </div>
 </section>
 
 <!-- Безопасность и контуры -->
-<section id="security" class="py-20 bg-slate-50">
-  <div class="container mx-auto px-6">
+<section id="security" class="py-20 bg-slate-50 relative overflow-hidden">
+  <div class="grid-pattern absolute inset-0 opacity-20"></div>
+  <!-- Микро‑подсветка фона -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80rem] h-[26rem] bg-[radial-gradient(ellipse_at_top,rgba(0,169,224,0.10),transparent_55%)]"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative">
     <div class="text-center mb-12">
       <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Безопасность и контуры</h2>
       <p class="text-xl text-gray-600">Конфиденциальность и воспроизводимость работ — в приоритете.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">NDA и ИЗО‑контуры</div>
-        <div class="text-gray-600 text-sm">NDA по умолчанию. Изолированные контуры для внедрения и испытаний, доступ по спискам.</div>
-      </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">On‑prem хранение</div>
-        <div class="text-gray-600 text-sm">КД, протоколы и артефакты храним на наших/ваших серверах. Обмен — только по защищённым каналам.</div>
-      </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Минимизация влияния</div>
-        <div class="text-gray-600 text-sm">Окна работ, резервирование, планы отката. Испытания согласуем под нагрузку и SLA.</div>
-      </div>
+
+      <!-- NDA и ИЗО‑контуры -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <!-- Вертикальный акцент -->
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-90"></div>
+          <!-- Декор -->
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(0,169,224,0.22),transparent_45%),conic-gradient(from_90deg,rgba(0,169,224,0.12),transparent_70%)]"></div>
+
+          <div class="font-semibold text-rosatom-dark mb-2">NDA и ИЗО‑контуры</div>
+          <div class="text-gray-600 text-sm">NDA по умолчанию. Изолированные контуры для внедрения и испытаний, доступ по спискам.</div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- On‑prem хранение -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-90"></div>
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(0,169,224,0.22),transparent_45%),conic-gradient(from_90deg,rgba(0,169,224,0.12),transparent_70%)]"></div>
+
+          <div class="font-semibold text-rosatom-dark mb-2">On‑prem хранение</div>
+          <div class="text-gray-600 text-sm">КД, протоколы и артефакты храним на наших/ваших серверах. Обмен — только по защищённым каналам.</div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- Минимизация влияния -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-90"></div>
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(0,169,224,0.22),transparent_45%),conic-gradient(from_90deg,rgba(0,169,224,0.12),transparent_70%)]"></div>
+
+          <div class="font-semibold text-rosatom-dark mb-2">Минимизация влияния</div>
+          <div class="text-gray-600 text-sm">Окна работ, резервирование, планы отката. Испытания согласуем под нагрузку и SLA.</div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
 <!-- Входные данные для старта -->
-<section id="inputs" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
+<section id="inputs" class="py-20 bg-white relative overflow-hidden">
+  <!-- Мягкая фонова подсветка -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80rem] h-[28rem] bg-[radial-gradient(ellipse_at_top,rgba(0,169,224,0.08),transparent_60%)]"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative">
     <div class="text-center mb-12">
       <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Входные данные для старта</h2>
       <p class="text-xl text-gray-600">Помогут быстро сформировать проект ТЗИ и план внедрения без рисков.</p>
     </div>
 
     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Технические</div>
-        <ul class="text-gray-600 text-sm space-y-2">
-          <li>• Описание ОИ и границ, схемы/опись ИТ</li>
-          <li>• Категории/уровни, критичные сервисы</li>
-          <li>• Текущий состав СЗИ и политики</li>
-          <li>• Планы релизов/изменений (freeze‑окна)</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="font-semibold text-rosatom-dark mb-2">Организационные</div>
-        <ul class="text-gray-600 text-sm space-y-2">
-          <li>• Контакты ответственных и доступы</li>
-          <li>• Окна работ и особенности эксплуатации</li>
-          <li>• Помещения для ПЭМИН/акустических измерений</li>
-          <li>• NDA/режим ИЗО и порядок обмена данными</li>
-        </ul>
-      </div>
+      <!-- Технические -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <!-- Вертикальный акцент -->
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-90"></div>
+          <div class="font-semibold text-rosatom-dark mb-2">Технические</div>
+          <ul class="text-gray-600 text-sm space-y-2">
+            <li class="rounded-md px-3 py-2 hover:bg-rosatom-blue/5 transition-colors">• Описание ОИ и границ, схемы/опись ИТ</li>
+            <li class="rounded-md px-3 py-2 hover:bg-rosatom-blue/5 transition-colors">• Категории/уровни, критичные сервисы</li>
+            <li class="rounded-md px-3 py-2 hover:bg-rosatom-blue/5 transition-colors">• Текущий состав СЗИ и политики</li>
+            <li class="rounded-md px-3 py-2 hover:bg-rosatom-blue/5 transition-colors">• Планы релизов/изменений (freeze‑окна)</li>
+          </ul>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- Организационные -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-90"></div>
+          <div class="font-semibold text-rosatom-dark mb-2">Организационные</div>
+          <ul class="text-gray-600 text-sm space-y-2">
+            <li class="rounded-md px-3 py-2 hover:bg-rosatom-blue/5 transition-colors">• Контакты ответственных и доступы</li>
+            <li class="rounded-md px-3 py-2 hover:bg-rosatom-blue/5 transition-colors">• Окна работ и особенности эксплуатации</li>
+            <li class="rounded-md px-3 py-2 hover:bg-rosatom-blue/5 transition-colors">• Помещения для ПЭМИН/акустических измерений</li>
+            <li class="rounded-md px-3 py-2 hover:bg-rosatom-blue/5 transition-colors">• NDA/режим ИЗО и порядок обмена данными</li>
+          </ul>
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
     </div>
 
-    <div class="mt-8 max-w-4xl mx-auto text-sm text-gray-500">
-      Примечание: сроки зависят от готовности ОИ, доступности окон, поставки СЗИ и согласований. Закладываем резерв под устранение замечаний и ретесты.
+    <!-- Примечание -->
+    <div class="mt-8 max-w-4xl mx-auto">
+      <div class="relative overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-5 ring-1 ring-slate-900/5 shadow-sm">
+        <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-90"></div>
+        <div class="text-sm text-gray-500">
+          Примечание: сроки зависят от готовности ОИ, доступности окон, поставки СЗИ и согласований. Закладываем резерв под устранение замечаний и ретесты.
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Соответствие требованиям -->
 <section id="compliance" class="py-20 gradient-rosatom text-white relative overflow-hidden">
+  <!-- Деликатная фонова подсветка -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[90rem] h-[28rem] bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.12),transparent_55%)]"></div>
+  </div>
+
   <div class="container mx-auto px-6 relative z-10">
     <div class="text-center mb-12">
       <h2 class="text-4xl font-bold mb-4">Соответствие и документация</h2>
@@ -476,33 +842,83 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
-        <div class="text-2xl font-bold mb-2">ФСТЭК / ФСБ</div>
-        <div class="opacity-90">Требования к защите информации, внедрение сертифицированных СЗИ, подготовка материалов для оценки соответствия.</div>
-      </div>
-      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
-        <div class="text-2xl font-bold mb-2">152‑ФЗ</div>
-        <div class="opacity-90">Персональные данные: модели угроз, уровни защищенности, эксплуатационная документация.</div>
-      </div>
-      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
-        <div class="text-2xl font-bold mb-2">187‑ФЗ</div>
-        <div class="opacity-90">КИИ: категорирование, планы обеспечения безопасности, технические меры для значимых объектов.</div>
-      </div>
-      <div class="bg-white/10 rounded-2xl p-6 border border-white/20">
-        <div class="text-2xl font-bold mb-2">ГОСТ / ISO</div>
-        <div class="opacity-90">ГОСТ 34, ГОСТ Р 57580, ISO/IEC 27001/27002 — по запросу.</div>
-      </div>
+
+      <!-- ФСТЭК / ФСБ -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-white/40 via-white/10 to-transparent hover:from-white/60 hover:to-white/30 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6 border border-white/20 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)] transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <!-- Вертикальный акцент -->
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-white/90 via-rosatom-light/70 to-transparent"></div>
+          <!-- Декор -->
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_45%),conic-gradient(from_90deg,rgba(255,255,255,0.18),transparent_70%)]"></div>
+
+          <div class="text-2xl font-bold mb-2">ФСТЭК / ФСБ</div>
+          <div class="h-px w-16 bg-gradient-to-r from-white/80 via-white/50 to-transparent rounded-full mb-3"></div>
+          <div class="opacity-90">Требования к защите информации, внедрение сертифицированных СЗИ, подготовка материалов для оценки соответствия.</div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(255,255,255,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- 152‑ФЗ -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-white/40 via-white/10 to-transparent hover:from-white/60 hover:to-white/30 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6 border border-white/20 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)] transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-white/90 via-rosatom-light/70 to-transparent"></div>
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_45%),conic-gradient(from_90deg,rgba(255,255,255,0.18),transparent_70%)]"></div>
+
+          <div class="text-2xl font-bold mb-2">152‑ФЗ</div>
+          <div class="h-px w-16 bg-gradient-to-r from-white/80 via-white/50 to-transparent rounded-full mb-3"></div>
+          <div class="opacity-90">Персональные данные: модели угроз, уровни защищенности, эксплуатационная документация.</div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(255,255,255,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- 187‑ФЗ -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-white/40 via-white/10 to-transparent hover:from-white/60 hover:to-white/30 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6 border border-white/20 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)] transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-white/90 via-rosatom-light/70 to-transparent"></div>
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_45%),conic-gradient(from_90deg,rgba(255,255,255,0.18),transparent_70%)]"></div>
+
+          <div class="text-2xl font-bold mb-2">187‑ФЗ</div>
+          <div class="h-px w-16 bg-gradient-to-r from-white/80 via-white/50 to-transparent rounded-full mb-3"></div>
+          <div class="opacity-90">КИИ: категорирование, планы обеспечения безопасности, технические меры для значимых объектов.</div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(255,255,255,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
+      <!-- ГОСТ / ISO -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-white/40 via-white/10 to-transparent hover:from-white/60 hover:to-white/30 transition-all duration-300">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6 border border-white/20 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)] transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-white/90 via-rosatom-light/70 to-transparent"></div>
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_45%),conic-gradient(from_90deg,rgba(255,255,255,0.18),transparent_70%)]"></div>
+
+          <div class="text-2xl font-bold mb-2">ГОСТ / ISO</div>
+          <div class="h-px w-16 bg-gradient-to-r from-white/80 via-white/50 to-transparent rounded-full mb-3"></div>
+          <div class="opacity-90">ГОСТ 34, ГОСТ Р 57580, ISO/IEC 27001/27002 — по запросу.</div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_50%_0%,rgba(255,255,255,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
+        </div>
+      </article>
+
     </div>
 
     <div class="text-center mt-12">
       <a href="#brief" class="js-open-modal bg-white text-rosatom-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus-ring">Получить консультацию</a>
     </div>
   </div>
+
   <div class="grid-pattern absolute inset-0 opacity-20"></div>
 </section>
 
 <!-- Кейсы -->
-<section id="cases" class="py-20 bg-white section-grid-bg">
+<section id="cases" class="py-20 bg-white section-grid-bg relative overflow-hidden">
+  <!-- Мягкая фонова подсветка -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute -top-24 right-[-10%] w-[42rem] h-[42rem] bg-[radial-gradient(ellipse_at_top_right,rgba(0,169,224,0.10),transparent_60%)]"></div>
+    <div class="absolute -bottom-24 left-[-10%] w-[36rem] h-[36rem] bg-[radial-gradient(ellipse_at_bottom_left,rgba(124,209,249,0.10),transparent_65%)]"></div>
+  </div>
+
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-rosatom-dark mb-4">Кейсы и результаты</h2>
@@ -510,28 +926,65 @@
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <article class="card tilt-hover">
-        <div class="text-sm text-gray-500 mb-2">ПДн / ИС</div>
-        <h3 class="text-xl font-semibold mb-3">Комплекс ТЗИ с подготовкой к аттестации</h3>
-        <p class="text-gray-600">Проект, внедрение СЗИ, ПЭМИН/акустика, испытания, пакет документов. Готовность к проверкам.</p>
-        <div class="mt-4 flex flex-wrap gap-2 text-sm">
-          <span class="chip">Аттестация‑ready</span><span class="chip">SLA 99.9%</span>
+      <!-- Кейc 1 -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300 tilt-hover">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <!-- Вертикальный акцент -->
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-90"></div>
+          <!-- Декор -->
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(0,169,224,0.22),transparent_45%),conic-gradient(from_90deg,rgba(0,169,224,0.12),transparent_70%)]"></div>
+
+          <div class="inline-flex items-center text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10 mb-2">ПДн / ИС</div>
+          <h3 class="text-xl font-semibold mb-2 text-rosatom-dark">Комплекс ТЗИ с подготовкой к аттестации</h3>
+          <div class="h-px w-16 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full mb-3"></div>
+          <p class="text-gray-600">Проект, внедрение СЗИ, ПЭМИН/акустика, испытания, пакет документов. Готовность к проверкам.</p>
+
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">Аттестация‑ready</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">SLA 99.9%</span>
+          </div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_80%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
       </article>
-      <article class="card tilt-hover">
-        <div class="text-sm text-gray-500 mb-2">Защита помещений</div>
-        <h3 class="text-xl font-semibold mb-3">Переговорные и АРМ</h3>
-        <p class="text-gray-600">Акустическая защита, виброакустика, фильтрация и экранирование. Протоколы измерений и инструкции.</p>
-        <div class="mt-4 flex flex-wrap gap-2 text-sm">
-          <span class="chip">Снижение утечек</span><span class="chip">Протоколы</span>
+
+      <!-- Кейc 2 -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300 tilt-hover">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-90"></div>
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(0,169,224,0.22),transparent_45%),conic-gradient(from_90deg,rgba(0,169,224,0.12),transparent_70%)]"></div>
+
+          <div class="inline-flex items-center text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10 mb-2">Защита помещений</div>
+          <h3 class="text-xl font-semibold mb-2 text-rosatom-dark">Переговорные и АРМ</h3>
+          <div class="h-px w-16 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full mb-3"></div>
+          <p class="text-gray-600">Акустическая защита, виброакустика, фильтрация и экранирование. Протоколы измерений и инструкции.</p>
+
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">Снижение утечек</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">Протоколы</span>
+          </div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_80%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
       </article>
-      <article class="card tilt-hover">
-        <div class="text-sm text-gray-500 mb-2">КИИ</div>
-        <h3 class="text-xl font-semibold mb-3">Сегментация и защищённый обмен</h3>
-        <p class="text-gray-600">NGFW/NAC/VPN, разграничение доступа, журналы и мониторинг. Настроены планы реагирования.</p>
-        <div class="mt-4 flex flex-wrap gap-2 text-sm">
-          <span class="chip">MTTR ↓</span><span class="chip">Audit‑ready</span>
+
+      <!-- Кейc 3 -->
+      <article class="group relative rounded-2xl p-[1px] bg-gradient-to-br from-rosatom-blue/20 via-transparent to-rosatom-light/20 hover:from-rosatom-blue/40 hover:to-rosatom-light/40 transition-all duration-300 tilt-hover">
+        <div class="relative h-full overflow-hidden rounded-2xl bg-white/90 backdrop-blur-xl p-6 ring-1 ring-slate-900/5 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+          <div aria-hidden="true" class="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-rosatom-blue to-rosatom-light opacity-90"></div>
+          <div aria-hidden="true" class="absolute right-4 top-4 w-20 h-20 rounded-full blur-md opacity-40 bg-[radial-gradient(circle_at_30%_30%,rgba(0,169,224,0.22),transparent_45%),conic-gradient(from_90deg,rgba(0,169,224,0.12),transparent_70%)]"></div>
+
+          <div class="inline-flex items-center text-xs text-gray-600 bg-slate-100 px-2 py-1 rounded-full ring-1 ring-rosatom-blue/10 mb-2">КИИ</div>
+          <h3 class="text-xl font-semibold mb-2 text-rosatom-dark">Сегментация и защищённый обмен</h3>
+          <div class="h-px w-16 bg-gradient-to-r from-rosatom-blue/70 via-rosatom-light/70 to-transparent rounded-full mb-3"></div>
+          <p class="text-gray-600">NGFW/NAC/VPN, разграничение доступа, журналы и мониторинг. Настроены планы реагирования.</p>
+
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">MTTR ↓</span>
+            <span class="chip !bg-white/70 text-rosatom-dark/80 ring-1 ring-rosatom-blue/10 hover:ring-rosatom-blue/30 transition-all hover:-translate-y-[1px] hover:shadow-sm">Audit‑ready</span>
+          </div>
+
+          <span aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(60%_60%_at_80%_0%,rgba(0,169,224,0.22),transparent)] opacity-0 group-hover:opacity-30 transition duration-300"></span>
         </div>
       </article>
     </div>
